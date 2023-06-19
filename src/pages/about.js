@@ -116,10 +116,10 @@ const About = () => {
             style={{ width: '250px', marginRight: '20px', marginTop: '20px' }}
           />
           <div className="icon-wrapper">
-            <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_blank" rel="noopener noreferrer">
+            <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer">
               <FaGraduationCap size={20} />
             </a>
-            <a href="https://github.com/momentine" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/momentine" target="_self" rel="noopener noreferrer">
               <TfiGithub size={20} />
             </a>
             <a href="mailto:yumeng_ma1@brown.edu">
@@ -141,18 +141,18 @@ const About = () => {
             <br />
             <br />
             I am a Computer Science Master's student at{' '}
-            <a href="https://www.brown.edu/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
             </a>{' '}
             (former intern at the {' '}
-            <a href="https://hci.brown.edu/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://hci.brown.edu/" target="_slef" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
             Brown HCI Lab
             </a>{''}
             ). My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health.
             <br />
             <br />
             Previously, I double majored in Computer Science and Psychology at{' '}
-            <a href="https://www.asu.edu/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>
             , where I discovered the world of human-computer interaction.
@@ -165,7 +165,7 @@ const About = () => {
             <br />
             <br />
             Text-to-AREffects: Grounding Natural Language Input to Context-Aware AR Effects (at the {' '}
-            <a href="https://hci.ucla.edu/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://hci.ucla.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
             UCLA HCI Lab
             </a>
             ).
