@@ -84,7 +84,7 @@ const Misc = () => {
             <br />
             <br />
             In the meantime, here is what I have been up to in the field of{' '}
-            <a href="../documents/robotics.pdf" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="../documents/robotics.pdf" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               robotics
             </a>.
           </h1>

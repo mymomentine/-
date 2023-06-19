@@ -86,13 +86,13 @@ const Publications = () => {
           <br />
           <em>In Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems</em> <strong>(CHI 2023)</strong>
           <br />
-          <a href="../documents/LiveTyping_CHI23.pdf" target="_blank" rel="noopener noreferrer" className="coral-link" style={{ marginRight: '10px' }}>
+          <a href="../documents/LiveTyping_CHI23.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginRight: '10px' }}>
             [pdf]
           </a>
-          <a href="https://doi.org/10.1145/3544548.3581248" target="_blank" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '10px' }}>
+          <a href="https://doi.org/10.1145/3544548.3581248" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '10px' }}>
             [doi]
           </a>
-          <a href="https://github.com/brownhci/live-typing" target="_blank" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '15px' }}>
+          <a href="https://github.com/brownhci/live-typing" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '15px' }}>
             [code]
           </a>
         </h1>
@@ -118,10 +118,10 @@ const Publications = () => {
           <br />
 		  <em>Human Interaction and Emerging Technologies </em> <strong> (IHIET-AI 2023)</strong><em>: Artificial Intelligence and Future Applications 70, 70 (2023)  </em>
           <br />
-          <a href="../documents/mrpw.pdf" target="_blank" rel="noopener noreferrer" className="coral-link" style={{ marginRight: '10px' }}>
+          <a href="../documents/mrpw.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginRight: '10px' }}>
             [pdf]
           </a>
-          <a href="http://doi.org/10.54941/ahfe1002954" target="_blank" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '10px' }}>
+          <a href="http://doi.org/10.54941/ahfe1002954" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '10px' }}>
             [doi]
           </a>
         </h1>
