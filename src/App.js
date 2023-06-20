@@ -6,7 +6,6 @@ import Home from './pages';
 import About from './pages/about';
 import Publications from './pages/publications';
 import Misc from './pages/misc';
-import CV from './pages/cv';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
         <Route path='/' element={<About />} />
         <Route path='/publications' element={<Publications />} />
         <Route path='/misc' element={<Misc />} />
-        <Route path='/cv' element={<CV />} />
       </Routes>
     </Router>
   );
