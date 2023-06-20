@@ -145,7 +145,7 @@ const About = () => {
               Brown University
             </a>{' '}
             (former intern at the {' '}
-            <a href="https://hci.brown.edu/" target="_slef" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://hci.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
             Brown HCI Lab
             </a>{''}
             ). My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health.
