@@ -15,7 +15,7 @@ const Navbar = () => {
           <NavLink to="/misc" activeStyle>
             misc
           </NavLink>
-          <NavLink to="../cv.pdf" target="_blank" rel="noopener noreferrer" activeStyle>
+          <NavLink to="../cv.pdf" target="_self" rel="noopener noreferrer" activeStyle>
             cv
           </NavLink>
         </NavMenu>
