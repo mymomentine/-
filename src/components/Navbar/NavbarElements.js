@@ -1,6 +1,10 @@
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  position: relative;
+`;
+
 export const Nav = styled.nav`
   background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency as needed */
   height: 60px; /* Adjust the height as needed */
@@ -65,3 +69,23 @@ export const NavBtnLink = styled(Link)`
     color: #808080;
   }
 `;
+
+export const PageContent = styled.div`
+  margin-top: 60px; /* Adjust the margin as needed to create space below the navigation bar */
+`;
+
+// Usage example
+const MyComponent = () => {
+  return (
+    <Container>
+      <Nav>
+        {/* Navigation bar content */}
+      </Nav>
+      <PageContent>
+        {/* Page contents */}
+      </PageContent>
+    </Container>
+  );
+};
+
+export default MyComponent;
