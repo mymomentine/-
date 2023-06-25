@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import pachimariGif from '../images/pachi-clip.gif';
 import { TfiGithub } from 'react-icons/tfi';
 
 const Misc = () => {
+  useEffect(() => {
+    const handleTouchMove = (event) => {
+      if (event.scale !== 1) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    return () => {
+      document.removeEventListener('touchmove', handleTouchMove);
+    };
+  }, []);
+
   return (
     <div
       style={{
@@ -134,7 +148,7 @@ const Misc = () => {
           overflow: 'hidden', // Hide overflowing content
           boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)', // Shadow effect
           marginTop: '10px', // Adjusted margin-top to shift the GIF up
-          marginBottom: '80px', // Keep the same margin-bottom
+          marginBottom: '50px', // Keep the same margin-bottom
         }}
       >
         <img src={pachimariGif} alt="Pachimari" style={{ width: '100%', height: 'auto' }} /> {/* Adjusted size */}
