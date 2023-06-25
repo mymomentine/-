@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Redirect to index.html for client-side routing
+      var segmentCount = 0;
+      var location = window.location;
+      location.replace(
+        location.protocol + "//" + location.host + "/" + location.pathname.split("/").slice(1, segmentCount + 1).join("/") + "/index.html"
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
