@@ -31,13 +31,13 @@ const Navbar = () => {
     <>
       <Nav>
         <NavMenu>
-          <NavLink to="/#" activeStyle>
+          <NavLink to="/#" activestyle="true">
             about
           </NavLink>
-          <NavLink to="/publications" activeStyle>
+          <NavLink to="/publications" activestyle="true">
             publications
           </NavLink>
-          <NavLink to="/misc" activeStyle>
+          <NavLink to="/misc" activestyle="true">
             misc
           </NavLink>
           <CVLink href="../cv.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: 'auto' }}>
