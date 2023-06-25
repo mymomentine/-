@@ -158,7 +158,7 @@ const About = () => {
             , where I discovered the world of human-computer interaction.
             <br />
             <br />
-            On the side, I enjoy playing Overwatch 2, skateboarding, watching anime, and dabbling in the arts.
+            On the side, I enjoy playing video games, skateboarding, watching anime, and dabbling in the arts.
             <br />
             <br />
             <span style={{ color: 'black' }}>💭 Current Project</span>

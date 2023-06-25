@@ -1,4 +1,6 @@
 import React from 'react';
+import pachimariGif from '../images/pachi-clip.gif';
+import { TfiGithub } from 'react-icons/tfi';
 
 const Misc = () => {
   return (
@@ -65,10 +67,27 @@ const Misc = () => {
           .coral-link:active {
             color: gray;
           }
+
+          /* CSS code for GitHub icon */
+
+          .github-icon {
+            color: #f88379;
+            transition: color 0.3s ease-in-out;
+          }
+
+          .github-link:hover .github-icon {
+            color: #f88379;
+            transition: color 0.3s ease-in-out;
+          }
+
+          .github-link:hover .github-icon,
+          .github-link:active .github-icon {
+            color: gray;
+          }
         `}
       </style>
 
-      <div className="container" style={{ marginBottom: '60px' }}>
+      <div className="container" style={{ marginBottom: '20px' }}>
         <div>
           <h1
             style={{
@@ -77,19 +96,50 @@ const Misc = () => {
               color: 'black',
               lineHeight: '1.4',
               marginTop: '1vh',
-              textAlign: 'left', // Align the text to the left
+              textAlign: 'left',
             }}
           >
-            ✧ some personal projects coming soon ✧
+            ✧ some personal projects (more coming soon) ✧
             <br />
-            <br />
-            In the meantime, here is what I have been up to in the field of{' '}
+            I also like{' '}
             <a href="../documents/robotics.pdf" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               robotics
-            </a>.
+            </a>
+            .
+            <div style={{ marginBottom: '10px', marginTop: '20px' }}>
+              <span style={{ fontSize: '25px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
+                Pachikatamari パチカタマリ
+              </span>
+              <a href="https://github.com/momentine/pachikatamari" target="_self" rel="noopener noreferrer" className="github-link" style={{ marginLeft: '5px' }}>
+                <TfiGithub className="github-icon" />
+              </a>
+            </div>
+            <div style={{ paddingTop: '10px' }}>
+              <span style={{ fontSize: '14px', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
+                A 3D game inspired by Katamari Damacy and Overwatch's Pachimari. Control a Pachimari and roll around to gather more Pachimari friends. Made with Unity Engine.
+              </span>
+            </div>
           </h1>
         </div>
       </div>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center', // Center the content horizontally
+          width: '100%',
+          maxWidth: '400px',
+          margin: '0 auto', // Center the image
+          borderRadius: '10px', // Rounded corners
+          overflow: 'hidden', // Hide overflowing content
+          boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)', // Shadow effect
+          marginTop: '10px', // Adjusted margin-top to shift the GIF up
+          marginBottom: '80px', // Keep the same margin-bottom
+        }}
+      >
+        <img src={pachimariGif} alt="Pachimari" style={{ width: '100%', height: 'auto' }} /> {/* Adjusted size */}
+      </div>
+
       <div
         className="copy-right"
         style={{
