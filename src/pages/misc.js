@@ -122,7 +122,7 @@ const Misc = () => {
             .
             <div style={{ marginBottom: '10px', marginTop: '20px' }}>
               <span style={{ fontSize: '25px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
-                Pachikatamari パチカタマリ
+                Pachikatamari (パチ塊)
               </span>
               <a href="https://github.com/momentine/pachikatamari" target="_self" rel="noopener noreferrer" className="github-link" style={{ marginLeft: '5px' }}>
                 <TfiGithub className="github-icon" />
