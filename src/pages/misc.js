@@ -120,7 +120,7 @@ const Misc = () => {
               robotics 
             </a>
             {' '}and{' '} 
-            <a href="https://mymomentine.github.io/animebase.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://mymomentine.github.io/index.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               design
             </a>
             .
