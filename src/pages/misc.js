@@ -117,10 +117,10 @@ const Misc = () => {
             <br />
             I also like{' '}
             <a href="../documents/robotics.pdf" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              robotics
+              robotics 
             </a>
-            and 
-            <a href="file:///Users/yumengma/Desktop/portfolio/index.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            {' '}and{' '} 
+            <a href="https://mymomentine.github.io/animebase.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               design
             </a>
             .
