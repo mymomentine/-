@@ -3,20 +3,6 @@ import pachimariGif from '../images/pachi-clip.gif';
 import { TfiGithub } from 'react-icons/tfi';
 
 const Misc = () => {
-  useEffect(() => {
-    const handleTouchMove = (event) => {
-      if (event.scale > 1) {
-        event.preventDefault();
-      }
-    };
-
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
-
-    return () => {
-      document.removeEventListener('touchmove', handleTouchMove);
-    };
-  }, []);
-
   return (
     <div
       style={{
