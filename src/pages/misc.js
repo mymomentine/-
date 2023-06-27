@@ -5,7 +5,7 @@ import { TfiGithub } from 'react-icons/tfi';
 const Misc = () => {
   useEffect(() => {
     const handleTouchMove = (event) => {
-      if (event.scale !== 1) {
+      if (event.scale > 1) {
         event.preventDefault();
       }
     };
@@ -119,6 +119,10 @@ const Misc = () => {
             <a href="../documents/robotics.pdf" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               robotics
             </a>
+            and 
+            <a href="file:///Users/yumengma/Desktop/portfolio/index.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              design
+            </a>
             .
             <div style={{ marginBottom: '10px', marginTop: '20px' }}>
               <span style={{ fontSize: '25px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
@@ -130,7 +134,7 @@ const Misc = () => {
             </div>
             <div style={{ paddingTop: '10px' }}>
               <span style={{ fontSize: '14px', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
-                A 3D game inspired by Katamari Damacy and Overwatch's Pachimari. Control a Pachimari and roll around to gather more Pachimari friends. Made with Unity Engine.
+                A 3D game inspired by Overwatch's Pachimari (パチマリ) and Katamari Damacy's katamari (塊). Control a Pachimari and roll around to gather more Pachimari friends. Made with Unity Engine.
               </span>
             </div>
           </h1>
