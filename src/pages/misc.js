@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import pachimariGif from '../images/pachi-clip.gif';
 import napkinPng from '../images/napkin.png';
-import napkinappPng from '../images/napkinapp.png';
 import { TfiGithub } from 'react-icons/tfi';
 
 const Misc = () => {
