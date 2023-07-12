@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import pachimariGif from '../images/pachi-clip.gif';
+import napkinPng from '../images/napkin.png';
+import napkinappPng from '../images/napkinapp.png';
 import { TfiGithub } from 'react-icons/tfi';
 
 const Misc = () => {
@@ -84,8 +86,25 @@ const Misc = () => {
           .github-link:active .github-icon {
             color: gray;
           }
+
+          /* CSS code for Napkin image */
+
+          .napkin-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0; /* Remove rounded corners */
+          }
+
+          /* CSS code for Pachikatamari image */
+
+          .pachikatamari-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0; /* Remove rounded corners */
+          }
         `}
       </style>
+
 
       <div className="container" style={{ marginBottom: '20px' }}>
         <div>
@@ -111,7 +130,55 @@ const Misc = () => {
             </a>
             .
             <div style={{ marginBottom: '10px', marginTop: '20px' }}>
-              <span style={{ fontSize: '25px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
+              <span style={{ fontSize: '20px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
+                Napkin
+              </span>
+              <a href="https://github.com/momentine/napkin" target="_self" rel="noopener noreferrer" className="github-link" style={{ marginLeft: '5px' }}>
+                <TfiGithub className="github-icon" />
+              </a>
+            </div>
+            <div style={{ paddingTop: '10px' }}>
+              <span style={{ fontSize: '14px', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
+              A sticky notes cross-platform desktop application developed using Electron, Vite 2, Vue 3, TypeScript, and Electron Builder. Napkin incorporates components from traditional todo and reminder apps and allows customizable transparent backgrounds.
+              </span>
+            </div>
+          </h1>
+        </div>
+      </div>
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center', // Center the content horizontally
+          width: '100%',
+          maxWidth: '400px',
+          margin: '0 auto', // Center the image
+          overflow: 'hidden', // Hide overflowing content
+          boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)', // Shadow effect
+          marginTop: '10px', // Adjusted margin-top to shift the GIF up
+          marginBottom: '50px', // Keep the same margin-bottom
+        }}
+      >
+
+     
+        <img src={napkinPng} alt="Napkin" className="napkin-image" /> {/* Adjusted size */}
+      </div>
+    
+
+      <div className="container" style={{ marginBottom: '20px' }}>
+        <div>
+          <h1
+            style={{
+              fontSize: '16px',
+              fontWeight: '300',
+              color: 'black',
+              lineHeight: '1.4',
+              marginTop: '1vh',
+              textAlign: 'left',
+            }}
+          >
+            <div style={{ marginBottom: '10px', marginTop: '20px' }}>
+              <span style={{ fontSize: '20px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
                 Pachikatamari (パチ塊)
               </span>
               <a href="https://github.com/momentine/pachikatamari" target="_self" rel="noopener noreferrer" className="github-link" style={{ marginLeft: '5px' }}>
@@ -134,14 +201,13 @@ const Misc = () => {
           width: '100%',
           maxWidth: '400px',
           margin: '0 auto', // Center the image
-          borderRadius: '10px', // Rounded corners
           overflow: 'hidden', // Hide overflowing content
           boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)', // Shadow effect
           marginTop: '10px', // Adjusted margin-top to shift the GIF up
           marginBottom: '50px', // Keep the same margin-bottom
         }}
       >
-        <img src={pachimariGif} alt="Pachimari" style={{ width: '100%', height: 'auto' }} /> {/* Adjusted size */}
+        <img src={pachimariGif} alt="Pachimari" className="pachikatamari-image" /> {/* Adjusted size */}
       </div>
 
       <div
