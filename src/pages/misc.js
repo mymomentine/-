@@ -123,7 +123,6 @@ const Misc = () => {
             <a href="../documents/robotics.pdf" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               robotics 
             </a>
-            {' '}and{' '} 
             .
             <div style={{ marginBottom: '10px', marginTop: '20px' }}>
               <span style={{ fontSize: '20px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>
