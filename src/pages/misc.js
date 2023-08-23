@@ -124,9 +124,6 @@ const Misc = () => {
               robotics 
             </a>
             {' '}and{' '} 
-            <a href="https://mymomentine.github.io/index.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              design
-            </a>
             .
             <div style={{ marginBottom: '10px', marginTop: '20px' }}>
               <span style={{ fontSize: '20px', fontWeight: 'bold', fontFamily: 'Nunito Sans, sans-serif', color: 'black' }}>

@@ -164,7 +164,7 @@ const About = () => {
             <span style={{ color: 'black' }}>💭 Current Project</span>
             <br />
             <br />
-            Text-to-AREffects: Grounding Natural Language Input to Context-Aware AR Effects (at the {' '}
+            ProactiveAgent: A personalized context-aware reminder application. (at the {' '}
             <a href="https://hci.ucla.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
             UCLA HCI Lab
             </a>
