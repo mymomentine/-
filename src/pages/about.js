@@ -140,7 +140,7 @@ const About = () => {
             <span style={{ fontSize: '20px', color: 'black' }}>yumeng ma | 马雨萌 🌱</span>
             <br />
             <br />
-            I am a Computer Science Master's student at{' '}
+            I am a computer science master's student at{' '}
             <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
             </a>{' '}
@@ -151,7 +151,7 @@ const About = () => {
             ). My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health.
             <br />
             <br />
-            Previously, I double majored in Computer Science and Psychology at{' '}
+            Previously, I double majored in computer science and psychology at{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>
