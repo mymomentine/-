@@ -113,7 +113,7 @@ const About = () => {
           <img
             src={profileImage}
             alt="Profile"
-            style={{ width: '250px', marginRight: '20px', marginTop: '20px' }}
+            style={{ width: '250px', marginRight: '20px', marginTop: '20px',  borderRadius: '20px' }}
           />
           <div className="icon-wrapper">
             <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer">
@@ -158,15 +158,16 @@ const About = () => {
             , where I discovered the world of human-computer interaction.
             <br />
             <br />
-            On the side, I enjoy playing video games, skateboarding, watching anime, and dabbling in the arts.
+            On the side, I enjoy playing/making video games, skateboarding, watching anime, and dabbling in the arts.
             <br />
             <br />
             <span style={{ color: 'black' }}>💭 Current Project</span>
             <br />
             <br />
-            ProactiveAgent: A personalized context-aware reminder application (at the {' '}
-            <a href="https://hci.ucla.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-            UCLA HCI Lab
+            Visual Prosthesis: A real-time assistance system to help visually impaired individuals easily locate everyday objects
+            (advised by {' '}
+            <a href="https://vivo.brown.edu/display/mparadis" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            Prof. Michael Paradiso
             </a>
             ).
           </h1>
