@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavLink = styled(Link)`
-  color: #f88379;
+  color: #b4be89;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -31,11 +31,11 @@ export const NavLink = styled(Link)`
   font-size: 1rem; /* Adjust the font size as needed */
 
   &:hover {
-    color: #787878;
+    color: #787878 ;
   }
 
   &.active {
-    color: #f88379;
+    color: #b4be89;
   }
 
   @media screen and (max-width: 320px) {

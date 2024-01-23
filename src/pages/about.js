@@ -2,8 +2,9 @@ import React from 'react';
 import { FaGraduationCap } from 'react-icons/fa';
 import { TfiGithub } from 'react-icons/tfi';
 import { MdEmail } from 'react-icons/md';
+import { FaDiscord } from "react-icons/fa";
 
-import profileImage from '../images/me.png'; // Import the image
+import profileImage from '../images/me.png'; 
 
 const About = () => {
   return (
@@ -89,13 +90,13 @@ const About = () => {
           /* CSS code for icon links on hover */
 
           .icon-wrapper a:hover {
-            color: #f88379;
+            color: #b4be89;
           }
 
           /* CSS code for coral links */
 
           .coral-link {
-            color: #f88379;
+            color: #b4be89;
             transition: color 0.3s ease-in-out;
           }
 
@@ -115,17 +116,6 @@ const About = () => {
             alt="Profile"
             style={{ width: '250px', marginRight: '20px', marginTop: '20px',  borderRadius: '20px' }}
           />
-          <div className="icon-wrapper">
-            <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer">
-              <FaGraduationCap size={20} />
-            </a>
-            <a href="https://github.com/momentine" target="_self" rel="noopener noreferrer">
-              <TfiGithub size={20} />
-            </a>
-            <a href="mailto:yumeng_ma1@brown.edu">
-              <MdEmail size={20} />
-            </a>
-          </div>
         </div>
         <div>
           <h1
@@ -151,7 +141,7 @@ const About = () => {
             ). My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health.
             <br />
             <br />
-            Previously, I double majored in computer science and psychology at{' '}
+            During my undergraduate studies, I double majored in computer science and psychology at{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>
@@ -173,6 +163,20 @@ const About = () => {
           </h1>
         </div>
       </div>
+      {/* <div className="icon-wrapper">
+            <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer">
+              <FaGraduationCap size={20} />
+            </a>
+            <a href="https://github.com/momentine" target="_self" rel="noopener noreferrer">
+              <TfiGithub size={20} />
+            </a>
+            <a href="" target="_self" rel="noopener noreferrer">
+              <FaDiscord size={20} />
+            </a>
+            <a href="mailto:yumeng_ma1@brown.edu">
+              <MdEmail size={20} />
+            </a>
+          </div> */}
       <div
         className="copy-right"
         style={{

@@ -1,4 +1,5 @@
 import React from 'react';
+import ProactiveAgent from '../images/proactiveagent.png';
 import liveTyping from '../images/livetyping.png';
 import mrpwImage from '../images/mrpw.png';
 
@@ -47,7 +48,7 @@ const Publications = () => {
 
           /* CSS code for coral links */
           .coral-link {
-            color: #f88379;
+            color: #b4be89;
             text-decoration: none;
             transition: color 0.3s ease-in-out;
           }
@@ -65,6 +66,35 @@ const Publications = () => {
           }
         `}
       </style>
+
+      <div className="container" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
+        <img src={ProactiveAgent} alt="Publication Image" style={{ height: '150px', borderRadius: '16px' }} /> {/* Increased the height of the image */}
+        <h1
+          style={{
+            fontSize: '16px',
+            fontWeight: '300',
+            color: 'rgba(0, 0, 0, 0.8)', // Adjusted the color to a darker shade of black
+            lineHeight: '1.4',
+            marginTop: '1vh',
+            marginLeft: '10px', // Add margin to create spacing between the image and text
+            textAlign: 'left', // Align text to the left
+          }}
+        >
+          <strong>ProactiveAgent: Personalized Context-Aware Reminder System
+          </strong>
+          <br />
+          <span className="name">Yumeng Ma</span>* and Jiahao Ren*
+          <br />
+          <em>UIST '23 Adjunct: Adjunct Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology</em> <strong>(UIST 2023 SIC)</strong>
+          <br />
+          <a href="../documents/ProactiveAgent.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginRight: '10px' }}>
+            [pdf]
+          </a>
+          <a href="https://dl.acm.org/doi/10.1145/3586182.3625115" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: '10px' }}>
+            [doi]
+          </a>
+        </h1>
+      </div>
 
       <div className="container" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
         <img src={liveTyping} alt="Publication Image" style={{ height: '150px', borderRadius: '16px' }} /> {/* Increased the height of the image */}

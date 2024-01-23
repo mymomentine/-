@@ -3,7 +3,7 @@ import { Nav, NavLink, NavMenu, NavBtnLink } from './NavbarElements';
 import styled from 'styled-components';
 
 const CVLink = styled.a`
-  color: #f88379;
+  color: #b4be89;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -17,7 +17,7 @@ const CVLink = styled.a`
   }
 
   &.active {
-    color: #f88379;
+    color: #b4be89;
   }
 
   @media screen and (max-width: 320px) {
@@ -32,13 +32,16 @@ const Navbar = () => {
       <Nav>
         <NavMenu>
           <NavLink to="/#" activeStyle>
-            about
+            me
           </NavLink>
           <NavLink to="/publications" activeStyle>
             publications
           </NavLink>
-          <NavLink to="/misc" activeStyle>
-            misc
+          <NavLink to="/blog" activeStyle>
+            blog
+          </NavLink>
+          <NavLink to="/random" activeStyle>
+            random
           </NavLink>
           <CVLink href="../cv.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: 'auto' }}>
             cv

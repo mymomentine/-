@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import pachimariGif from '../images/pachi-clip.gif';
 import napkinPng from '../images/napkin.png';
-import { TfiGithub } from 'react-icons/tfi';
+// import { TfiGithub } from 'react-icons/tfi';
+import { FaCode } from "react-icons/fa";
 
-const Misc = () => {
+const Random = () => {
   return (
     <div
       style={{
@@ -58,7 +59,7 @@ const Misc = () => {
           /* CSS code for coral links */
 
           .coral-link {
-            color: #f88379;
+            color: #b4be89;
             transition: color 0.3s ease-in-out;
           }
 
@@ -72,12 +73,12 @@ const Misc = () => {
           /* CSS code for GitHub icon */
 
           .github-icon {
-            color: #f88379;
+            color: #b4be89;
             transition: color 0.3s ease-in-out;
           }
 
           .github-link:hover .github-icon {
-            color: #f88379;
+            color: #b4be89;
             transition: color 0.3s ease-in-out;
           }
 
@@ -117,7 +118,14 @@ const Misc = () => {
               textAlign: 'left',
             }}
           >
-            ✧ some personal projects (more coming soon) ✧
+            ✧ my personal projects (more coming soon) ✧
+            <br />
+            <br />
+            I recently built my own {' '}
+            <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              pc
+            </a>
+            .
             <br />
             I also like{' '}
             <a href="../documents/robotics.pdf" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
@@ -129,7 +137,7 @@ const Misc = () => {
                 Napkin
               </span>
               <a href="https://github.com/momentine/napkin" target="_self" rel="noopener noreferrer" className="github-link" style={{ marginLeft: '5px' }}>
-                <TfiGithub className="github-icon" />
+                <FaCode className="github-icon" />
               </a>
             </div>
             <div style={{ paddingTop: '10px' }}>
@@ -177,7 +185,7 @@ const Misc = () => {
                 Pachikatamari (パチ塊)
               </span>
               <a href="https://github.com/momentine/pachikatamari" target="_self" rel="noopener noreferrer" className="github-link" style={{ marginLeft: '5px' }}>
-                <TfiGithub className="github-icon" />
+                < FaCode  className="github-icon" />
               </a>
             </div>
             <div style={{ paddingTop: '10px' }}>
@@ -226,4 +234,4 @@ const Misc = () => {
   );
 };
 
-export default Misc;
+export default Random;
