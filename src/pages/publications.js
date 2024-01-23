@@ -156,7 +156,6 @@ const Publications = () => {
           </a>
         </h1>
       </div>
-
       <div
         className="copy-right"
         style={{

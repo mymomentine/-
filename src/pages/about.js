@@ -177,6 +177,19 @@ const About = () => {
               <MdEmail size={20} />
             </a>
           </div> */}
+
+<div
+        style={{
+          position: 'absolute',
+          bottom: '10px',
+          left: '20px',
+          fontSize: '6px', 
+          color: 'gray',
+          textAlign: 'left',
+        }}
+      >
+        Credits: Design of this site was initially inspired by Tongyu Zhou and others.
+      </div>
       <div
         className="copy-right"
         style={{
