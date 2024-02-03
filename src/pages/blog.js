@@ -1,33 +1,58 @@
 import React, { useEffect } from 'react';
-import pachimariGif from '../images/pachi-clip.gif';
-// import napkinPng from '../images/napkin.png';
-// import { TfiGithub } from 'react-icons/tfi';
+import { NavLink as Link } from 'react-router-dom';
+
+import styled from 'styled-components';
+
+import { FaCalendarAlt } from "react-icons/fa";
+
+export const BlogLink = styled(Link)`
+  color: #e85d4e;
+  display: flex;
+  text-decoration: none;
+  font-weight: bold; /* Make the font weight heavier */
+
+  &:hover {
+    color: #787878;
+  }
+
+  &.active {
+    color: #e85d4e;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 0 0.5rem; /* Adjust the padding as needed for smaller screens */
+    font-size: 0.9rem; /* Adjust the font size as needed for smaller screens */
+  }
+`;
 
 const Blog = () => {
-  return (
-    <div
-      style={{
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'flex-start', // Align the text to the left
-        justifyContent: 'flex-start',
-        margin: '0 auto',
-        maxWidth: '800px',
-        padding: '0 20px',
-        fontFamily: 'Nunito Sans, sans-serif',
-        WebkitFontSmoothing: 'antialiased',
-        MozOsxFontSmoothing: 'grayscale',
-        backgroundColor: 'white',
-        minHeight: '80vh',
-        marginTop: '100px',
-      }}
-    >
-      {/* CSS media query for smaller screens */}
-      <style>
-        {`
+    return (
+        <div
+            style={{
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-start', // Align the text to the left
+                justifyContent: 'flex-start',
+                margin: '0 auto',
+                maxWidth: '800px',
+                padding: '0 20px',
+                fontFamily: 'Nunito Sans, sans-serif',
+                WebkitFontSmoothing: 'antialiased',
+                MozOsxFontSmoothing: 'grayscale',
+                backgroundColor: 'white',
+                minHeight: '80vh',
+                marginTop: '50px',
+            }}
+        >
+            {/* CSS media query for smaller screens */}
+            <style>
+                {`
           /* CSS code for smaller screens */
-
+        
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+          }
           @media (max-width: 767px) {
             div.container {
               flex-direction: column;
@@ -35,9 +60,20 @@ const Blog = () => {
               text-align: left;
             }
 
+            div.container img {
+              width: 100%;
+              margin-bottom: 20px;
+              margin-right: 0; /* Remove margin-right on smaller screens */
+            }
+
             div.container h1 {
               margin-top: 0;
               font-size: 14px;
+            }
+
+            div.container div.icon-wrapper {
+              justify-content: flex-start;
+              margin-top: 2em; /* Increased spacing between icons and "yumeng ma" text */
             }
 
             .copy-right {
@@ -55,10 +91,27 @@ const Blog = () => {
             }
           }
 
+          /* CSS code for icon wrapper */
+
+
+          /* CSS code for icon links */
+
+          .icon-wrapper a {
+            color: #787878;
+            margin: 5px;
+            transition: color 0.3s ease-in-out;
+          }
+
+          /* CSS code for icon links on hover */
+
+          .icon-wrapper a:hover {
+            color: #e85d4e;
+          }
+
           /* CSS code for coral links */
 
           .coral-link {
-            color: #b4be89;
+            color: #e85d4e;
             transition: color 0.3s ease-in-out;
           }
 
@@ -66,81 +119,136 @@ const Blog = () => {
 
           .coral-link:hover,
           .coral-link:active {
-            color: gray;
+            color: #7C7C7C;
           }
 
-          /* CSS code for GitHub icon */
-
-          .github-icon {
-            color: #b4be89;
-            transition: color 0.3s ease-in-out;
+          /* CSS for Hover bubble */
+          .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
           }
-
-          .github-link:hover .github-icon {
-            color: #b4be89;
-            transition: color 0.3s ease-in-out;
+          
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: white;
+            color: #7C7C7C;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+            font-size: 10px;
+          
+            /* Create tail for the tooltip */
+            &::after {
+              content: "";
+              position: absolute;
+              top: 100%; 
+              left: 50%;
+              margin-left: -5px;
+              border-width: 5px;
+              border-style: solid;
+              border-color: white transparent transparent transparent;
+            }
           }
-
-          .github-link:hover .github-icon,
-          .github-link:active .github-icon {
-            color: gray;
-          }
-
-          /* CSS code for Napkin image */
-
-          .napkin-image {
-            width: 100%;
-            height: auto;
-            border-radius: 0; /* Remove rounded corners */
-          }
-
-          /* CSS code for Pachikatamari image */
-
-          .pachikatamari-image {
-            width: 100%;
-            height: auto;
-            border-radius: 0; /* Remove rounded corners */
+          
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
           }
         `}
-      </style>
+            </style>
+
+            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+                <div>
+                    <h1
+                        style={{
+                            fontSize: '16px',
+                            fontWeight: '300',
+                            color: '#7C7C7C',
+                            lineHeight: '1.4',
+                            marginTop: '1vh',
+                        }}
+                    >
+                        <BlogLink to="/blog/hello">Hello World: What Really Inspired My Academic Trajectory</BlogLink>
+                        <div style={{ marginBottom: '5px' }}></div>
+                        <div >
+                            <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
+                                <FaCalendarAlt size={12} color="#7C7C7C" />
+                                <span style={{ marginLeft: '8px' }}>Feb 14 2023</span>
+                            </div>
+                        </div>
+                        <div style={{ marginBottom: '5px' }}></div>
+                        I am a computer science master's student at{' '}
+                    </h1>
+                </div>
+            </div>
 
 
-      <div className="container" style={{ marginBottom: '20px' }}>
-        <div>
-          <h1
-            style={{
-              fontSize: '16px',
-              fontWeight: '300',
-              color: 'black',
-              lineHeight: '1.4',
-              marginTop: '1vh',
-              textAlign: 'left',
-            }}
-          >
-            ✧ I hope to share more personal stories soon with the world ✧
-          </h1>
+            {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '60px' }}>
+                <div>
+                    <h1
+                        style={{
+                            fontSize: '16px',
+                            fontWeight: '300',
+                            color: '#7C7C7C',
+                            lineHeight: '1.4',
+                            marginTop: '1vh',
+                        }}
+                    >
+                         <BlogLink to="/blog/hello">Hello World: A Bit About Me</BlogLink>
+                         <div style={{ marginBottom: '5px' }}></div>
+                        <div >
+                            <div style={{ display: 'flex', alignItems: 'center' }}>
+                                <FaCalendarAlt size={12} color="#7C7C7C" />
+                                <span style={{ marginLeft: '8px' }}>Feb 14 2023</span>
+                            </div>
+                        </div>
+                        <div style={{ marginBottom: '5px' }}></div>
+                        I am a computer science master's student at{' '}
+                    </h1>
+                </div>
+            </div> */}
+
+            <div
+                style={{
+                    position: 'absolute',
+                    bottom: '30px',
+                    // left: '20px',
+                    fontSize: '12px',
+                    color: '#7C7C7C',
+                    textAlign: 'left',
+                    marginTop: '30px',
+                    marginBottom: '30px'
+                }}
+            >
+                Slice of life 🍰
+            </div>
+
+            <div
+                className="copy-right"
+                style={{
+                    fontSize: '12px',
+                    color: '#7C7C7C',
+                    textAlign: 'center',
+                    marginTop: '20px',
+                    position: 'absolute',
+                    bottom: '10px',
+                    width: '100%',
+                    borderTop: '1px solid white',
+                    marginBottom: '10px',
+                    zIndex: '20',
+                }}
+            >
+                Potayto Workshop by Yumeng Ma
+            </div>
         </div>
-      </div>
-
-      <div
-        className="copy-right"
-        style={{
-          fontSize: '12px',
-          color: 'gray',
-          textAlign: 'center',
-          marginTop: '20px',
-          position: 'absolute',
-          bottom: '10px',
-          width: '100%',
-          borderTop: '1px solid white',
-          marginBottom: '10px',
-          zIndex: '20',
-        }}
-      >
-        Made with 🧸 by Yumeng Ma
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Blog;

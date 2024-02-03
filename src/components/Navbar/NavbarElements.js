@@ -13,29 +13,33 @@ export const Nav = styled.nav`
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12;
   font-family: 'Nunito Sans', sans-serif;
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   right: 0;
-  backdrop-filter: blur(4px); /* Adjust the blur strength as needed */
+  // backdrop-filter: blur(4px); /* Adjust the blur strength as needed */
 `;
 
 export const NavLink = styled(Link)`
-  color: #b4be89;
+  color: #e85d4e;
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0 0.8rem; /* Adjust the padding as needed */
-  height: 100%;
+  padding: 0.8rem; /* Adjust the padding as needed */
+  height: 30px; /* Thinner height */
   cursor: pointer;
   font-size: 1rem; /* Adjust the font size as needed */
+  background-color: #F3F3F3; /* Bubble background color */
+  border-radius: 8px; /* Slightly rounded corners for the bubble */
+  margin: 0 5px; /* Space between tabs */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 
   &:hover {
-    color: #787878 ;
+    color: #787878;
   }
 
   &.active {
-    color: #b4be89;
+    color: #e85d4e;
   }
 
   @media screen and (max-width: 320px) {
@@ -74,7 +78,6 @@ export const PageContent = styled.div`
   margin-top: 60px; /* Adjust the margin as needed to create space below the navigation bar */
 `;
 
-// Usage example
 const MyComponent = () => {
   return (
     <Container>
