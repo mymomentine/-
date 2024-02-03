@@ -175,16 +175,16 @@ const Blog = () => {
                             marginTop: '1vh',
                         }}
                     >
-                        <BlogLink to="/blog/hello">Hello World: What Really Inspired My Academic Trajectory</BlogLink>
+                        <BlogLink to="/blog/hello">Hello World: What Really Guided My Academic Trajectory</BlogLink>
                         <div style={{ marginBottom: '5px' }}></div>
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                                 <FaCalendarAlt size={12} color="#7C7C7C" />
-                                <span style={{ marginLeft: '8px' }}>Feb 14 2023</span>
+                                <span style={{ marginLeft: '8px' }}>Feb 03 2023</span>
                             </div>
                         </div>
                         <div style={{ marginBottom: '5px' }}></div>
-                        I am a computer science master's student at{' '}
+                        A little more insight on what guided me to computer science
                     </h1>
                 </div>
             </div>

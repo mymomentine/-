@@ -183,12 +183,12 @@ const Hello = () => {
             marginBottom: '30px'
           }}
         >
-          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> Hello World: What Really Inspired My Academic Trajectory</span>
+          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> Hello World: What Really Guided My Academic Trajectory</span>
           <div style={{ marginBottom: '5px' }}></div>
           <div >
             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
               <FaCalendarAlt size={12} color="#7C7C7C" />
-              <span style={{ marginLeft: '8px', marginRight: '20px' }}>Feb 14 2023</span>
+              <span style={{ marginLeft: '8px', marginRight: '20px' }}>Feb 03 2023</span>
               <FaPenAlt size={12} color="#7C7C7C" />
               <span style={{ marginLeft: '8px' }}>By Yumeng Ma</span>
             </div>
