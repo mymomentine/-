@@ -42,7 +42,7 @@ const Blog = () => {
                 MozOsxFontSmoothing: 'grayscale',
                 backgroundColor: 'white',
                 minHeight: '80vh',
-                marginTop: '50px',
+                marginTop: '30px',
             }}
         >
             {/* CSS media query for smaller screens */}
@@ -180,7 +180,7 @@ const Blog = () => {
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                                 <FaCalendarAlt size={12} color="#7C7C7C" />
-                                <span style={{ marginLeft: '8px' }}>Feb 03 2023</span>
+                                <span style={{ marginLeft: '8px' }}>Feb 03 2024</span>
                             </div>
                         </div>
                         <div style={{ marginBottom: '5px' }}></div>

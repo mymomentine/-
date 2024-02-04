@@ -22,7 +22,7 @@ const Projects = () => {
         MozOsxFontSmoothing: 'grayscale',
         backgroundColor: 'white',
         minHeight: '80vh',
-        marginTop: '50px',
+        marginTop: '30px',
       }}
     >
 

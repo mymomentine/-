@@ -50,7 +50,7 @@ const Hello = () => {
         MozOsxFontSmoothing: 'grayscale',
         backgroundColor: 'white',
         minHeight: '80vh',
-        marginTop: '50px',
+        marginTop: '30px',
       }}
     >
       {/* CSS media query for smaller screens */}
@@ -188,7 +188,7 @@ const Hello = () => {
           <div >
             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
               <FaCalendarAlt size={12} color="#7C7C7C" />
-              <span style={{ marginLeft: '8px', marginRight: '20px' }}>Feb 03 2023</span>
+              <span style={{ marginLeft: '8px', marginRight: '20px' }}>Feb 03 2024</span>
               <FaPenAlt size={12} color="#7C7C7C" />
               <span style={{ marginLeft: '8px' }}>By Yumeng Ma</span>
             </div>
@@ -206,7 +206,7 @@ const Hello = () => {
           Back then, I also played a lot of chess. After freshman year, I had made it onto the varsity team and quickly advanced to the first board position by my junior and senior years. My playing style was what my coach would refer to as <i>“unconventional”</i> and <i>“outside of the books”</i>. My opponents frequently misjudged my capabilities and perceived my seemingly oblivious style as a weakness. The unique strategy served me well in tournaments and taught me the value of thinking outside the box.
           <br />
           <br />
-          When I got to college, my interests took on an interdisciplinary approach. Coding provided a new arena that challenged my mindset and psychology offered insights into human thought and behavior. The dual focus naturally mapped a blueprint to the field of human-computer interaction (HCI), where the cognitive strategies of chess and the logical reasoning of mathematics found their application in designing systems in a more human-centric way.
+          When I got to college, my interests took on an interdisciplinary approach. Coding provided a new arena that challenged my technical mindset and psychology offered insights into human thought and behavior. The dual focus naturally mapped a blueprint to the field of human-computer interaction (HCI), where the cognitive strategies of chess and the logical reasoning of mathematics found their application in designing systems in a more human-centric way.
           <br />
           <br />
           My path to computer science was actually the merge of disparate interests. Today, as I dive deeper into HCI, I carry with me the lessons learned from those early passions. The drive to improve, the courage to explore uncharted territories, and the belief in the power of interdisciplinary research guide my way forward.
