@@ -171,7 +171,7 @@ const About = () => {
           <h1 style={{
             fontSize: '20px',
             fontWeight: '300', // Normal font weight for the text
-            color:  '#7C7C7C', // Gray color for all text
+            color: '#7C7C7C', // Gray color for all text
             lineHeight: '1.4',
             marginTop: '1vh',
             marginBottom: '0', // No bottom margin here
@@ -223,7 +223,11 @@ const About = () => {
             </a>
             ),
             {''} where I am advised by {''}
-            <div className="tooltip">
+            <div className="tooltip"
+              style={{
+                fontSize: '16px',
+                fontWeight: '300',
+              }}>
               <a
                 href="https://jeffhuang.com/"
                 target="_self"
@@ -259,7 +263,12 @@ const About = () => {
             }}>
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
               Visual Prosthesis: A real-time assistance system to help visually impaired individuals easily locate everyday objects (advised by {' '}
-              <div className="tooltip">
+              <div className="tooltip"
+              style={{
+                fontSize: '16px',
+                fontWeight: '300',
+              }}
+              >
                 <a
                   href="https://vivo.brown.edu/display/mparadis"
                   target="_self"
@@ -283,6 +292,10 @@ const About = () => {
               <span style={{
                 backgroundColor: 'rgba(236, 193, 124, 0.3)', // #ECC17C with 30% transparency
                 fontWeight: 'bold',
+
+                  fontSize: '16px',
+                  fontWeight: '300',
+
                 color: '#ECC17C',
                 padding: '5px 10px', // Padding inside the bubble
                 borderRadius: '5px', // Slightly rounded corners

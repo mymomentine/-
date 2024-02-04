@@ -273,7 +273,12 @@ const Publications = () => {
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <div className="tooltip">
+            <div className="tooltip"
+                style={{
+                  fontSize: '16px',
+                  fontWeight: '300',
+                }}           
+            >
               <a
                 href="https://zainabiftikhar.com/"
                 target="_self"
@@ -287,7 +292,12 @@ const Publications = () => {
               </span>
             </div>
             , <span className="name">Yumeng Ma</span>, and  {''}
-            <div className="tooltip">
+            <div className="tooltip"
+              style={{
+                fontSize: '16px',
+                fontWeight: '300',
+              }}            
+            >
               <a
                 href="https://jeffhuang.com/"
                 target="_self"
@@ -348,7 +358,12 @@ const Publications = () => {
 
 
           <div style={{ marginBottom: '5px' }}>
-            <div className="tooltip">
+            <div className="tooltip"
+              style={{
+                fontSize: '16px',
+                fontWeight: '300',
+              }}                       
+            >
               <a
                 href="https://www.gonsherdesign.com/"
                 target="_self"
@@ -362,7 +377,12 @@ const Publications = () => {
               </span>
             </div>
             , <span className="name">Yumeng Ma</span>, Ivan Pineda-Dominguez, Matthew Lee, and  {''}
-            <div className="tooltip">
+            <div className="tooltip"
+              style={{
+                fontSize: '16px',
+                fontWeight: '300',
+              }}            
+            >
               <a
                 href="https://www.linkedin.com/in/horatiohan/"
                 target="_self"
@@ -434,7 +454,12 @@ const Publications = () => {
 
           <div style={{ marginBottom: '5px' }}>
             <span className="name">Yumeng Ma</span>* and  {''}
-            <div className="tooltip">
+            <div className="tooltip"
+              style={{
+                fontSize: '16px',
+                fontWeight: '300',
+              }}                
+            >
               <a
                 href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
                 target="_self"
