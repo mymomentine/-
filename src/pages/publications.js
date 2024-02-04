@@ -273,17 +273,12 @@ const Publications = () => {
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <div className="tooltip"
-                style={{
-                  fontSize: '16px',
-                  fontWeight: '300',
-                }}           
-            >
+            <div className="tooltip">
               <a
                 href="https://zainabiftikhar.com/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: 'none', fontSize: '16px' }}
                 className="author-link"
               >
                 Zainab Iftikhar
@@ -292,17 +287,12 @@ const Publications = () => {
               </span>
             </div>
             , <span className="name">Yumeng Ma</span>, and  {''}
-            <div className="tooltip"
-              style={{
-                fontSize: '16px',
-                fontWeight: '300',
-              }}            
-            >
+            <div className="tooltip">
               <a
                 href="https://jeffhuang.com/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: 'none', fontSize: '16px' }}
                 className="author-link"
               >
                 Jeff Huang
@@ -358,17 +348,12 @@ const Publications = () => {
 
 
           <div style={{ marginBottom: '5px' }}>
-            <div className="tooltip"
-              style={{
-                fontSize: '16px',
-                fontWeight: '300',
-              }}                       
-            >
+            <div className="tooltip">
               <a
                 href="https://www.gonsherdesign.com/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: 'none', fontSize: '16px' }}
                 className="author-link"
               >
                 Ian Gonsher
@@ -377,17 +362,12 @@ const Publications = () => {
               </span>
             </div>
             , <span className="name">Yumeng Ma</span>, Ivan Pineda-Dominguez, Matthew Lee, and  {''}
-            <div className="tooltip"
-              style={{
-                fontSize: '16px',
-                fontWeight: '300',
-              }}            
-            >
+            <div className="tooltip">
               <a
                 href="https://www.linkedin.com/in/horatiohan/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: 'none', fontSize: '16px' }}
                 className="author-link"
               >
                 Yuxin Han
@@ -454,17 +434,12 @@ const Publications = () => {
 
           <div style={{ marginBottom: '5px' }}>
             <span className="name">Yumeng Ma</span>* and  {''}
-            <div className="tooltip"
-              style={{
-                fontSize: '16px',
-                fontWeight: '300',
-              }}                
-            >
+            <div className="tooltip">
               <a
                 href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
+                style={{ textDecoration: 'none', fontSize: '16px' }}
                 className="author-link"
               >
                 Jiahao Ren
