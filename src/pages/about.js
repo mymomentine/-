@@ -247,7 +247,7 @@ const About = () => {
             . My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health.
             <br />
             <br />
-            During my undergraduate studies, I double majored in computer science and psychology at{' '}
+            Previously, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>

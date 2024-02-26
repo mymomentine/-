@@ -198,7 +198,7 @@ const Blog = () => {
                 <div>
                     <h1
                         style={{
-                            fontSize: '16px',
+                            fontSize: '14px',
                             fontWeight: '300',
                             color: '#7C7C7C',
                             lineHeight: '1.4',
