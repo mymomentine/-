@@ -6,9 +6,11 @@ import { MdEmail } from 'react-icons/md';
 
 import profileImage from '../images/me.png';
 import cat from '../images/cat.gif';
+import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
+    
     <div
       style={{
         position: 'relative',
@@ -27,6 +29,9 @@ const About = () => {
         marginTop: '30px',
       }}
     >
+            <Helmet>
+        <meta name="robots" content="nosnippet" />
+      </Helmet>
 
       {/* CSS media query for smaller screens */}
       <style>

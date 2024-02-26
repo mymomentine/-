@@ -6,6 +6,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { FaPenAlt } from "react-icons/fa";
 
 import kiriko from '../../images/kiriko.gif';
+import { Helmet } from 'react-helmet';
 
 const CVLink = styled.a`
   color: #e85d4e;
@@ -55,6 +56,9 @@ const Videogame = () => {
         marginTop: '30px',
       }}
     >
+        <Helmet>
+        <meta name="robots" content="nosnippet" />
+      </Helmet>
       {/* CSS media query for smaller screens */}
       <style>
         {`

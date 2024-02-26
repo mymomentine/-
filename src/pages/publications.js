@@ -7,6 +7,7 @@ import { FaFilePdf } from "react-icons/fa";
 import { FaPaperclip } from "react-icons/fa";
 import { FaFileCode } from "react-icons/fa";
 import { FaCarrot } from "react-icons/fa";
+import { Helmet } from 'react-helmet';
 
 const Publications = () => {
   const [isMerged, setIsMerged] = useState(false);
@@ -37,6 +38,10 @@ const Publications = () => {
 
 
     >
+
+<Helmet>
+        <meta name="robots" content="nosnippet" />
+      </Helmet>
       {/* CSS media query for smaller screens */}
       <style>
         {`

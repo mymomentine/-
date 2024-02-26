@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaPenAlt } from "react-icons/fa";
 
+import { Helmet } from 'react-helmet';
+
 const CVLink = styled.a`
   color: #e85d4e;
   display: flex;
@@ -53,6 +55,11 @@ const Hello = () => {
         marginTop: '30px',
       }}
     >
+
+<Helmet>
+        <meta name="robots" content="nosnippet" />
+      </Helmet>
+      
       {/* CSS media query for smaller screens */}
       <style>
         {`

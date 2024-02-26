@@ -3,7 +3,7 @@ import pachimariGif from '../images/pachi-clip.gif';
 import napkinPng from '../images/napkin.png';
 import { FaFileCode } from "react-icons/fa";
 import { FaRobot } from "react-icons/fa";
-
+import { Helmet } from 'react-helmet';
 
 const Projects = () => {
   return (
@@ -26,6 +26,9 @@ const Projects = () => {
       }}
     >
 
+            <Helmet>
+        <meta name="robots" content="nosnippet" />
+      </Helmet>
       {/* CSS media query for smaller screens */}
       <style>
         {`
