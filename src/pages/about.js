@@ -165,8 +165,8 @@ const About = () => {
           src={profileImage}
           alt="Profile"
           style={{
-            width: '140px',
-            height: '140px',
+            width: '150px',
+            height: '150px',
             objectFit: 'cover',
             borderRadius: '50%',
             marginRight: '20px'
