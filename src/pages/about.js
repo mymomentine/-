@@ -25,8 +25,6 @@ const About = () => {
         backgroundColor: 'white',
         minHeight: '80vh',
         marginTop: '30px',
-
-
       }}
     >
 
@@ -145,7 +143,7 @@ const About = () => {
           .tooltip:hover .tooltiptext {
             visibility: visible;
           }
-          
+
         `}
       </style>
 
@@ -162,17 +160,20 @@ const About = () => {
           src={profileImage}
           alt="Profile"
           style={{
-            width: '120px',
-            borderRadius: '20px',
+            width: '140px',
+            height: '140px',
+            objectFit: 'cover',
+            borderRadius: '50%',
             marginRight: '20px'
           }}
         />
+
 
         <div>
           <h1 style={{
             fontSize: '20px',
             fontWeight: '300', // Normal font weight for the text
-            color:  '#7C7C7C', // Gray color for all text
+            color: '#7C7C7C', // Gray color for all text
             lineHeight: '1.4',
             marginTop: '1vh',
             marginBottom: '0', // No bottom margin here
@@ -183,7 +184,7 @@ const About = () => {
               <span style={{ fontWeight: 'normal' }}>马雨萌</span> 🌱
             </div>
 
-            <div style={{ fontSize: '16px', marginBottom: '10px' }}> Compsci Masters Student </div> {/* Consistent marginBottom */}
+            <div style={{ fontSize: '16px', marginBottom: '10px' }}> MS CS </div> {/* Consistent marginBottom */}
 
             <div style={{ fontSize: '16px' }}> Brown University</div>
 
@@ -203,7 +204,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginTop: '30px', marginBottom: '60px' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginTop: '10px', marginBottom: '60px' }}>
         <div>
           <h1
             style={{
@@ -222,8 +223,8 @@ const About = () => {
             <a href="https://hci.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown HCI Lab
             </a>
-            ),
-            {''} where I am advised by {''}
+            )
+            {''} advised by {''}
             <div className="tooltip">
               <a
                 href="https://jeffhuang.com/"

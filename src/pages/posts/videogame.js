@@ -5,6 +5,8 @@ import styled from 'styled-components';
 import { FaCalendarAlt } from "react-icons/fa";
 import { FaPenAlt } from "react-icons/fa";
 
+import kiriko from '../../images/kiriko.gif';
+
 const CVLink = styled.a`
   color: #e85d4e;
   display: flex;
@@ -33,7 +35,7 @@ const CVLink = styled.a`
   }
 `;
 
-const Hello = () => {
+const Videogame = () => {
   return (
     <div
       style={{
@@ -184,7 +186,7 @@ const Hello = () => {
             marginBottom: '30px'
           }}
         >
-          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> Hello World: What Really Guided My Academic Trajectory</span>
+          <span style={{ fontWeight: 'bold', fontSize: '20px' }}>My Thoughts on Overwatch: From a UI/UX and Accessibility Standpoint</span>
           <div style={{ marginBottom: '5px' }}></div>
           <div >
             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -194,8 +196,21 @@ const Hello = () => {
               <span style={{ marginLeft: '8px' }}>By Yumeng Ma</span>
             </div>
           </div>
-          
+          <div style={{ marginBottom: '8px' }}>
+            <img
+              src={kiriko}
+              alt="kiriko"
+              style={{
+                width: '100%', // Makes the image responsive
+                maxWidth: '800px', // Ensures the image does not exceed 600px in width
+                float: 'right', // Aligns the image to the right
+                display: 'block', // Ensures the image is treated as a block-level element for proper spacing
+              }}
+            />
+          </div>
+
           <div style={{ marginBottom: '20px' }}></div>
+          In case you didn't know, I loe video games. 
           Before I even knew what computer science was, I loved two things: math and chess. These were my gateways to understanding complexity, strategy, and the beauty of logical thought.
           <br />
           <br />
@@ -209,9 +224,6 @@ const Hello = () => {
           <br />
           <br />
           When I got to college, my interests took on an interdisciplinary approach. Coding provided a new arena that challenged my technical mindset and psychology offered insights into human thought and behavior. The dual focus naturally mapped a blueprint to the field of human-computer interaction (HCI), where the cognitive strategies of chess and the logical reasoning of mathematics found their application in designing systems in a more human-centric way.
-          <br />
-          <br />
-          My path to computer science was actually the merge of disparate interests. Today, as I dive deeper into HCI, I carry with me the lessons learned from those early passions. The drive to improve, the courage to explore uncharted territories, and the power of interdisciplinary research guide my way forward.
         </h1>
       </div>
 
@@ -250,4 +262,4 @@ const Hello = () => {
   );
 };
 
-export default Hello;
+export default Videogame;

@@ -234,6 +234,12 @@ const Publications = () => {
             color: #7C7C7C;
           }    
 
+          @media (orientation: landscape) {
+            .tooltip .author-link {
+              font-size: 16px; /* Adjust as needed */
+            }
+          }
+
         `}
       </style>
 
@@ -292,7 +298,7 @@ const Publications = () => {
                 href="https://jeffhuang.com/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
+                style={{ textDecoration: 'none' }}
                 className="author-link"
               >
                 Jeff Huang
@@ -353,7 +359,7 @@ const Publications = () => {
                 href="https://www.gonsherdesign.com/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
+                style={{ textDecoration: 'none' }}
                 className="author-link"
               >
                 Ian Gonsher
@@ -367,7 +373,7 @@ const Publications = () => {
                 href="https://www.linkedin.com/in/horatiohan/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
+                style={{ textDecoration: 'none' }}
                 className="author-link"
               >
                 Yuxin Han
@@ -439,7 +445,7 @@ const Publications = () => {
                 href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
+                style={{ textDecoration: 'none' }}
                 className="author-link"
               >
                 Jiahao Ren
