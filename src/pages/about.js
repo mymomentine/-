@@ -161,18 +161,39 @@ const About = () => {
         marginBottom: '20px'
       }}>
 
-        <img
-          src={profileImage}
-          alt="Profile"
-          style={{
-            width: '150px',
-            height: '150px',
-            objectFit: 'cover',
-            borderRadius: '50%',
-            marginRight: '20px'
-          }}
-        />
+<div style={{
+  display: 'flex',
+  flexDirection: 'row', // Use 'column' for smaller screens if manually adjusting or via external CSS
+  alignItems: 'center',
+  justifyContent: 'flex-start',
+  flexWrap: 'wrap', // Allows items to wrap to the next line on narrow screens
+}}>
+  <div style={{
+    width: '150px',
+    height: '150px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+    borderRadius: '50%', 
+    marginRight: '20px', // Provides spacing between the image and text
+  }}>
+    <img
+      src={profileImage}
+      alt="Profile"
+      style={{
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        borderRadius: '50%',
+      }}
+    />
+  </div>
 
+  {/* Text content here */}
+</div>
+
+        
 
         <div>
           <h1 style={{
