@@ -169,7 +169,7 @@ const Blog = () => {
         `}
             </style>
 
-            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+            {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div>
                     <h1
                         style={{
@@ -189,10 +189,10 @@ const Blog = () => {
                             </div>
                         </div>
                         <div style={{ marginBottom: '5px' }}></div>
-                        A little more insight on what guided me to computer science
+                        Placeholder
                     </h1>
                 </div>
-            </div>
+            </div> */}
 
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div>
