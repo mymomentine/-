@@ -169,18 +169,18 @@ const Blog = () => {
         `}
             </style>
 
-            {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div>
                     <h1
                         style={{
-                            fontSize: '16px',
+                            fontSize: '14px',
                             fontWeight: '300',
                             color: '#7C7C7C',
                             lineHeight: '1.4',
                             marginTop: '1vh',
                         }}
                     >
-                        <BlogLink to="/blog/videogame">My Thoughts on Overwatch: From a UI/UX and Accessibility Standpoint</BlogLink>
+                        <BlogLink to="/blog/overwatch">My Thoughts on Overwatch: From a UI/UX and Accessibility Standpoint</BlogLink>
                         <div style={{ marginBottom: '5px' }}></div>
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -192,7 +192,7 @@ const Blog = () => {
                         A little more insight on what guided me to computer science
                     </h1>
                 </div>
-            </div> */}
+            </div>
 
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div>

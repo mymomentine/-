@@ -36,7 +36,7 @@ const CVLink = styled.a`
   }
 `;
 
-const Videogame = () => {
+const Overwatch = () => {
   return (
     <div
       style={{
@@ -214,20 +214,7 @@ const Videogame = () => {
           </div>
 
           <div style={{ marginBottom: '20px' }}></div>
-          In case you didn't know, I loe video games. 
-          Before I even knew what computer science was, I loved two things: math and chess. These were my gateways to understanding complexity, strategy, and the beauty of logical thought.
-          <br />
-          <br />
-          Let’s rewind to my high school days. My journey took a turn during my calculus class the autumn semester of junior year. My favorite math teacher, a mentor who saw potential in every student, warned me about my grade—a 91. To me, the verge of a B was enough of a wake-up call to strive for better. His belief in my abilities became a beacon for my efforts. Sadly and unexpectedly, he passed away that mid-semester.
-          <br />
-          <br />
-          Programming formulas on ti-84 calculators in his class was my first foray into structuring commands to solve problems—a precursor to my future in programming. What started as little classroom activities sparked a curiosity about what more could be achieved through code.
-          <br />
-          <br />
-          Back then, I also played a lot of chess. After freshman year, I had made it onto the varsity team and quickly advanced to the first board position by my junior and senior years. My playing style was what my coach would refer to as <i>“unconventional”</i> and <i>“outside of the books”</i>. My opponents frequently misjudged my capabilities and perceived my seemingly oblivious style as a weakness. The unique strategy served me well in tournaments and taught me the value of thinking outside the box.
-          <br />
-          <br />
-          When I got to college, my interests took on an interdisciplinary approach. Coding provided a new arena that challenged my technical mindset and psychology offered insights into human thought and behavior. The dual focus naturally mapped a blueprint to the field of human-computer interaction (HCI), where the cognitive strategies of chess and the logical reasoning of mathematics found their application in designing systems in a more human-centric way.
+          In case it wasn't obvious, I loe video games. 
         </h1>
       </div>
 
@@ -266,4 +253,4 @@ const Videogame = () => {
   );
 };
 
-export default Videogame;
+export default Overwatch;

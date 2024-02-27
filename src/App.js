@@ -6,7 +6,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/about';
 import Publications from './pages/publications';
 import Blog from './pages/blog';
-import Videogame from './pages/posts/videogame'; 
+import Overwatch from './pages/posts/overwatch'; 
 import Hello from './pages/posts/hello'; 
 import Projects from './pages/projects';
 
@@ -19,7 +19,7 @@ function App() {
         <Route path='/' element={<About />} />
         <Route path='/publications' element={<Publications />} />
         <Route path='/blog' element={<Blog/>} />
-        <Route path='/blog/videogame' element={<Videogame/>} />
+        <Route path='/blog/overwatch' element={<Overwatch/>} />
         <Route path='/blog/hello' element={<Hello/>} />
         <Route path='/projects' element={<Projects/>} />
       </Routes>

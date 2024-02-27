@@ -47,9 +47,9 @@ const Navbar = () => {
           <NavLink to="/blog" activeStyle>
             blog
           </NavLink>
-          <NavLink href="../cv.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: 'auto' }}>
+          <CVLink href="../cv.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: 'auto' }}>
             cv
-          </NavLink>
+          </CVLink>
         </NavMenu>
       </Nav>
     </>
