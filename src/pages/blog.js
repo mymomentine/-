@@ -169,7 +169,7 @@ const Blog = () => {
         `}
             </style>
 
-            {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div>
                     <h1
                         style={{
@@ -180,19 +180,19 @@ const Blog = () => {
                             marginTop: '1vh',
                         }}
                     >
-                        <BlogLink to="/blog/overwatch">My Thoughts on Overwatch: From a UI/UX and Accessibility Standpoint</BlogLink>
+                        <BlogLink to="/blog/overwatch">My Thoughts on Overwatch: From a Design and Accessibility Standpoint</BlogLink>
                         <div style={{ marginBottom: '5px' }}></div>
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
                                 <FaCalendarAlt size={12} color="#7C7C7C" />
-                                <span style={{ marginLeft: '8px' }}>Feb 03 2024</span>
+                                <span style={{ marginLeft: '8px' }}>Mar 20 2024</span>
                             </div>
                         </div>
                         <div style={{ marginBottom: '5px' }}></div>
                         Placeholder
                     </h1>
                 </div>
-            </div> */}
+            </div>
 
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div>
