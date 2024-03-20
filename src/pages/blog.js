@@ -189,7 +189,7 @@ const Blog = () => {
                             </div>
                         </div>
                         <div style={{ marginBottom: '5px' }}></div>
-                        Placeholder
+                        Reflections on how Overwatch's dynamic complexity sparks a broader conversation on inclusivity in gaming
                     </h1>
                 </div>
             </div>
