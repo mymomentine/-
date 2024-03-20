@@ -188,8 +188,8 @@ const Blog = () => {
                                 <span style={{ marginLeft: '8px' }}>Mar 20 2024</span>
                             </div>
                         </div>
-                        <div style={{ marginBottom: '5px' }}></div>
-                        Reflections on how Overwatch's dynamic complexity sparks a broader conversation on inclusivity in gaming
+                        {/* <div style={{ marginBottom: '5px' }}></div>
+                placeholder */}
                     </h1>
                 </div>
             </div>
@@ -213,8 +213,8 @@ const Blog = () => {
                                 <span style={{ marginLeft: '8px' }}>Feb 03 2024</span>
                             </div>
                         </div>
-                        <div style={{ marginBottom: '5px' }}></div>
-                        A little more insight on what guided me to computer science
+                        {/* <div style={{ marginBottom: '5px' }}></div>
+                        A little more insight on what guided me to computer science */}
                     </h1>
                 </div>
             </div>
