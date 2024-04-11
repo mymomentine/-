@@ -265,7 +265,10 @@ const About = () => {
                 Associate Professor and Associate Chair of Computer Science at Brown University
               </span>
             </div>
-            . My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health.
+            . My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health. 
+            <br />
+            <br />
+            I'll be starting my PhD in Computer Science & Engineering at the University of Washington this fall.
             <br />
             <br />
             Previously, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
@@ -286,7 +289,7 @@ const About = () => {
               margin: '10px 0',
             }}>
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
-              Visual Prosthesis: A real-time assistance system to help visually impaired individuals easily locate everyday objects (advised by {' '}
+              Visual Prosthesis: A real-time assistance system to help low vision individuals easily locate everyday objects (advised by {' '}
               <div className="tooltip">
                 <a
                   href="https://vivo.brown.edu/display/mparadis"
@@ -305,6 +308,21 @@ const About = () => {
             <div style={{ marginBottom: '20px' }}></div>
             <div style={{ marginBottom: '20px' }}> {/* Additional spacing for "Updates" */}
               <span style={{ fontWeight: 'bold' }}> Updates </span>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+              <span style={{
+                backgroundColor: 'rgba(117, 122, 98, 0.3)',
+                fontWeight: 'bold',
+                color: '#757A62',
+                padding: '5px 10px', // Padding inside the bubble
+                borderRadius: '5px', // Slightly rounded corners
+                marginRight: '10px',
+                whiteSpace: 'nowrap' // Prevent date from wrapping
+              }}>
+                Apr 04 2024
+              </span>
+              <span>Received the 2024 NSF Graduate Research Fellowship</span>
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
