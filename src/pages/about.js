@@ -268,7 +268,7 @@ const About = () => {
             . My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health. 
             <br />
             <br />
-            I'll be starting my PhD in Computer Science & Engineering at the University of Washington this fall.
+            I will be starting my PhD in Computer Science & Engineering at the University of Washington this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
             <br />
             <br />
             Previously, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
@@ -310,7 +310,7 @@ const About = () => {
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
                 backgroundColor: 'rgba(117, 122, 98, 0.3)',
                 fontWeight: 'bold',
@@ -323,7 +323,7 @@ const About = () => {
                 Apr 04 2024
               </span>
               <span>Received the 2024 NSF Graduate Research Fellowship</span>
-            </div>
+            </div> */}
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
