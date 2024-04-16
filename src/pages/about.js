@@ -268,7 +268,11 @@ const About = () => {
             . My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health. 
             <br />
             <br />
-            I will be starting my PhD in Computer Science & Engineering at the University of Washington this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            I will be starting my PhD in Computer Science & Engineering at the{' '}
+            <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              University of Washington
+            </a>
+             this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
             <br />
             <br />
             Previously, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
