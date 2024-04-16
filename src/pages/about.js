@@ -272,7 +272,7 @@ const About = () => {
             <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               University of Washington
             </a>
-             this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            {' '}this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
             <br />
             <br />
             Previously, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
