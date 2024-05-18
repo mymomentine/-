@@ -5,10 +5,10 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 // import Home from './pages';
 import About from './pages/about';
 import Publications from './pages/publications';
-import Blog from './pages/blog';
+import Notes from './pages/notes';
 import Overwatch from './pages/posts/overwatch'; 
 import Hello from './pages/posts/hello'; 
-import Projects from './pages/projects';
+import Playground from './pages/playground';
 
 
 function App() {
@@ -18,10 +18,10 @@ function App() {
       <Routes>
         <Route path='/' element={<About />} />
         <Route path='/publications' element={<Publications />} />
-        <Route path='/blog' element={<Blog/>} />
-        <Route path='/blog/overwatch' element={<Overwatch/>} />
-        <Route path='/blog/hello' element={<Hello/>} />
-        <Route path='/projects' element={<Projects/>} />
+        <Route path='/notes' element={<Notes/>} />
+        <Route path='/notes/overwatch' element={<Overwatch/>} />
+        <Route path='/notes/hello' element={<Hello/>} />
+        <Route path='/playground' element={<Playground/>} />
       </Routes>
     </Router>
   );

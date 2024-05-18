@@ -26,7 +26,7 @@ export const BlogLink = styled(Link)`
   }
 `;
 
-const Blog = () => {
+const Notes = () => {
     return (
         <div
             style={{
@@ -180,7 +180,7 @@ const Blog = () => {
                             marginTop: '1vh',
                         }}
                     >
-                        <BlogLink to="/blog/overwatch">My Thoughts on Overwatch: From a Design and Accessibility Standpoint</BlogLink>
+                        <BlogLink to="/notes/overwatch">My Thoughts on Overwatch: From a Design and Accessibility Standpoint</BlogLink>
                         <div style={{ marginBottom: '5px' }}></div>
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -205,7 +205,7 @@ const Blog = () => {
                             marginTop: '1vh',
                         }}
                     >
-                        <BlogLink to="/blog/hello">Hello World: What Really Guided My Academic Trajectory</BlogLink>
+                        <BlogLink to="/notes/hello">Hello World: What Really Guided My Academic Trajectory</BlogLink>
                         <div style={{ marginBottom: '5px' }}></div>
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -255,4 +255,4 @@ const Blog = () => {
     );
 };
 
-export default Blog;
+export default Notes;

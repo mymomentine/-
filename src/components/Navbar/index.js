@@ -41,11 +41,11 @@ const Navbar = () => {
           <NavLink to="/publications" activeStyle>
             publications
           </NavLink>
-          <NavLink to="/projects" activeStyle>
-            projects
+          <NavLink to="/playground" activeStyle>
+            playground
           </NavLink>
-          <NavLink to="/blog" activeStyle>
-            blog
+          <NavLink to="/notes" activeStyle>
+            notes
           </NavLink>
           <CVLink href="../cv.pdf" target="_self" rel="noopener noreferrer" className="coral-link" style={{ marginLeft: 'auto' }}>
             cv

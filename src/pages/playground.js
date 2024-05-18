@@ -5,7 +5,7 @@ import { FaFileCode } from "react-icons/fa";
 import { FaRobot } from "react-icons/fa";
 import { Helmet } from 'react-helmet';
 
-const Projects = () => {
+const Playground = () => {
   return (
     <div
       style={{
@@ -26,9 +26,10 @@ const Projects = () => {
       }}
     >
 
-            <Helmet>
+<Helmet>
         <meta name="robots" content="nosnippet" />
       </Helmet>
+      
       {/* CSS media query for smaller screens */}
       <style>
         {`
@@ -382,4 +383,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Playground;
