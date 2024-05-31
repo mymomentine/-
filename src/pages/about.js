@@ -239,70 +239,63 @@ const About = () => {
           >
             I will be starting my PhD in Computer Science & Engineering at the{' '}
             <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              University of Washington{' '}
+              University of Washington
             </a>
-            this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            {' '} this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
             <br />
             <br />
-            I recently graduated with a master of science degree in computer science from {' '}
+            I recently graduated with a master of science degree in computer science from{' '}
             <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
             </a>{' '}
-            where I worked with {' '}
-            <span className="tooltip">
-              <a
-                href="https://jeffhuang.com/"
-                target="_self"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
-                className="coral-link"
-              >
-                Prof. Jeff Huang
-              </a>
+            where I worked with{' '}
+            <a
+              href="https://jeffhuang.com/"
+              target="_self"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', fontSize: '16px' }}
+              className="coral-link tooltip"
+            >
+              Prof. Jeff Huang
               <span className="tooltiptext">
                 Associate Professor and Associate Chair of Computer Science at Brown University
               </span>
-            </span>
-            {' '} at the Brown HCI Lab, and{' '}
-             <span className="tooltip">
-              <a
-                href="https://vivo.brown.edu/display/mparadis"
-                target="_self"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
-                className="coral-link"
-              >
-                 Prof. Michael Paradiso
-              </a>
+            </a>
+            {' '}at the Brown HCI Lab, and{' '}
+            <a
+              href="https://vivo.brown.edu/display/mparadis"
+              target="_self"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', fontSize: '16px' }}
+              className="coral-link tooltip"
+            >
+              Prof. Michael Paradiso
               <span className="tooltiptext">
-              Neuroscientist and Founding Director of the Center for Vision Research at Brown University
+                Neuroscientist and Founding Director of the Center for Vision Research at Brown University
               </span>
-            </span>
-            {' '} in the the neuroscience department.
+            </a>
+            {' '}in the neuroscience department.
             <br />
             <br />
             Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
-            </a>, where I discovered the world of human-computer interaction.
+            </a> where I discovered the world of human-computer interaction.
             <br />
             <br />
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I also love playing and making video games, skateboarding, watching anime, and dabbling in the{' '}
-      <span className="tooltip">
-        <a
-          href="#"
-          target="_self"
-          rel="noopener noreferrer"
-          style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }}
-          className="coral-link"
-        >
-          arts
-        </a>
-        <span className="tooltiptext">
-          Lately it's been taking digicam photos, writing poems, and drawing digital sketches
-        </span>
-      </span>
-      .
+            <a
+              href="#"
+              target="_self"
+              rel="noopener noreferrer"
+              style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }}
+              className="coral-link tooltip"
+            >
+              arts
+              <span className="tooltiptext">
+                Lately it's been taking digicam photos, writing poems, and drawing digital sketches
+              </span>
+            </a>.
 
             <div style={{ marginBottom: '20px' }}></div>
 
@@ -335,7 +328,7 @@ const About = () => {
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
                 backgroundColor: 'rgba(236, 193, 124, 0.3)', // #ECC17C with 30% transparency
                 fontWeight: 'bold',
@@ -346,10 +339,12 @@ const About = () => {
                 whiteSpace: 'nowrap' // Prevent date from wrapping
               }}>
                 Nov 19 2023
+              
               </span>
-              <span>Built <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+              Built{' '}
+               <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
                 my first pc
-              </a> (now I can run heavy vision-language models) </span>
+              </a>{' '}(now I can run heavy vision-language models)
               <img
                 src={cat}
                 alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
@@ -358,7 +353,37 @@ const About = () => {
                   marginRight: '20px'
                 }}
               />
-            </div>
+            </div> */}
+
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+  <div style={{
+    backgroundColor: 'rgba(236, 193, 124, 0.3)', // #ECC17C with 30% transparency
+    fontWeight: 'bold',
+    color: '#ECC17C',
+    padding: '5px 10px', // Padding inside the bubble
+    borderRadius: '5px', // Slightly rounded corners
+    marginRight: '10px',
+    whiteSpace: 'nowrap' // Prevent date from wrapping
+  }}>
+    Nov 19 2023
+  </div>
+  <div>
+    Built{' '}
+    <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+      my first pc
+    </a>{' '}
+    (now I can run heavy vision-language models)
+  </div>
+  <img
+    src={cat}
+    alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
+    style={{
+      width: '40px',
+      marginLeft: '10px'
+    }}
+  />
+</div>
+
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
