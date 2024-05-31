@@ -10,7 +10,7 @@ import { Helmet } from 'react-helmet';
 
 const About = () => {
   return (
-    
+
     <div
       style={{
         position: 'relative',
@@ -29,7 +29,7 @@ const About = () => {
         marginTop: '30px',
       }}
     >
-            <Helmet>
+      <Helmet>
         <meta name="robots" content="nosnippet" />
       </Helmet>
 
@@ -161,39 +161,35 @@ const About = () => {
         marginBottom: '20px'
       }}>
 
-<div style={{
-  display: 'flex',
-  flexDirection: 'row', // Use 'column' for smaller screens if manually adjusting or via external CSS
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  flexWrap: 'wrap', // Allows items to wrap to the next line on narrow screens
-}}>
-  <div style={{
-    width: '150px',
-    height: '150px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    overflow: 'hidden',
-    borderRadius: '50%', 
-    marginRight: '20px', // Provides spacing between the image and text
-  }}>
-    <img
-      src={profileImage}
-      alt="Profile"
-      style={{
-        width: '100%',
-        height: '100%',
-        objectFit: 'cover',
-        borderRadius: '50%',
-      }}
-    />
-  </div>
-
-  {/* Text content here */}
-</div>
-
-        
+        <div style={{
+          display: 'flex',
+          flexDirection: 'row', // Use 'column' for smaller screens if manually adjusting or via external CSS
+          alignItems: 'center',
+          justifyContent: 'flex-start',
+          flexWrap: 'wrap', // Allows items to wrap to the next line on narrow screens
+        }}>
+          <div style={{
+            width: '150px',
+            height: '150px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            overflow: 'hidden',
+            borderRadius: '50%',
+            marginRight: '20px',
+          }}>
+            <img
+              src={profileImage}
+              alt="雨萌, wearing a blue bucket hat beanie and tilting her head slightly to the side"
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: '50%',
+              }}
+            />
+          </div>
+        </div>
 
         <div>
           <h1 style={{
@@ -206,13 +202,13 @@ const About = () => {
           }}>
 
             <div style={{ fontWeight: 'bold', marginBottom: '10px' }}>
-              <span style={{ fontWeight: 'bold', marginRight: '10px' }}>yumeng ma</span> {/* Added right margin */}
+              <span style={{ fontWeight: 'bold', marginRight: '10px' }}>yumeng ma</span> { }
               <span style={{ fontWeight: 'normal' }}>马雨萌</span> 🌱
             </div>
 
-            <div style={{ fontSize: '16px', marginBottom: '10px' }}> MS CS </div> {/* Consistent marginBottom */}
+            <div style={{ fontSize: '16px', marginBottom: '10px' }}> incoming CSE PhD </div> { }
 
-            <div style={{ fontSize: '16px' }}> Brown University</div>
+            <div style={{ fontSize: '16px' }}> University of Washington </div>
 
           </h1>
 
@@ -241,17 +237,19 @@ const About = () => {
               marginTop: '1vh',
             }}
           >
-            I am a computer science master's student at{' '}
+            I will be starting my PhD in Computer Science & Engineering at the{' '}
+            <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              University of Washington{' '}
+            </a>
+            this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            <br />
+            <br />
+            I recently graduated with a master of science degree in computer science from {' '}
             <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
             </a>{' '}
-            (former intern at the {' '}
-            <a href="https://hci.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              Brown HCI Lab
-            </a>
-            )
-            {''} advised by {''}
-            <div className="tooltip">
+            where I worked with {' '}
+            <span className="tooltip">
               <a
                 href="https://jeffhuang.com/"
                 target="_self"
@@ -264,29 +262,51 @@ const About = () => {
               <span className="tooltiptext">
                 Associate Professor and Associate Chair of Computer Science at Brown University
               </span>
-            </div>
-            . My interest is in creating and researching interactive social and visual systems that improve user experience, accessibility, and mental health. 
+            </span>
+            {' '} at the Brown HCI Lab, and{' '}
+             <span className="tooltip">
+              <a
+                href="https://vivo.brown.edu/display/mparadis"
+                target="_self"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none', fontSize: '16px' }}
+                className="coral-link"
+              >
+                 Prof. Michael Paradiso
+              </a>
+              <span className="tooltiptext">
+              Neuroscientist and Founding Director of the Center for Vision Research at Brown University
+              </span>
+            </span>
+            {' '} in the the neuroscience department.
             <br />
             <br />
-            I will be starting my PhD in Computer Science & Engineering at the{' '}
-            <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              University of Washington {' '}
-            </a>
-            this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
-            <br />
-            <br />
-            Previously, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
+            Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
-            </a>
-            , where I discovered the world of human-computer interaction.
+            </a>, where I discovered the world of human-computer interaction.
             <br />
             <br />
-            On the side, I enjoy playing/making video games, skateboarding, watching anime, and dabbling in the arts.
+            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I also love playing and making video games, skateboarding, watching anime, and dabbling in the{' '}
+      <span className="tooltip">
+        <a
+          href="#"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }}
+          className="coral-link"
+        >
+          arts
+        </a>
+        <span className="tooltiptext">
+          Lately it's been taking digicam photos, writing poems, and drawing digital sketches
+        </span>
+      </span>
+      .
 
-            <div style={{ marginBottom: '20px' }}></div> {/* Increased div space before the bubble */}
+            <div style={{ marginBottom: '20px' }}></div>
 
-            <div style={{
+            {/* <div style={{
               backgroundColor: '#F3F3F3',
               padding: '10px',
               borderRadius: '5px',
@@ -309,25 +329,11 @@ const About = () => {
                 </span>
               </div>
             </div>
-            <div style={{ marginBottom: '20px' }}></div>
+            <div style={{ marginBottom: '20px' }}></div> */}
+
             <div style={{ marginBottom: '20px' }}> {/* Additional spacing for "Updates" */}
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
-
-            {/* <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span style={{
-                backgroundColor: 'rgba(117, 122, 98, 0.3)',
-                fontWeight: 'bold',
-                color: '#757A62',
-                padding: '5px 10px', // Padding inside the bubble
-                borderRadius: '5px', // Slightly rounded corners
-                marginRight: '10px',
-                whiteSpace: 'nowrap' // Prevent date from wrapping
-              }}>
-                Apr 04 2024
-              </span>
-              <span>Received the 2024 NSF Graduate Research Fellowship</span>
-            </div> */}
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
@@ -346,7 +352,7 @@ const About = () => {
               </a> (now I can run heavy vision-language models) </span>
               <img
                 src={cat}
-                alt="Profile"
+                alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
                 style={{
                   width: '40px',
                   marginRight: '20px'
