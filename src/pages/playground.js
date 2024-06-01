@@ -4,6 +4,7 @@ import napkinPng from '../images/napkin.png';
 import { FaFileCode } from "react-icons/fa";
 import { FaRobot } from "react-icons/fa";
 import { Helmet } from 'react-helmet';
+import { FaGlasses } from "react-icons/fa";
 
 const Playground = () => {
   return (
@@ -354,6 +355,15 @@ const Playground = () => {
               target="_self"
               rel="noopener noreferrer"
               className="coral-link robotics-link"> {' '} <FaRobot size={16} />
+            </a>
+          </div>
+          <div >
+            <div style={{ marginBottom: '20px' }}></div>
+            Visual prosthesis system to enhance daily experiences for people with visual impairments
+            <a href="../documents/visual_prosthesis.pdf"
+              target="_self"
+              rel="noopener noreferrer"
+              className="coral-link robotics-link"> {' '} <FaGlasses size={16} />
             </a>
           </div>
           <div style={{ marginBottom: '30px' }}></div>

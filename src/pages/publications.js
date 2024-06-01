@@ -315,7 +315,7 @@ const Publications = () => {
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2023</span>
           </div>
-          <a href="../documents/LiveTyping_CHI23.pdf"
+          <a href="../documents/live_typing.pdf"
             target="_self"
             rel="noopener noreferrer"
             className="coral-link bubble-link"
