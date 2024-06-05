@@ -33,6 +33,7 @@ const About = () => {
         <meta name="robots" content="nosnippet" />
       </Helmet>
 
+      {/* CSS media query for smaller screens */}
       <style>
   {`
     /* CSS code for smaller screens */
@@ -85,7 +86,7 @@ const About = () => {
 
       /* Ensure consistent font size for tooltip links */
       .tooltip a {
-        font-size: 20px; /* Match the font size of surrounding text */
+        font-size: 16px; /* Match the font size of surrounding text */
       }
     }
 
@@ -130,7 +131,7 @@ const About = () => {
       visibility: hidden;
       width: 200px;
       background-color: white;
-      color: #7C7C7C;
+      color:  #7C7C7C;
       text-align: center;
       border-radius: 6px;
       padding: 5px 10px;
@@ -264,7 +265,7 @@ const About = () => {
                 href="https://jeffhuang.com/"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
+                style={{ textDecoration: 'none' }}
                 className="coral-link"
               >
                 Prof. Jeff Huang
@@ -279,7 +280,7 @@ const About = () => {
                 href="https://vivo.brown.edu/display/mparadis"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
+                style={{ textDecoration: 'none'}}
                 className="coral-link"
               >
                 Prof. Michael Paradiso
