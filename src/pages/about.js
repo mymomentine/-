@@ -35,122 +35,133 @@ const About = () => {
 
       {/* CSS media query for smaller screens */}
       <style>
-        {`
-          /* CSS code for smaller screens */
-        
-          .tooltip:hover .tooltiptext {
-            visibility: visible;
-          }
-          @media (max-width: 767px) {
-            div.container {
-              flex-direction: column;
-              align-items: flex-start;
-              text-align: left;
-            }
+  {`
+    /* CSS code for smaller screens */
 
-            div.container img {
-              width: 100%;
-              margin-bottom: 20px;
-              margin-right: 0; /* Remove margin-right on smaller screens */
-            }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
 
-            div.container h1 {
-              margin-top: 0;
-              font-size: 14px;
-            }
+    @media (max-width: 767px) {
+      div.container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
 
-            div.container div.icon-wrapper {
-              justify-content: flex-start;
-              margin-top: 2em; /* Increased spacing between icons and "yumeng ma" text */
-            }
+      div.container img {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0; /* Remove margin-right on smaller screens */
+      }
 
-            .copy-right {
-              margin-top: 20px; /* Decreased margin-top to create smaller spacing */
-              margin-bottom: 2em; /* Decreased margin-bottom for closer positioning */
-              position: static; /* Change to static position */
-            }
-          }
+      div.container h1 {
+        margin-top: 0;
+        font-size: 14px;
+      }
 
-          /* CSS code for larger screens */
+      div.container div.icon-wrapper {
+        justify-content: flex-start;
+        margin-top: 2em; /* Increased spacing between icons and "yumeng ma" text */
+      }
 
-          @media (min-width: 768px) {
-            div.container h1 {
-              margin-top: -5em;
-            }
-          }
+      .copy-right {
+        margin-top: 20px; /* Decreased margin-top to create smaller spacing */
+        margin-bottom: 2em; /* Decreased margin-bottom for closer positioning */
+        position: static; /* Change to static position */
+      }
 
-          /* CSS code for icon wrapper */
+      /* Ensure consistent font size for tooltip links */
+      .tooltip a {
+        font-size: 14px; /* Match the font size of surrounding text */
+      }
+    }
 
-          /* CSS code for icon links */
+    /* CSS code for larger screens */
 
-          .icon-wrapper a {
-            color: #787878;
-            margin: 5px;
-            transition: color 0.3s ease-in-out;
-          }
+    @media (min-width: 768px) {
+      div.container h1 {
+        margin-top: -5em;
+      }
 
-          /* CSS code for icon links on hover */
+      /* Ensure consistent font size for tooltip links */
+      .tooltip a {
+        font-size: 16px; /* Match the font size of surrounding text */
+      }
+    }
 
-          .icon-wrapper a:hover {
-            color: #e85d4e;
-          }
+    /* CSS code for icon wrapper */
 
-          /* CSS code for coral links */
+    /* CSS code for icon links */
 
-          .coral-link {
-            color: #e85d4e;
-            transition: color 0.3s ease-in-out;
-          }
+    .icon-wrapper a {
+      color: #787878;
+      margin: 5px;
+      transition: color 0.3s ease-in-out;
+    }
 
-          /* CSS code for coral links on hover and active */
+    /* CSS code for icon links on hover */
 
-          .coral-link:hover,
-          .coral-link:active {
-            color: #7C7C7C;
-          }
+    .icon-wrapper a:hover {
+      color: #e85d4e;
+    }
 
-          /* CSS for Hover bubble */
-          .tooltip {
-            position: relative;
-            display: inline-block;
-            cursor: pointer;
-          }
-          
-          .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 200px;
-            background-color: white;
-            color:  #7C7C7C;
-            text-align: center;
-            border-radius: 6px;
-            padding: 5px 10px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            left: 50%;
-            margin-left: -100px;
-            box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
-            font-size: 10px;
-          
-            /* Create tail for the tooltip */
-            &::after {
-              content: "";
-              position: absolute;
-              top: 100%; 
-              left: 50%;
-              margin-left: -5px;
-              border-width: 5px;
-              border-style: solid;
-              border-color: white transparent transparent transparent;
-            }
-          }
-          
-          .tooltip:hover .tooltiptext {
-            visibility: visible;
-          }
+    /* CSS code for coral links */
 
-        `}
-      </style>
+    .coral-link {
+      color: #e85d4e;
+      transition: color 0.3s ease-in-out;
+    }
+
+    /* CSS code for coral links on hover and active */
+
+    .coral-link:hover,
+    .coral-link:active {
+      color: #7C7C7C;
+    }
+
+    /* CSS for Hover bubble */
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: white;
+      color:  #7C7C7C;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 10px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -100px;
+      box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
+      font-size: 10px;
+    
+      /* Create tail for the tooltip */
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%; 
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+      }
+    }
+    
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  `}
+</style>
+
 
       <div style={{
         display: 'flex',
@@ -284,13 +295,13 @@ const About = () => {
             Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
-            </a>where I discovered the world of human-computer interaction.
+            </a> {' '} where I discovered the world of human-computer interaction.
             <br />
             <br />
-            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I also love playing and making video games, skateboarding, watching anime, and dabbling in the{' '}
+            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy/playing and making video games, skateboarding, watching anime, and dabbling in the{' '}
             <span className="tooltip">
               <a
-                href="#"
+                // href="#"
                 target="_self"
                 rel="noopener noreferrer"
                 style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }}
@@ -299,7 +310,7 @@ const About = () => {
                 arts
               </a>
               <span className="tooltiptext">
-                Lately it's been taking digicam photos, writing poems, and drawing digital sketches
+                Lately it's been doodling on napkins
               </span>
             </span>
             .
