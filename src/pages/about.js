@@ -33,7 +33,6 @@ const About = () => {
         <meta name="robots" content="nosnippet" />
       </Helmet>
 
-      {/* CSS media query for smaller screens */}
       <style>
   {`
     /* CSS code for smaller screens */
@@ -86,7 +85,7 @@ const About = () => {
 
       /* Ensure consistent font size for tooltip links */
       .tooltip a {
-        font-size: 16px; /* Match the font size of surrounding text */
+        font-size: 20px; /* Match the font size of surrounding text */
       }
     }
 
@@ -131,7 +130,7 @@ const About = () => {
       visibility: hidden;
       width: 200px;
       background-color: white;
-      color:  #7C7C7C;
+      color: #7C7C7C;
       text-align: center;
       border-radius: 6px;
       padding: 5px 10px;
