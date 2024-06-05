@@ -64,19 +64,11 @@ const About = () => {
               margin-bottom: 2em;
               position: static;
             }
-
-            .tooltip a {
-              font-size: 14px;
-            }
           }
 
           @media (min-width: 768px) {
             .container h1 {
               margin-top: -5em;
-            }
-
-            .tooltip a {
-              font-size: 16px;
             }
           }
 
@@ -282,8 +274,8 @@ const About = () => {
             >
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
               blah blah 
-            </div>
-            <div style={{ marginBottom: '20px' }}></div> */}
+            </div> */}
+            <div style={{ marginBottom: '20px' }}></div>
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
