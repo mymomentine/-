@@ -265,6 +265,7 @@ const About = () => {
                 href="https://jeffhuang.com/"
                 target="_self"
                 rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
                 className="coral-link"
               >
                 Prof. Jeff Huang
@@ -279,6 +280,7 @@ const About = () => {
                 href="https://vivo.brown.edu/display/mparadis"
                 target="_self"
                 rel="noopener noreferrer"
+                style={{ textDecoration: 'none'}}
                 className="coral-link"
               >
                 Prof. Michael Paradiso
@@ -356,7 +358,7 @@ const About = () => {
               }}>
                 Nov 19 2023
               </span>
-              <span>Built <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" className="coral-link">
+              <span>Built <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none'}} className="coral-link">
                 my first pc
               </a> (now I can run heavy vision-language models) </span>
               <img
