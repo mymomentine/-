@@ -48,7 +48,7 @@ const About = () => {
             }
 
             .tooltip a {
-              font-size: 16px;
+              font-size: 14px;
             }
           }
 
@@ -196,29 +196,29 @@ const About = () => {
             <div style={{ marginBottom: '20px' }}></div>
             
              {/* <div style={{
-               backgroundColor: '#F3F3F3',
-              padding: '10px',
-             borderRadius: '5px',
-            margin: '10px 0',
-            }}>
-              <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
-              Visual Prosthesis: A real-time assistance system to help low vision individuals easily locate everyday objects (advised by {' '}
-              <div className="tooltip">
-                <a
-                  href="https://vivo.brown.edu/display/mparadis"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  style={{ textDecoration: 'none', fontSize: '16px' }}
-                  className="coral-link"
-                >
-                  Prof. Michael Paradiso
-                </a>).
-                <span className="tooltiptext">
-                  Neuroscientist and Founding Director of the Center for Vision Research at Brown University
-                </span>
-              </div>
-            </div>
-            <div style={{ marginBottom: '20px' }}></div> */}
+//                backgroundColor: '#F3F3F3',
+//               padding: '10px',
+//              borderRadius: '5px',
+//             margin: '10px 0',
+//             }}>
+//               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
+//               Visual Prosthesis: A real-time assistance system to help low vision individuals easily locate everyday objects (advised by {' '}
+//               <div className="tooltip">
+//                 <a
+//                   href="https://vivo.brown.edu/display/mparadis"
+//                   target="_self"
+//                   rel="noopener noreferrer"
+//                   style={{ textDecoration: 'none', fontSize: '16px' }}
+//                   className="coral-link"
+//                 >
+//                   Prof. Michael Paradiso
+//                 </a>).
+//                 <span className="tooltiptext">
+//                   Neuroscientist and Founding Director of the Center for Vision Research at Brown University
+//                 </span>
+//               </div>
+//             </div>
+//             <div style={{ marginBottom: '20px' }}></div> */}
 
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
