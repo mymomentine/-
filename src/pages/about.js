@@ -35,7 +35,7 @@ const About = () => {
 
       {/* CSS media query for smaller screens */}
       <style>
-  {`
+        {`
     /* CSS code for smaller screens */
 
     .tooltip:hover .tooltiptext {
@@ -73,7 +73,7 @@ const About = () => {
 
       /* Ensure consistent font size for tooltip links */
       .tooltip a {
-        font-size: 14px; /* Match the font size of surrounding text */
+        font-size: 16px; /* Match the font size of surrounding text */
       }
     }
 
@@ -160,7 +160,7 @@ const About = () => {
       visibility: visible;
     }
   `}
-</style>
+      </style>
 
 
       <div style={{
@@ -280,7 +280,7 @@ const About = () => {
                 href="https://vivo.brown.edu/display/mparadis"
                 target="_self"
                 rel="noopener noreferrer"
-                style={{ textDecoration: 'none'}}
+                style={{ textDecoration: 'none' }}
                 className="coral-link"
               >
                 Prof. Michael Paradiso
@@ -345,7 +345,6 @@ const About = () => {
             <div style={{ marginBottom: '20px' }}> {/* Additional spacing for "Updates" */}
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
-
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
                 backgroundColor: 'rgba(236, 193, 124, 0.3)', // #ECC17C with 30% transparency
@@ -358,9 +357,9 @@ const About = () => {
               }}>
                 Nov 19 2023
               </span>
-              <span>Built <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none'}} className="coral-link">
+              Built&nbsp;<a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
                 my first pc
-              </a> (now I can run heavy vision-language models) </span>
+              </a>&nbsp;(now I can run heavy vision-language models)
               <img
                 src={cat}
                 alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
@@ -370,6 +369,7 @@ const About = () => {
                 }}
               />
             </div>
+
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span style={{
