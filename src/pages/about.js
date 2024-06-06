@@ -257,7 +257,7 @@ const About = () => {
             <br />
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the{' '}
             <span className="tooltip">
-              <a href="#" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }} className="coral-link">
+              <a target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }} className="coral-link">
                 arts
               </a>
               <span className="tooltiptext">Lately it's been doodling on napkins</span>
