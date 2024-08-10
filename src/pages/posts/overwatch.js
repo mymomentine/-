@@ -1,10 +1,6 @@
-import React, { useEffect } from 'react';
-
+import React from 'react';
 import styled from 'styled-components';
-
-import { FaCalendarAlt } from "react-icons/fa";
-import { FaPenAlt } from "react-icons/fa";
-
+import { FaCalendarAlt, FaPenAlt } from "react-icons/fa";
 import kiriko from '../../images/kiriko.gif';
 import { Helmet } from 'react-helmet';
 
@@ -13,14 +9,14 @@ const CVLink = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 0.8rem; /* Same padding as NavLink */
-  height: 30px; /* Same height as NavLink */
+  padding: 0.8rem;
+  height: 30px;
   cursor: pointer;
-  font-size: 1rem; /* Same font size as NavLink */
-  background-color: #F3F3F3; /* Same bubble background color as NavLink */
-  border-radius: 8px; /* Same slightly rounded corners as NavLink */
-  margin: 0 5px; /* Same space between tabs as NavLink */
-  box-sizing: border-box; /* Same box sizing as NavLink */
+  font-size: 1rem;
+  background-color: #F3F3F3;
+  border-radius: 8px;
+  margin: 0 5px;
+  box-sizing: border-box;
 
   &:hover {
     color: #787878;
@@ -31,8 +27,8 @@ const CVLink = styled.a`
   }
 
   @media screen and (max-width: 320px) {
-    padding: 0 0.5rem; /* Same padding adjustment for smaller screens as NavLink */
-    font-size: 0.9rem; /* Same font size adjustment for smaller screens as NavLink */
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
   }
 `;
 
@@ -43,7 +39,7 @@ const Overwatch = () => {
         position: 'relative',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start', // Align the text to the left
+        alignItems: 'flex-start',
         justifyContent: 'flex-start',
         margin: '0 auto',
         maxWidth: '800px',
@@ -59,11 +55,9 @@ const Overwatch = () => {
       <Helmet>
         <meta name="robots" content="nosnippet" />
       </Helmet>
-      {/* CSS media query for smaller screens */}
+
       <style>
         {`
-          /* CSS code for smaller screens */
-        
           .tooltip:hover .tooltiptext {
             visibility: visible;
           }
@@ -77,27 +71,15 @@ const Overwatch = () => {
             div.container img {
               width: 100%;
               margin-bottom: 20px;
-              margin-right: 0; /* Remove margin-right on smaller screens */
-            }
-
-            div.container h1 {
-              margin-top: 0;
-              font-size: 14px;
-            }
-
-            div.container div.icon-wrapper {
-              justify-content: flex-start;
-              margin-top: 2em; /* Increased spacing between icons and "yumeng ma" text */
+              margin-right: 0;
             }
 
             .copy-right {
-              margin-top: 20px; /* Decreased margin-top to create smaller spacing */
-              margin-bottom: 2em; /* Decreased margin-bottom for closer positioning */
-              position: static; /* Change to static position */
+              margin-top: 20px;
+              margin-bottom: 2em;
+              position: static;
             }
           }
-
-          /* CSS code for larger screens */
 
           @media (min-width: 768px) {
             div.container h1 {
@@ -105,38 +87,26 @@ const Overwatch = () => {
             }
           }
 
-          /* CSS code for icon wrapper */
-
-
-          /* CSS code for icon links */
-
           .icon-wrapper a {
             color: #787878;
             margin: 5px;
             transition: color 0.3s ease-in-out;
           }
 
-          /* CSS code for icon links on hover */
-
           .icon-wrapper a:hover {
             color: #e85d4e;
           }
-
-          /* CSS code for coral links */
 
           .coral-link {
             color: #e85d4e;
             transition: color 0.3s ease-in-out;
           }
 
-          /* CSS code for coral links on hover and active */
-
           .coral-link:hover,
           .coral-link:active {
             color: #7C7C7C;
           }
 
-          /* CSS for Hover bubble */
           .tooltip {
             position: relative;
             display: inline-block;
@@ -159,7 +129,6 @@ const Overwatch = () => {
             box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.2);
             font-size: 10px;
           
-            /* Create tail for the tooltip */
             &::after {
               content: "";
               position: absolute;
@@ -178,9 +147,8 @@ const Overwatch = () => {
         `}
       </style>
 
-
-      <div >
-        <h1
+      <div style={{ marginBottom: '30px' }}>
+        <div
           style={{
             fontSize: '16px',
             fontWeight: '300',
@@ -192,7 +160,7 @@ const Overwatch = () => {
         >
           <span style={{ fontWeight: 'bold', fontSize: '20px' }}>My Thoughts on Overwatch: From a Design and Accessibility Standpoint</span>
           <div style={{ marginBottom: '5px' }}></div>
-          <div >
+          <div>
             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
               <FaCalendarAlt size={12} color="#7C7C7C" />
               <span style={{ marginLeft: '8px', marginRight: '20px' }}>Mar 20 2024</span>
@@ -205,14 +173,13 @@ const Overwatch = () => {
               src={kiriko}
               alt="kiriko"
               style={{
-                width: '100%', // Makes the image responsive
-                maxWidth: '800px', // Ensures the image does not exceed 600px in width
-                float: 'right', // Aligns the image to the right
-                display: 'block', // Ensures the image is treated as a block-level element for proper spacing
+                width: '100%',
+                maxWidth: '800px',
+                float: 'right',
+                display: 'block',
               }}
             />
           </div>
-
           <div style={{ marginBottom: '20px' }}></div>
           From the moment I first launched Overwatch, its vibrant colors and richly detailed world were unlike anything I had seen in an FPS game. Each hero had a unique customizable appearance and backstory, some even brought to life through animated shorts. The blend of art and narrative drew me in, marking the beginning of a long-standing appreciation for the game, regardless of the fluctuating ratings and the controversies it has received.
           <br />
@@ -227,14 +194,13 @@ const Overwatch = () => {
           <br />
           <br />
           So....how can games like Overwatch become inclusive without diluting their complexity? It's a dilemma that doesn't have an easy answer, especially in a game where so much is happening at once. As I continue to play, I'm left wondering about the experiences of other blind or low vision gamers. Do they feel the same thrill that their fully sighted counterparts do? And what steps can we take to ensure that this excitement is universally conveyed? The quest for inclusivity in gaming is about reimagining the very fabric of game design to accommodate a broader spectrum of experiences. It challenges us to envision a gaming world that's as diverse and welcoming as the stories and chaos it seeks to show.
-        </h1>
+        </div>
       </div>
 
       <div
         style={{
           position: 'relative',
           bottom: '30px',
-          // left: '20px',
           fontSize: '12px',
           color: '#7C7C7C',
           marginTop: '30px',
