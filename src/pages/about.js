@@ -281,112 +281,111 @@ const About = () => {
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
               blah blah 
             </div> */}
-            <div style={{ marginBottom: '20px' }}></div>
-            <div style={{ marginBottom: '20px' }}>
-              <span style={{ fontWeight: 'bold' }}> Updates </span>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#ECC17C',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Jun 2024
-              </span>
-                Moved to Seattle + pc in reapiar after transit ˙◠˙
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(117, 122, 98, 0.3',
-                  fontWeight: 'bold',
-                  color: '#757A62',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                May 2024
-              </span>
-                Graduated from Brown University
-              <img
-                src={bear}
-                alt="a pencil sketch of beaar wearing a graduation hat."
-                style={{
-                  width: '40px',
-                  marginRight: '20px',
-                }}
-              />
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#E1C0C5',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Apr 2024
-              </span>
-              Attended the CRA-WP Grad Cohort for Women
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#ECC17C',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Nov 2023
-              </span>
-              <span>
-                Built{' '}
-                <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
-                  my first pc
-                </a>{' '}
-                (now I can run heavy vision-language models)
-              </span>
-              <img
-                src={cat}
-                alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
-                style={{
-                  width: '40px',
-                  marginRight: '20px',
-                }}
-              />
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#E1C0C5',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Oct 2023
-              </span>
-              <span>Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC</span>
-            </div>
+        <div style={{ fontSize: '16px', fontWeight: '300', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh' }}>
+  <div style={{ marginBottom: '20px' }}>
+    <span style={{ fontWeight: 'bold' }}> Updates </span>
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+    <span
+      style={{
+        backgroundColor: 'rgba(236, 193, 124, 0.3)',
+        fontWeight: 'bold',
+        color: '#ECC17C',
+        padding: '5px 10px',
+        borderRadius: '5px',
+        marginRight: '10px',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      Jun 2024
+    </span>
+    Moved to Seattle + pc in repair after transit ˙◠˙
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+    <span
+      style={{
+        backgroundColor: 'rgba(117, 122, 98, 0.3)',
+        fontWeight: 'bold',
+        color: '#757A62',
+        padding: '5px 10px',
+        borderRadius: '5px',
+        marginRight: '10px',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      May 2024
+    </span>
+    Graduated from Brown University
+    <img
+      src={bear}
+      alt="a pencil sketch of bear wearing a graduation hat."
+      style={{
+        width: '40px',
+        marginRight: '20px',
+      }}
+    />
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+    <span
+      style={{
+        backgroundColor: 'rgba(225, 192, 197, 0.3)',
+        fontWeight: 'bold',
+        color: '#E1C0C5',
+        padding: '5px 10px',
+        borderRadius: '5px',
+        marginRight: '10px',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      Apr 2024
+    </span>
+    Attended the CRA-WP Grad Cohort for Women
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+    <span
+      style={{
+        backgroundColor: 'rgba(236, 193, 124, 0.3)',
+        fontWeight: 'bold',
+        color: '#ECC17C',
+        padding: '5px 10px',
+        borderRadius: '5px',
+        marginRight: '10px',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      Nov 2023
+    </span>
+    Built my first pc (now I can run heavy vision-language models)
+    <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+      my first pc
+    </a>
+    <img
+      src={cat}
+      alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
+      style={{
+        width: '40px',
+        marginRight: '20px',
+      }}
+    />
+  </div>
+  <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+    <span
+      style={{
+        backgroundColor: 'rgba(225, 192, 197, 0.3)',
+        fontWeight: 'bold',
+        color: '#E1C0C5',
+        padding: '5px 10px',
+        borderRadius: '5px',
+        marginRight: '10px',
+        whiteSpace: 'nowrap',
+      }}
+    >
+      Oct 2023
+    </span>
+    Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
+  </div>
+</div>
+
           </h1>
         </div>
       </div>
