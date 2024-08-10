@@ -431,7 +431,7 @@ const About = () => {
       alignItems: 'center',
     }}
   >
-       Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
+    Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
   </span>
 </div>
 
