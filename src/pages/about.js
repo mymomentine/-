@@ -157,7 +157,7 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Profile picture of Yumeng Ma, wearing a blue bucket hat and tilting her head slightly."
+              alt="Profile picture of Yumeng Ma, wearing a graduation gown with manzanita trees in the background."
               style={{
                 width: '100%',
                 height: '100%',
@@ -169,7 +169,7 @@ const About = () => {
         </div>
 
         <div>
-          <h1
+          <div
             style={{
               fontSize: '20px',
               fontWeight: '300',
@@ -185,7 +185,7 @@ const About = () => {
             </div>
             <div style={{ fontSize: '16px', marginBottom: '10px' }}>PhD Student in CSE</div>
             <div style={{ fontSize: '16px' }}>University of Washington</div>
-          </h1>
+          </div>
 
           <div className="icon-wrapper" style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
             <a href="mailto:yumengma@uw.edu">
@@ -247,7 +247,8 @@ const About = () => {
             <br />
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the arts.
 
-            {/* {<div style={{ marginBottom: '20px' }}></div>
+
+                {/* {<div style={{ marginBottom: '20px' }}></div>
             <div
               style={{
                 backgroundColor: '#F3F3F3',
@@ -261,7 +262,7 @@ const About = () => {
             </div>} */}
 
 
-            {/* updates */}
+            {/* Here comes the updates section */}
             <div style={{ marginBottom: '20px' }}></div>
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
@@ -299,7 +300,7 @@ const About = () => {
               Graduated from Brown University
               <img
                 src={bear}
-                alt="a pencil sketch of bear wearing a graduation hat."
+                alt="A pencil sketch of a bear wearing a graduation hat."
                 style={{
                   width: '40px',
                   marginRight: '20px',
@@ -336,13 +337,11 @@ const About = () => {
               >
                 Nov 2023
               </span>
-              <span>
-                Built{' '}
-                <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
-                  my first pc
-                </a>{' '}
-                (now I can run heavy vision-language models)
-              </span>
+              Built{' '}
+              <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+                my first pc
+              </a>{' '}
+              (now I can run heavy vision-language models)
               <img
                 src={cat}
                 alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
@@ -366,7 +365,7 @@ const About = () => {
               >
                 Oct 2023
               </span>
-              <span>Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC</span>
+              Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
             </div>
           </div>
         </div>
