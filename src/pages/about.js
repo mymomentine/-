@@ -33,9 +33,6 @@ const About = () => {
 
       <style>
         {`
-          .tooltip:hover .tooltiptext {
-            visibility: visible;
-          }
 
           @media (max-width: 767px) {
             .container {
@@ -127,9 +124,10 @@ const About = () => {
             border-color: white transparent transparent transparent;
           }
 
-          .tooltip:hover .tooltiptext {
+         .tooltip:hover .tooltiptext {
             visibility: visible;
           }
+
         `}
       </style>
 
@@ -228,7 +226,7 @@ const About = () => {
             this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship. I recently joined the {' '}
             <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               ACE Lab
-            </a>,{' '}advised by {' '}
+            </a>,{' '}advised by{' '}
             <span className="tooltip">
               <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
                 Prof. Jacob Wobbrock
@@ -241,7 +239,7 @@ const About = () => {
             I obtained my master of science degree in computer science from{' '}
             <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
-            </a>,{' '} where I worked with{' '}
+            </a>{' '} where I worked with{' '}
             <span className="tooltip">
               <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
                 Prof. Jeff Huang
@@ -301,9 +299,7 @@ const About = () => {
               >
                 Jun 2024
               </span>
-              <span>
                 Moved to Seattle + pc in reapiar after transit ˙◠˙
-              </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span
@@ -319,9 +315,7 @@ const About = () => {
               >
                 May 2024
               </span>
-              <span>
                 Graduated from Brown University
-              </span>
               <img
                 src={bear}
                 alt="a pencil sketch of beaar wearing a graduation hat."
@@ -345,7 +339,7 @@ const About = () => {
               >
                 Apr 2024
               </span>
-              <span>Attended the CRA-WP Grad Cohort for Women</span>
+              Attended the CRA-WP Grad Cohort for Women
             </div>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span
