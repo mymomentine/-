@@ -287,6 +287,7 @@ const About = () => {
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
+      fontSize: '16px',  // Ensure consistent font size
     }}
   >
     Moved to Seattle + pc in repair after transit ˙◠˙
@@ -314,6 +315,7 @@ const About = () => {
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
+      fontSize: '16px',  // Ensure consistent font size
     }}
   >
     Graduated from Brown University
@@ -350,6 +352,7 @@ const About = () => {
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
+      fontSize: '16px',  // Ensure consistent font size
     }}
   >
     Attended the CRA-WP Grad Cohort for Women
@@ -377,6 +380,7 @@ const About = () => {
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
+      fontSize: '16px',  // Ensure consistent font size
     }}
   >
     <span>
@@ -429,11 +433,13 @@ const About = () => {
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
+      fontSize: '16px',  // Ensure consistent font size
     }}
   >
     Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
   </span>
 </div>
+
 
 
           </div>
