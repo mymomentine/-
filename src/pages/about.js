@@ -249,7 +249,7 @@ const About = () => {
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the arts.
 
             {/* Brainstorming section */}
-            <div style={{ marginBottom: '20px' }}></div>
+            {/* <div style={{ marginBottom: '20px' }}></div>
             <div
               style={{
                 backgroundColor: '#F3F3F3',
@@ -260,7 +260,7 @@ const About = () => {
             >
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
               blah blah
-            </div>
+            </div> */}
 
             {/* Updates section */}
             <div style={{ marginBottom: '20px' }}>
@@ -323,52 +323,62 @@ const About = () => {
               Attended the CRA-WP Grad Cohort for Women
             </div>
 
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              marginBottom: '20px',
-              whiteSpace: 'nowrap'
-            }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#ECC17C',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                }}
-              >
-                Nov 2023
-              </span>
-              <span style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
-                Built&nbsp;
-                <a
-                  href="https://pcpartpicker.com/b/Bgy48d"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  style={{
-                    textDecoration: 'none',
-                    fontSize: '16px',
-                    color: 'red', // Set the link color to red
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                  }}
-                  className="coral-link"
-                >
-                  my first pc
-                </a>
-                &nbsp;(now I can run heavy vision-language models)
-              </span>
-              <img
-                src={cat}
-                alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
-                style={{
-                  width: '40px',
-                  marginLeft: '20px',
-                }}
-              />
-            </div>
+            <div
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '20px',
+    flexWrap: 'wrap', // Allows wrapping on smaller screens
+  }}
+>
+  <span
+    style={{
+      backgroundColor: 'rgba(236, 193, 124, 0.3)',
+      fontWeight: 'bold',
+      color: '#ECC17C',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap', // Keeps the date on one line
+      flexShrink: 0, // Ensures the date doesn't shrink
+    }}
+  >
+    Nov 2023
+  </span>
+  <span
+    style={{
+      display: 'inline', // Allows the text to wrap naturally
+      whiteSpace: 'normal', // Ensures the text wraps normally
+      flex: 1, // Allows this section to take up available space
+    }}
+  >
+    Built&nbsp;
+    <a
+      href="https://pcpartpicker.com/b/Bgy48d"
+      target="_self"
+      rel="noopener noreferrer"
+      style={{
+        textDecoration: 'none',
+        fontSize: '16px',
+        color: 'red',
+      }}
+      className="coral-link"
+    >
+      my first pc
+    </a>
+    &nbsp;(now I can run heavy vision-language models)
+  </span>
+  <img
+    src={cat}
+    alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
+    style={{
+      width: '40px',
+      marginLeft: '20px',
+      marginTop: '10px', // Adds margin to avoid overlap on smaller screens
+    }}
+  />
+</div>
+
 
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
