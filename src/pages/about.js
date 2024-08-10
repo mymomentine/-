@@ -266,149 +266,148 @@ const About = () => {
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#ECC17C',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap', // Keeps the date on one line
-                  flexShrink: 0, // Ensures the date doesn't shrink
-                }}
-              >
-                Jun 2024
-              </span>
-              <span
-                style={{
-                  display: 'inline', // Allows the text to wrap naturally
-                  whiteSpace: 'normal', // Ensures the text wraps normally
-                  flex: 1, // Allows this section to take up available space
-                }}
-              >
-                Moved to Seattle + pc in repair after transit ˙◠˙
-              </span>
-            </div>
+            
+            <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(236, 193, 124, 0.3)',
+      fontWeight: 'bold',
+      color: '#ECC17C',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    Jun 2024
+  </span>
+  <span
+    style={{
+      display: 'inline-flex', // Inline-flex to allow image and text to align
+      whiteSpace: 'normal',
+      flex: 1,
+      alignItems: 'center',
+    }}
+  >
+    Moved to Seattle + pc in repair after transit ˙◠˙
+  </span>
+</div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(117, 122, 98, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#757A62',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap', // Keeps the date on one line
-                  flexShrink: 0, // Ensures the date doesn't shrink
-                }}
-              >
-                May 2024
-              </span>
-              <span
-                style={{
-                  display: 'inline', // Allows the text to wrap naturally
-                  whiteSpace: 'normal', // Ensures the text wraps normally
-                  flex: 1, // Allows this section to take up available space
-                }}
-              >
-                Graduated from Brown University
-              </span>
-              <img
-                src={bear}
-                alt="A pencil sketch of a bear wearing a graduation hat."
-                style={{
-                  width: '40px',
-                  marginLeft: '20px', // Adjusted for consistency
-                  marginTop: '10px', // Adds margin to avoid overlap on smaller screens
-                }}
-              />
-            </div>
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(117, 122, 98, 0.3)',
+      fontWeight: 'bold',
+      color: '#757A62',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    May 2024
+  </span>
+  <span
+    style={{
+      display: 'inline-flex', // Inline-flex to allow image and text to align
+      whiteSpace: 'normal',
+      flex: 1,
+      alignItems: 'center',
+    }}
+  >
+    Graduated from Brown University
+    <img
+      src={bear}
+      alt="A pencil sketch of a bear wearing a graduation hat."
+      style={{
+        width: '40px',
+        marginLeft: '10px', // Space between text and image
+        flexShrink: 0,
+      }}
+    />
+  </span>
+</div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#E1C0C5',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap', // Keeps the date on one line
-                  flexShrink: 0, // Ensures the date doesn't shrink
-                }}
-              >
-                Apr 2024
-              </span>
-              <span
-                style={{
-                  display: 'inline', // Allows the text to wrap naturally
-                  whiteSpace: 'normal', // Ensures the text wraps normally
-                  flex: 1, // Allows this section to take up available space
-                }}
-              >
-                Attended the CRA-WP Grad Cohort for Women
-              </span>
-            </div>
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(225, 192, 197, 0.3)',
+      fontWeight: 'bold',
+      color: '#E1C0C5',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    Apr 2024
+  </span>
+  <span
+    style={{
+      display: 'inline-flex', // Inline-flex to allow image and text to align
+      whiteSpace: 'normal',
+      flex: 1,
+      alignItems: 'center',
+    }}
+  >
+    Attended the CRA-WP Grad Cohort for Women
+  </span>
+</div>
 
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginBottom: '20px',
-                flexWrap: 'wrap', // Allows wrapping on smaller screens
-              }}
-            >
-              <span
-                style={{
-                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#ECC17C',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap', // Keeps the date on one line
-                  flexShrink: 0, // Ensures the date doesn't shrink
-                }}
-              >
-                Nov 2023
-              </span>
-              <span
-                style={{
-                  display: 'inline', // Allows the text to wrap naturally
-                  whiteSpace: 'normal', // Ensures the text wraps normally
-                  flex: 1, // Allows this section to take up available space
-                }}
-              >
-                Built&nbsp;
-                <a
-                  href="https://pcpartpicker.com/b/Bgy48d"
-                  target="_self"
-                  rel="noopener noreferrer"
-                  style={{
-                    textDecoration: 'none',
-                    fontSize: '16px',
-                    color: 'red',
-                  }}
-                  className="coral-link"
-                >
-                  my first pc
-                </a>
-                &nbsp;(now I can run heavy vision-language models)
-              </span>
-              <img
-                src={cat}
-                alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
-                style={{
-                  width: '40px',
-                  marginLeft: '20px',
-                  marginTop: '10px', // Adds margin to avoid overlap on smaller screens
-                }}
-              />
-            </div>
-
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(236, 193, 124, 0.3)',
+      fontWeight: 'bold',
+      color: '#ECC17C',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    Nov 2023
+  </span>
+  <span
+    style={{
+      display: 'inline-flex', // Inline-flex to allow image and text to align
+      whiteSpace: 'normal',
+      flex: 1,
+      alignItems: 'center',
+    }}
+  >
+    <span>
+      Built&nbsp;
+      <a
+        href="https://pcpartpicker.com/b/Bgy48d"
+        target="_self"
+        rel="noopener noreferrer"
+        style={{
+          textDecoration: 'none',
+          fontSize: '16px',
+          color: 'red',
+        }}
+        className="coral-link"
+      >
+        my first pc
+      </a>
+      &nbsp;(now I can run heavy vision-language models)
+    </span>
+    <img
+      src={cat}
+      alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
+      style={{
+        width: '40px',
+        marginLeft: '10px', // Space between text and image
+        flexShrink: 0,
+      }}
+    />
+  </span>
+</div>
 
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
