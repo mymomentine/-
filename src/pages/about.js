@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import profileImage from '../images/me.png';
 import cat from '../images/cat.gif';
+import bear from '../images/bear.png';
 
 const About = () => {
   return (
@@ -191,7 +192,7 @@ const About = () => {
               <span style={{ fontWeight: 'bold', marginRight: '10px' }}>yumeng ma</span>{' '}
               <span style={{ fontWeight: 'normal' }}>马雨萌</span> 🌱
             </div>
-            <div style={{ fontSize: '16px', marginBottom: '10px' }}> incoming CSE PhD </div>{' '}
+            <div style={{ fontSize: '16px', marginBottom: '10px' }}> PhD Student in CSE  </div>{' '}
             <div style={{ fontSize: '16px' }}> University of Washington </div>
           </h1>
 
@@ -224,14 +225,23 @@ const About = () => {
             <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               University of Washington
             </a>{' '}
-            this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship. I recently joined the {' '}
+            <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              ACE Lab
+            </a>,{' '}advised by {' '}
+            <span className="tooltip">
+              <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+                Prof. Jacob Wobbrock
+              </a>
+              <span className="tooltiptext">Professor of Information and, by courtesy, Computer Science & Engineering at the University of Washington</span>
+            </span>.
+          
             <br />
             <br />
-            I recently graduated with a master of science degree in computer science from{' '}
+            I obtained my master of science degree in computer science from{' '}
             <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
-            </a>{' '}
-            where I worked with{' '}
+            </a>,{' '} where I worked with{' '}
             <span className="tooltip">
               <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
                 Prof. Jeff Huang
@@ -245,23 +255,21 @@ const About = () => {
               </a>
               <span className="tooltiptext">Neuroscientist and Founding Director of the Center for Vision Research at Brown University</span>
             </span>{' '}
-            in the neuroscience department.
-            <br />
-            <br />
-            Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
+            in the neuroscience department. Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>{' '}
             where I discovered the world of human-computer interaction.
             <br />
             <br />
-            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the{' '}
+            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the
+            arts. {/* {' '}
             <span className="tooltip">
               <a target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px', color: '#7C7C7C' }} className="coral-link">
                 arts
               </a>
               <span className="tooltiptext">Lately it's been doodling on napkins</span>
-            </span>
+            </span> */}
             .
             {/* <div style={{ marginBottom: '20px' }}></div>
             <div
@@ -291,7 +299,67 @@ const About = () => {
                   whiteSpace: 'nowrap',
                 }}
               >
-                Nov 19 2023
+                Jun 2024
+              </span>
+              <span>
+                Moved to Seattle + pc in reapiar after transit ˙◠˙
+              </span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(117, 122, 98, 0.3',
+                  fontWeight: 'bold',
+                  color: '#757A62',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                May 2024
+              </span>
+              <span>
+                Graduated from Brown University
+              </span>
+              <img
+                src={bear}
+                alt="a pencil sketch of beaar wearing a graduation hat."
+                style={{
+                  width: '40px',
+                  marginRight: '20px',
+                }}
+              />
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#E1C0C5',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Apr 2024
+              </span>
+              <span>Attended the CRA-WP Grad Cohort for Women</span>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#ECC17C',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                Nov 2023
               </span>
               <span>
                 Built{' '}
@@ -321,7 +389,7 @@ const About = () => {
                   whiteSpace: 'nowrap',
                 }}
               >
-                Oct 29 2023
+                Oct 2023
               </span>
               <span>Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC</span>
             </div>
