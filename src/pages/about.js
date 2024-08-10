@@ -214,7 +214,7 @@ const About = () => {
               ACE Lab
             </a>,{' '}advised by{' '}
             <span className="tooltip">
-              <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+              <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
                 Prof. Jacob Wobbrock
               </a>
               <span className="tooltiptext">Professor of Information and, by courtesy, Computer Science & Engineering at the University of Washington</span>
@@ -227,19 +227,21 @@ const About = () => {
               Brown University
             </a>{' '}where I worked with{' '}
             <span className="tooltip">
-              <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+              <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
                 Prof. Jeff Huang
               </a>
               <span className="tooltiptext">Associate Professor and Associate Chair of Computer Science at Brown University</span>
             </span>{' '}
             at the Brown HCI Lab, and{' '}
             <span className="tooltip">
-              <a href="https://vivo.brown.edu/display/mparadis" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
+              <a href="https://vivo.brown.edu/display/mparadis" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
                 Prof. Michael Paradiso
               </a>
               <span className="tooltiptext">Neuroscientist and Founding Director of the Center for Vision Research at Brown University</span>
             </span>{' '}
-            in the neuroscience department. Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
+            in the neuroscience department.
+
+            Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>{' '}
@@ -267,178 +269,178 @@ const About = () => {
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-  <span
-    style={{
-      backgroundColor: 'rgba(236, 193, 124, 0.3)',
-      fontWeight: 'bold',
-      color: '#ECC17C',
-      padding: '5px 10px',
-      borderRadius: '5px',
-      marginRight: '10px',
-      whiteSpace: 'nowrap',
-      flexShrink: 0,
-    }}
-  >
-    Jun 2024
-  </span>
-  <span
-    style={{
-      display: 'inline-flex',
-      whiteSpace: 'normal',
-      flex: 1,
-      alignItems: 'center',
-      fontSize: '16px',  // Ensure consistent font size
-    }}
-  >
-    Moved to Seattle + pc in repair after transit ˙◠˙
-  </span>
-</div>
+              <span
+                style={{
+                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#ECC17C',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                Jun 2024
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                Moved to Seattle + pc in repair after transit ˙◠˙
+              </span>
+            </div>
 
-<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-  <span
-    style={{
-      backgroundColor: 'rgba(117, 122, 98, 0.3)',
-      fontWeight: 'bold',
-      color: '#757A62',
-      padding: '5px 10px',
-      borderRadius: '5px',
-      marginRight: '10px',
-      whiteSpace: 'nowrap',
-      flexShrink: 0,
-    }}
-  >
-    May 2024
-  </span>
-  <span
-    style={{
-      display: 'inline-flex',
-      whiteSpace: 'normal',
-      flex: 1,
-      alignItems: 'center',
-      fontSize: '16px',  // Ensure consistent font size
-    }}
-  >
-    Graduated from Brown University
-    <img
-      src={bear}
-      alt="A pencil sketch of a bear wearing a graduation hat."
-      style={{
-        width: '40px',
-        marginLeft: '10px',
-        flexShrink: 0,
-      }}
-    />
-  </span>
-</div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(117, 122, 98, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#757A62',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                May 2024
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                Graduated from Brown University
+                <img
+                  src={bear}
+                  alt="A pencil sketch of a bear wearing a graduation hat."
+                  style={{
+                    width: '40px',
+                    marginLeft: '10px',
+                    flexShrink: 0,
+                  }}
+                />
+              </span>
+            </div>
 
-<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-  <span
-    style={{
-      backgroundColor: 'rgba(225, 192, 197, 0.3)',
-      fontWeight: 'bold',
-      color: '#E1C0C5',
-      padding: '5px 10px',
-      borderRadius: '5px',
-      marginRight: '10px',
-      whiteSpace: 'nowrap',
-      flexShrink: 0,
-    }}
-  >
-    Apr 2024
-  </span>
-  <span
-    style={{
-      display: 'inline-flex',
-      whiteSpace: 'normal',
-      flex: 1,
-      alignItems: 'center',
-      fontSize: '16px',  // Ensure consistent font size
-    }}
-  >
-    Attended the CRA-WP Grad Cohort for Women
-  </span>
-</div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#E1C0C5',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                Apr 2024
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                Attended the CRA-WP Grad Cohort for Women
+              </span>
+            </div>
 
-<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-  <span
-    style={{
-      backgroundColor: 'rgba(236, 193, 124, 0.3)',
-      fontWeight: 'bold',
-      color: '#ECC17C',
-      padding: '5px 10px',
-      borderRadius: '5px',
-      marginRight: '10px',
-      whiteSpace: 'nowrap',
-      flexShrink: 0,
-    }}
-  >
-    Nov 2023
-  </span>
-  <span
-    style={{
-      display: 'inline-flex',
-      whiteSpace: 'normal',
-      flex: 1,
-      alignItems: 'center',
-      fontSize: '16px',  // Ensure consistent font size
-    }}
-  >
-    <span>
-      Built&nbsp;
-      <a
-        href="https://pcpartpicker.com/b/Bgy48d"
-        target="_self"
-        rel="noopener noreferrer"
-        style={{
-          textDecoration: 'none',
-          fontSize: '16px',
-          color: 'red',
-        }}
-        className="coral-link"
-      >
-        my first pc
-      </a>
-      &nbsp;(now I can run heavy vision-language models)
-    </span>
-    <img
-      src={cat}
-      alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
-      style={{
-        width: '40px',
-        marginLeft: '10px',
-        flexShrink: 0,
-      }}
-    />
-  </span>
-</div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#ECC17C',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                Nov 2023
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                <span>
+                  Built&nbsp;
+                  <a
+                    href="https://pcpartpicker.com/b/Bgy48d"
+                    target="_self"
+                    rel="noopener noreferrer"
+                    style={{
+                      textDecoration: 'none',
+                      fontSize: '16px',
+                      color: 'red',
+                    }}
+                    className="coral-link"
+                  >
+                    my first pc
+                  </a>
+                  &nbsp;(now I can run heavy vision-language models)
+                </span>
+                <img
+                  src={cat}
+                  alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
+                  style={{
+                    width: '40px',
+                    marginLeft: '10px',
+                    flexShrink: 0,
+                  }}
+                />
+              </span>
+            </div>
 
-<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-  <span
-    style={{
-      backgroundColor: 'rgba(225, 192, 197, 0.3)',
-      fontWeight: 'bold',
-      color: '#E1C0C5',
-      padding: '5px 10px',
-      borderRadius: '5px',
-      marginRight: '10px',
-      whiteSpace: 'nowrap',
-      flexShrink: 0,
-    }}
-  >
-    Oct 2023
-  </span>
-  <span
-    style={{
-      display: 'inline-flex',
-      whiteSpace: 'normal',
-      flex: 1,
-      alignItems: 'center',
-      fontSize: '16px',  // Ensure consistent font size
-    }}
-  >
-    Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
-  </span>
-</div>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#E1C0C5',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                Oct 2023
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
+              </span>
+            </div>
 
 
 
