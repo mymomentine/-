@@ -266,8 +266,7 @@ const About = () => {
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
-            
-            <div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
   <span
     style={{
       backgroundColor: 'rgba(236, 193, 124, 0.3)',
@@ -284,7 +283,7 @@ const About = () => {
   </span>
   <span
     style={{
-      display: 'inline-flex', // Inline-flex to allow image and text to align
+      display: 'inline-flex',
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
@@ -294,7 +293,7 @@ const About = () => {
   </span>
 </div>
 
-<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
   <span
     style={{
       backgroundColor: 'rgba(117, 122, 98, 0.3)',
@@ -311,7 +310,7 @@ const About = () => {
   </span>
   <span
     style={{
-      display: 'inline-flex', // Inline-flex to allow image and text to align
+      display: 'inline-flex',
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
@@ -323,14 +322,14 @@ const About = () => {
       alt="A pencil sketch of a bear wearing a graduation hat."
       style={{
         width: '40px',
-        marginLeft: '10px', // Space between text and image
+        marginLeft: '10px',
         flexShrink: 0,
       }}
     />
   </span>
 </div>
 
-<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
   <span
     style={{
       backgroundColor: 'rgba(225, 192, 197, 0.3)',
@@ -347,7 +346,7 @@ const About = () => {
   </span>
   <span
     style={{
-      display: 'inline-flex', // Inline-flex to allow image and text to align
+      display: 'inline-flex',
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
@@ -357,7 +356,7 @@ const About = () => {
   </span>
 </div>
 
-<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
   <span
     style={{
       backgroundColor: 'rgba(236, 193, 124, 0.3)',
@@ -374,7 +373,7 @@ const About = () => {
   </span>
   <span
     style={{
-      display: 'inline-flex', // Inline-flex to allow image and text to align
+      display: 'inline-flex',
       whiteSpace: 'normal',
       flex: 1,
       alignItems: 'center',
@@ -402,30 +401,41 @@ const About = () => {
       alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
       style={{
         width: '40px',
-        marginLeft: '10px', // Space between text and image
+        marginLeft: '10px',
         flexShrink: 0,
       }}
     />
   </span>
 </div>
 
+<div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(225, 192, 197, 0.3)',
+      fontWeight: 'bold',
+      color: '#E1C0C5',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    Oct 2023
+  </span>
+  <span
+    style={{
+      display: 'inline-flex',
+      whiteSpace: 'normal',
+      flex: 1,
+      alignItems: 'center',
+    }}
+  >
+       Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
+  </span>
+</div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#E1C0C5',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Oct 2023
-              </span>
-              Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
-            </div>
+
           </div>
         </div>
       </div>
