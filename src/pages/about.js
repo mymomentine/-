@@ -77,6 +77,8 @@ const About = () => {
           .coral-link {
             color: #e85d4e;
             transition: color 0.3s ease-in-out;
+            font-size: inherit; /* Ensure it inherits font size from the parent */
+            text-decoration: none;
           }
 
           .coral-link:hover,
@@ -88,6 +90,7 @@ const About = () => {
             position: relative;
             display: inline-block;
             cursor: pointer;
+            font-size: inherit; /* Ensure it inherits font size from the parent */
           }
 
           .tooltip .tooltiptext {
@@ -206,15 +209,15 @@ const About = () => {
         <div>
           <div style={{ fontSize: '16px', fontWeight: '300', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh' }}>
             I will be starting my PhD in Computer Science & Engineering at the{' '}
-            <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" className="coral-link">
               University of Washington
             </a>{' '}
             this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship. I recently joined the{' '}
-            <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" className="coral-link">
               ACE Lab
             </a>,{' '}advised by{' '}
             <span className="tooltip">
-              <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" className="coral-link">
                 Prof. Jacob Wobbrock
               </a>
               <span className="tooltiptext">Professor of Information and, by courtesy, Computer Science & Engineering at the University of Washington</span>
@@ -223,18 +226,18 @@ const About = () => {
             <br />
             <br />
             I obtained my master of science degree in computer science from{' '}
-            <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" className="coral-link">
               Brown University
             </a>{' '}where I worked with{' '}
             <span className="tooltip">
-              <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" className="coral-link">
                 Prof. Jeff Huang
               </a>
               <span className="tooltiptext">Associate Professor and Associate Chair of Computer Science at Brown University</span>
             </span>{' '}
             at the Brown HCI Lab, and{' '}
             <span className="tooltip">
-              <a href="https://vivo.brown.edu/display/mparadis" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              <a href="https://vivo.brown.edu/display/mparadis" target="_self" rel="noopener noreferrer" className="coral-link">
                 Prof. Michael Paradiso
               </a>
               <span className="tooltiptext">Neuroscientist and Founding Director of the Center for Vision Research at Brown University</span>
@@ -242,14 +245,14 @@ const About = () => {
             in the neuroscience department.
 
             Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
-            <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+            <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" className="coral-link">
               Arizona State University
             </a>{' '}
             where I discovered the world of human-computer interaction.
             <br />
             <br />
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the arts.
-
+         
             {/* Brainstorming section */}
             <div style={{ marginBottom: '20px' }}></div>
             {/* <div
