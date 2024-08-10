@@ -205,7 +205,7 @@ const Notes = () => {
                             marginTop: '1vh',
                         }}
                     >
-                        <BlogLink to="/notes/hello">Hello World: What Really Guided My Academic Trajectory</BlogLink>
+                        <BlogLink to="/notes/hello">Hello World: I am Bad at Coding</BlogLink>
                         <div style={{ marginBottom: '5px' }}></div>
                         <div >
                             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>

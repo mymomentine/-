@@ -191,7 +191,7 @@ const Hello = () => {
             marginBottom: '30px'
           }}
         >
-          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> Hello World: What Really Guided My Academic Trajectory</span>
+          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> Hello World: I am Bad at Coding</span>
           <div style={{ marginBottom: '5px' }}></div>
           <div >
             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -203,24 +203,27 @@ const Hello = () => {
           </div>
           
           <div style={{ marginBottom: '20px' }}></div>
-          Before I even knew what computer science was, I loved two things: math and chess. These were my gateways to understanding complexity, strategy, and the beauty of logical thought.
-          <br />
-          <br />
-          Let’s rewind to my high school days. My journey took a turn during my calculus class the autumn semester of junior year. My favorite math teacher, a mentor who saw potential in every student, warned me about my grade—a 91. To me, the verge of a B was enough of a wake-up call to strive for better. His belief in my abilities became a beacon for my efforts. Sadly and unexpectedly, he passed away that mid-semester.
-          <br />
-          <br />
-          Programming formulas on ti-84 calculators in his class was my first foray into structuring commands to solve problems—a precursor to my future in programming. What started as little classroom activities sparked a curiosity about what more could be achieved through code.
-          <br />
-          <br />
-          Back then, I also played a lot of chess. After freshman year, I had made it onto the varsity team and quickly advanced to the first board position by my junior and senior years. My playing style was what my coach would refer to as <i>“unconventional”</i> and <i>“outside of the books”</i>. My opponents frequently misjudged my capabilities and perceived my seemingly oblivious style as a weakness. The unique strategy served me well in tournaments and taught me the value of thinking outside the box.
-          <br />
-          <br />
-          When I got to college, my interests took on an interdisciplinary approach. Coding provided a new arena that challenged my technical mindset and psychology fulfilled my curiosity of human thought and behavior. The dual focus naturally mapped a blueprint to the field of human-computer interaction (HCI), where the cognitive strategies of chess and the logical reasoning of mathematics found their application in designing systems in a more human-centric way.
-          <br />
-          <br />
-          My path to computer science was actually the merge of disparate interests. Today, as I dive deeper into HCI, I carry with me the lessons learned from those early passions. The drive to improve, the courage to explore uncharted territories, and the power of interdisciplinary research guide my way forward.
-        </h1>
-      </div>
+Before I even knew what computer science was, I loved two things: math and chess. These were my gateways to understanding complexity, strategy, and the beauty in logical thought.
+<br />
+<br />
+Let’s rewind to my high school days. It was halfway through my first semester of junior year. My favorite math teacher had just warned me about my grade—a 91. The verge of a B was enough of a wake-up call to strive for better. He put a lot of belief in me for some reason. Sadly and unexpectedly, he passed away that mid-semester.
+<br />
+<br />
+Programming formulas on ti-84 calculators in his class was my first step into structuring commands to solve problems—a precursor to why I even thought about computer science as a career. It started as little classroom activities that turned into thinking about what more could be achieved through software and what it could do to help others.
+<br />
+<br />
+Back then, I also played a lot of chess. After freshman year, I made it onto the varsity team and quickly advanced to the first board position by my junior and senior years. My playing style was what my coach would refer to as <i>“unconventional”</i> and <i>“outside of the books”</i>. My opponents frequently misjudged my capabilities and perceived my seemingly oblivious style as a weakness. It's funny because I never learned how to set up those chess clocks and always had my opponents do it. The strategy of that "seemingly clueless girl" actually served me well in tournaments and has even worked well today outside of chess.
+<br />
+<br />
+When I got to university, I didn't like computer science as much as I thought I would. The coding seemed difficult and mundane, and all I could think about was how to map my course schedule to graduate in three years instead of four.
+That's when I added psychology as my second major, the major I had in mind to pursue in the first place since the beginning of high school. That's when my interest took on an interdisciplinary approach. I saw coding as more of a tool. Psychology fulfilled my curiosity about human thought and behavior. The combination of the two led me to HCI. The cognitive strategies of chess and the logical reasoning of mathematics from my past also found their application in designing human-centric systems.
+<br />
+<br />
+In case you were wondering, I did manage to graduate with double majors in three years at the cost of taking 20+ credits a semester, but none of the coursework kept me busy or focused. I like HCI because it's trend-following and keeps me looking at the big picture.
+As I dive deeper into HCI today, I carry with me the lessons learned from those early passions. The drive to improve, the courage to explore unfamiliar territories, and the power of interdisciplinarity guide my way forward.
+</h1>
+</div>
+
 
       <div
         style={{
