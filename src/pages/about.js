@@ -249,8 +249,8 @@ const About = () => {
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the arts.
 
             {/* Brainstorming section */}
-            {/* <div style={{ marginBottom: '20px' }}></div>
-            <div
+            <div style={{ marginBottom: '20px' }}></div>
+            {/* <div
               style={{
                 backgroundColor: '#F3F3F3',
                 padding: '10px',
@@ -266,71 +266,8 @@ const About = () => {
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(236, 193, 124, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#ECC17C',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Jun 2024
-              </span>
-              Moved to Seattle + pc in repair after transit ˙◠˙
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(117, 122, 98, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#757A62',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                May 2024
-              </span>
-              Graduated from Brown University
-              <img
-                src={bear}
-                alt="A pencil sketch of a bear wearing a graduation hat."
-                style={{
-                  width: '40px',
-                  marginRight: '20px',
-                }}
-              />
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
-              <span
-                style={{
-                  backgroundColor: 'rgba(225, 192, 197, 0.3)',
-                  fontWeight: 'bold',
-                  color: '#E1C0C5',
-                  padding: '5px 10px',
-                  borderRadius: '5px',
-                  marginRight: '10px',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                Apr 2024
-              </span>
-              Attended the CRA-WP Grad Cohort for Women
-            </div>
 
-            <div
-  style={{
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: '20px',
-    flexWrap: 'wrap', // Allows wrapping on smaller screens
-  }}
->
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
   <span
     style={{
       backgroundColor: 'rgba(236, 193, 124, 0.3)',
@@ -339,17 +276,104 @@ const About = () => {
       padding: '5px 10px',
       borderRadius: '5px',
       marginRight: '10px',
-      whiteSpace: 'nowrap', // Keeps the date on one line
-      flexShrink: 0, // Ensures the date doesn't shrink
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    Jun 2024
+  </span>
+  <span
+    style={{
+      display: 'inline', 
+      whiteSpace: 'normal',
+      flex: 1,
+    }}
+  >
+    Moved to Seattle + pc in repair after transit ˙◠˙
+  </span>
+</div>
+
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(117, 122, 98, 0.3)',
+      fontWeight: 'bold',
+      color: '#757A62',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    May 2024
+  </span>
+  <span
+    style={{
+      display: 'inline',
+      whiteSpace: 'normal',
+      flex: 1,
+    }}
+  >
+    Graduated from Brown University
+    <img
+      src={bear}
+      alt="A pencil sketch of a bear wearing a graduation hat."
+      style={{
+        width: '40px',
+        marginLeft: '10px', // Closer margin to avoid too much space when wrapped
+        verticalAlign: 'middle', // Keeps the image aligned with the text
+      }}
+    />
+  </span>
+</div>
+
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(225, 192, 197, 0.3)',
+      fontWeight: 'bold',
+      color: '#E1C0C5',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
+    }}
+  >
+    Apr 2024
+  </span>
+  <span
+    style={{
+      display: 'inline',
+      whiteSpace: 'normal',
+      flex: 1,
+    }}
+  >
+    Attended the CRA-WP Grad Cohort for Women
+  </span>
+</div>
+
+<div style={{ display: 'flex', alignItems: 'flex-start', marginBottom: '20px', flexWrap: 'wrap' }}>
+  <span
+    style={{
+      backgroundColor: 'rgba(236, 193, 124, 0.3)',
+      fontWeight: 'bold',
+      color: '#ECC17C',
+      padding: '5px 10px',
+      borderRadius: '5px',
+      marginRight: '10px',
+      whiteSpace: 'nowrap',
+      flexShrink: 0,
     }}
   >
     Nov 2023
   </span>
   <span
     style={{
-      display: 'inline', // Allows the text to wrap naturally
-      whiteSpace: 'normal', // Ensures the text wraps normally
-      flex: 1, // Allows this section to take up available space
+      display: 'inline',
+      whiteSpace: 'normal',
+      flex: 1,
     }}
   >
     Built&nbsp;
@@ -367,16 +391,16 @@ const About = () => {
       my first pc
     </a>
     &nbsp;(now I can run heavy vision-language models)
+    <img
+      src={cat}
+      alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
+      style={{
+        width: '40px',
+        marginLeft: '10px',
+        verticalAlign: 'middle',
+      }}
+    />
   </span>
-  <img
-    src={cat}
-    alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
-    style={{
-      width: '40px',
-      marginLeft: '20px',
-      marginTop: '10px', // Adds margin to avoid overlap on smaller screens
-    }}
-  />
 </div>
 
 
