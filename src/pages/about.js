@@ -157,7 +157,7 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Profile picture of Yumeng Ma, wearing a graduation gown with manzanita trees in the background."
+              alt="Profile picture of Yumeng Ma, wearing a blue bucket hat and tilting her head slightly."
               style={{
                 width: '100%',
                 height: '100%',
@@ -188,16 +188,17 @@ const About = () => {
           </div>
 
           <div className="icon-wrapper" style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
-            <a href="mailto:yumengma@uw.edu">
+            <a href="mailto:yumengma@uw.edu" aria-label="Send an email to Yumeng">
               <MdEmail size={18} />
             </a>
-            <a href="https://github.com/momentine" target="_self" rel="noopener noreferrer">
+            <a href="https://github.com/momentine" target="_self" rel="noopener noreferrer" aria-label="Visit Yumeng's GitHub profile">
               <FaGithub size={18} />
             </a>
-            <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer">
+            <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer" aria-label="Visit Yumeng's Google Scholar profile">
               <FaGraduationCap size={18} />
             </a>
           </div>
+
         </div>
       </div>
 
@@ -247,8 +248,8 @@ const About = () => {
             <br />
             My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the arts.
 
-
-                {/* {<div style={{ marginBottom: '20px' }}></div>
+            {/* Brainstorming section */}
+            <div style={{ marginBottom: '20px' }}></div>
             <div
               style={{
                 backgroundColor: '#F3F3F3',
@@ -258,12 +259,10 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
-              blah blah 
-            </div>} */}
+              blah blah
+            </div>
 
-
-            {/* Here comes the updates section */}
-            <div style={{ marginBottom: '20px' }}></div>
+            {/* Updates section */}
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
@@ -323,7 +322,13 @@ const About = () => {
               </span>
               Attended the CRA-WP Grad Cohort for Women
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              marginBottom: '20px',
+              whiteSpace: 'nowrap'
+            }}>
               <span
                 style={{
                   backgroundColor: 'rgba(236, 193, 124, 0.3)',
@@ -332,25 +337,40 @@ const About = () => {
                   padding: '5px 10px',
                   borderRadius: '5px',
                   marginRight: '10px',
-                  whiteSpace: 'nowrap',
                 }}
               >
                 Nov 2023
               </span>
-              Built{' '}
-              <a href="https://pcpartpicker.com/b/Bgy48d" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="coral-link">
-                my first pc
-              </a>{' '}
-              (now I can run heavy vision-language models)
+              <span style={{ display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}>
+                Built&nbsp;
+                <a
+                  href="https://pcpartpicker.com/b/Bgy48d"
+                  target="_self"
+                  rel="noopener noreferrer"
+                  style={{
+                    textDecoration: 'none',
+                    fontSize: '16px',
+                    color: 'red', // Set the link color to red
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                  }}
+                  className="coral-link"
+                >
+                  my first pc
+                </a>
+                &nbsp;(now I can run heavy vision-language models)
+              </span>
               <img
                 src={cat}
                 alt="A yellow cartoon cat sitting on a green bean bag, typing furiously on a red laptop positioned on its lap."
                 style={{
                   width: '40px',
-                  marginRight: '20px',
+                  marginLeft: '20px',
                 }}
               />
             </div>
+
+
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
               <span
                 style={{
