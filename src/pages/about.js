@@ -205,20 +205,21 @@ const About = () => {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginTop: '10px', marginBottom: '60px' }}>
         <div>
           <div style={{ fontSize: '16px', fontWeight: '300', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh' }}>
-            I will be starting my PhD in Computer Science & Engineering at the{' '}
+            I am a PhD student in Computer Science & Engineering at the{' '}
             <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              University of Washington
+              University of Washington,
             </a>{' '}
-            this fall supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship. I recently joined the{' '}
-            <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              ACE Lab
-            </a> {' '} and am advised by{' '}
+            advised by 
             <span className="tooltip">
               <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
                 Prof. Jacob Wobbrock
               </a>
               <span className="tooltiptext">Professor of Information and, by courtesy, Computer Science & Engineering at the University of Washington</span>
-            </span>.
+            </span>
+            {' '} in the {' '}
+            <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              ACE Lab
+            </a>. My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
 
             <br />
             <br />
@@ -248,7 +249,7 @@ const About = () => {
             where I discovered the world of human-computer interaction.
             <br />
             <br />
-            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, and dabbling in the arts.
+            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, creating digital art, and most recently, playing bass guitar.
 
             {/* Brainstorming section */}
             <div style={{ marginBottom: '20px' }}></div>
