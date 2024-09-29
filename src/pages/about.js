@@ -249,7 +249,7 @@ const About = () => {
             where I discovered the world of human-computer interaction.
             <br />
             <br />
-            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, creating digital art, and most recently, playing bass guitar.
+            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, creating digital art, and recently, playing bass guitar.
 
             {/* Brainstorming section */}
             <div style={{ marginBottom: '20px' }}></div>
