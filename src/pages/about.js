@@ -207,7 +207,7 @@ const About = () => {
           <div style={{ fontSize: '16px', fontWeight: '300', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh' }}>
             I am a PhD student in Computer Science & Engineering at the{' '}
             <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-              University of Washington,
+              University of Washington
             </a>{' '}
             advised by 
             <span className="tooltip">
