@@ -209,7 +209,7 @@ const About = () => {
             <a href="https://www.washington.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               University of Washington
             </a>{' '}
-            advised by 
+            advised by {' '}
             <span className="tooltip">
               <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
                 Prof. Jacob Wobbrock
