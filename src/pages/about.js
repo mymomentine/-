@@ -266,9 +266,40 @@ const About = () => {
             </div> */}
 
             {/* Updates section */}
+
             <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(117, 122, 98, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#757A62',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                Sep 2024
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                Started my PhD jounrey + pc is fixed now ˙‿˙
+              </span>
+            </div>
+
+
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
               <span
                 style={{
@@ -282,7 +313,7 @@ const About = () => {
                   flexShrink: 0,
                 }}
               >
-                Jun 2024
+                Jul 2024
               </span>
               <span
                 style={{
@@ -363,7 +394,7 @@ const About = () => {
             </div>
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
-              <span
+              {/* <span
                 style={{
                   backgroundColor: 'rgba(236, 193, 124, 0.3)',
                   fontWeight: 'bold',
@@ -376,7 +407,7 @@ const About = () => {
                 }}
               >
                 Nov 2023
-              </span>
+              </span> */}
               <span
                 style={{
                   display: 'inline-flex',
@@ -387,7 +418,6 @@ const About = () => {
                 }}
               >
                 <span>
-                  Built&nbsp;
                   <a
                     href="https://pcpartpicker.com/b/Bgy48d"
                     target="_self"
@@ -399,9 +429,9 @@ const About = () => {
                     }}
                     className="coral-link"
                   >
-                    my first pc
+                    my pc build
                   </a>
-                  &nbsp;(now I can run heavy vision-language models)
+                  &nbsp;(to run heavy vision-language models + make 3d art)
                 </span>
                 <img
                   src={cat}
@@ -415,7 +445,7 @@ const About = () => {
               </span>
             </div>
 
-            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+            {/* <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
               <span
                 style={{
                   backgroundColor: 'rgba(225, 192, 197, 0.3)',
@@ -441,7 +471,7 @@ const About = () => {
               >
                 Attended UIST 2023 as a student volunteer and demoed ProactiveAgent for SIC
               </span>
-            </div>
+            </div> */}
 
 
 

@@ -127,7 +127,7 @@ const Notes = () => {
                 `}
             </style>
 
-            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+            {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div
                     style={{
                         fontSize: '14px',
@@ -146,7 +146,7 @@ const Notes = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div
