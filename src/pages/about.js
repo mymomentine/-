@@ -219,11 +219,11 @@ const About = () => {
             {' '} in the {' '}
             <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               ACE Lab
-            </a>. My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
-
+            </a>. 
+            I research and craft interactive social and visual systems that enhance user experience and accessibility. However, my wwork goes beyond design to explore the scientific and conceptual depth behind these systems. I challenge existing perspectives and rethink how we evaluate and understand interaction and perception.  My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
             <br />
             <br />
-            I obtained my master of science degree in computer science from{' '}
+            I recieved my M.S. in computer science from{' '}
             <a href="https://www.brown.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Brown University
             </a>{' '}where I worked with{' '}
@@ -241,19 +241,19 @@ const About = () => {
               <span className="tooltiptext">Neuroscientist and Founding Director of the Center for Vision Research at Brown University</span>
             </span>{' '}
             in the neuroscience department.
-
-            Before that, I received concurrent bachelor of science degrees in computer science and psychology from{' '}
+            Before that, I recieved my B.S.from {' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
-            </a>{' '}
-            where I discovered the world of human-computer interaction.
+            </a>{' '} where I double majored in computer science and psychology.
             <br />
             <br />
-            My passion lies in crafting and researching interactive social and visual systems that enhance user experience, accessibility, and mental health. On the side, I enjoy playing and making video games, skateboarding, watching anime, creating digital art, and recently, playing bass guitar.
+            
+            On the side, I enjoy playing and making video games, skateboarding, watching anime, creating digital art, and playing bass guitar.
+
 
             {/* Brainstorming section */}
             <div style={{ marginBottom: '20px' }}></div>
-            {/* <div
+            <div
               style={{
                 backgroundColor: '#F3F3F3',
                 padding: '10px',
@@ -262,12 +262,12 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
-              blah blah
-            </div> */}
+              What shapes our expectations and why do certain interactions feel more compelling than others?
+            </div>
 
-            {/* Updates section */}
+            {/* Updates section
 
-            <div style={{ marginBottom: '20px' }}>
+            {/* <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
             </div>
 
@@ -391,7 +391,7 @@ const About = () => {
               >
                 Attended the CRA-WP Grad Cohort for Women
               </span>
-            </div>
+            </div> */}
 
             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
               {/* <span

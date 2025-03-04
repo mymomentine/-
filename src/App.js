@@ -8,6 +8,7 @@ import Publications from './pages/publications';
 import Notes from './pages/notes';
 import Overwatch from './pages/posts/overwatch'; 
 import Hello from './pages/posts/hello'; 
+import Hiatus from './pages/posts/hiatus'; 
 import Playground from './pages/playground';
 
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/notes' element={<Notes/>} />
         <Route path='/notes/overwatch' element={<Overwatch/>} />
         <Route path='/notes/hello' element={<Hello/>} />
+        <Route path='/notes/hiatus' element={<Hiatus/>} />
         <Route path='/playground' element={<Playground/>} />
       </Routes>
     </Router>

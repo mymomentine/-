@@ -127,6 +127,27 @@ const Notes = () => {
                 `}
             </style>
 
+                       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+                <div
+                    style={{
+                        fontSize: '14px',
+                        fontWeight: '300',
+                        color: '#7C7C7C',
+                        lineHeight: '1.4',
+                        marginTop: '1vh',
+                    }}
+                >
+                    <BlogLink to="/notes/hiatus">A little research hiatus</BlogLink>
+                    <div style={{ marginBottom: '5px' }}></div>
+                    <div>
+                        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
+                            <FaCalendarAlt size={12} color="#7C7C7C" />
+                            <span style={{ marginLeft: '8px' }}>Mar 03 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div
                     style={{
@@ -148,7 +169,7 @@ const Notes = () => {
                 </div>
             </div> */}
 
-            <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+            {/* <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div
                     style={{
                         fontSize: '14px',
@@ -167,7 +188,7 @@ const Notes = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div
                 style={{
