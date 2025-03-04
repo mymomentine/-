@@ -220,7 +220,7 @@ const About = () => {
             <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               ACE Lab
             </a>. 
-            I research and craft interactive social and visual systems that enhance user experience and accessibility. However, my wwork goes beyond design to explore the scientific and conceptual depth behind these systems. I challenge existing perspectives and rethink how we evaluate and understand interaction and perception.  My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            I research and craft interactive social and visual systems that enhance user experience and accessibility. My work goes beyond design to explore the scientific and conceptual depth behind these systems. I challenge existing perspectives and rethink how we evaluate and understand interaction and perception.  My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
             <br />
             <br />
             I recieved my M.S. in computer science from{' '}

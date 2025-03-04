@@ -180,7 +180,7 @@ const Hiatus = () => {
             <a href="https://dubfuture.blogspot.com/2009/11/i-give-up-on-chiuist.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
             <i>I Give Up on CHI/UIST</i> 
             </a>{' '}
-             post, where he adocated for more space to build real systems in 2009. He argued that systems research takes longer to do than other types of work. The opposite seems true to me now. Systems papers are in high demand and often rushed while more scientific research takes longer to complete. Much of today’s systems work feels superficial and easy to build. 
+             post, where he advocated for more space to build real systems in 2009. He argued that systems research takes longer to do than other types of work. The opposite seems true to me now. Systems papers are in high demand and often rushed while more scientific research takes longer to complete. Much of today’s systems work feels superficial and easy to build. 
           <br />
           <br />
 
