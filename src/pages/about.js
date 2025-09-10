@@ -180,7 +180,7 @@ const About = () => {
             }}
           >
             <div style={{ fontWeight: 'bold', marginBottom: '10px' }}>
-              <span style={{ fontWeight: 'bold', marginRight: '10px' }}>Yumeng Ma</span>
+              <span style={{ fontWeight: 'bold', marginRight: '10px' }}>yumeng ma</span>
               <span style={{ fontWeight: 'normal' }}>马雨萌</span> 🌱
             </div>
             <div style={{ fontSize: '16px', marginBottom: '10px' }}>PhD Student in CSE</div>
@@ -220,7 +220,8 @@ const About = () => {
             <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               ACE Lab
             </a>. 
-            I research and craft interactive social and visual systems that enhance user experience and accessibility. My work goes beyond design to explore the scientific and conceptual depth behind these systems. I challenge existing perspectives and rethink how we evaluate and understand interaction and perception.  My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship.
+            I research the intersection of AI and accessibility. My current work in collaboration with <strong>Microsoft</strong> explores how large language models generate code and whether that code supports accessible web experiences.
+            {/* I research and craft interactive social and visual systems that enhance user experience and accessibility. My work goes beyond design to explore the scientific and conceptual depth behind these systems. I challenge existing perspectives and rethink how we evaluate and understand interaction and perception.  My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship. */}
             <br />
             <br />
             I recieved my M.S. in computer science from{' '}
@@ -247,9 +248,8 @@ const About = () => {
             </a>{' '} where I double majored in computer science and psychology.
             <br />
             <br />
-            
-            On the side, I enjoy playing and making video games, skateboarding, watching anime, creating digital art, and playing bass guitar.
-
+          
+          On the side, I enjoy lurking on Discord, reading creepypastas, skateboarding, loitering at grocery stores, making digital art, and playing bass guitar
 
             {/* Brainstorming section */}
             <div style={{ marginBottom: '20px' }}></div>
@@ -262,7 +262,8 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
-              What shapes our expectations and why do certain interactions feel more compelling than others?
+              {/* What shapes our expectations and why do certain interactions feel more compelling than others? */}
+              How can AI create code that's accessibile by design and what makes those outputs feel truly inclusive?
             </div>
 
             {/* Updates section

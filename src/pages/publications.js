@@ -477,7 +477,7 @@ const Publications = () => {
         </div>
         <div className="research-interests">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
-            <span style={{ marginLeft: '8px' }}> My research interests  {''} <FaCarrot size={12} color="#7C7C7C" /></span>
+            <span style={{ marginLeft: '8px' }}> What I’m curious about  {''} <FaCarrot size={12} color="#7C7C7C" /></span>
           </div>
         </div>
       </div>
