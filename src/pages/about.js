@@ -249,7 +249,7 @@ const About = () => {
             <br />
             <br />
           
-          On the side, I enjoy lurking on Discord, reading creepypastas, skateboarding, loitering at grocery stores, making digital art, and playing bass guitar
+          On the side, I enjoy lurking on Discord, reading creepypastas, skateboarding, loitering at grocery stores, making digital art, and playing bass guitar.
 
             {/* Brainstorming section */}
             <div style={{ marginBottom: '20px' }}></div>
