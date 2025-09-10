@@ -245,6 +245,22 @@ const Playground = () => {
         </div>
       </div>
 
+
+            <div
+                style={{
+                    position: 'absolute',
+                    bottom: '30px',
+                    left: '20px',
+                    fontSize: '12px',
+                    color: '#7C7C7C',
+                    textAlign: 'left',
+                    marginTop: '30px',
+                    marginBottom: '30px'
+                }}
+            >
+              Not all creations need publishing ★
+            </div>
+
       <div
         className="copy-right"
         style={{
