@@ -22,6 +22,7 @@ const Playground = () => {
         backgroundColor: 'white',
         minHeight: '80vh',
         marginTop: '30px',
+        paddingBottom: '90px',
       }}
     >
       <Helmet>
