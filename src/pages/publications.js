@@ -54,13 +54,24 @@
 //             clip: rect(0, 0, 0, 0);
 //             white-space: nowrap;
 //             border: 0;
+//             /* prevent selection/highlight overlay on iOS */
+//             user-select: none;
+//             -webkit-user-select: none;
+//             pointer-events: none;
+//             -webkit-touch-callout: none;
 //           }
 
 //           .links-visual{list-style:none;padding-left:0;margin:6px 0}
 //           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
 
-//           /* Reader-only lines: invisible in UI; prevent Speak Screen reading using aria-hidden */
-//           .reader-inline{height:0;overflow:hidden;margin:0;font-size:0;line-height:0}
+//           /* Reader-only lines: keep your exact hiding strategy
+//              + add no-select/no-pointer so Speak Screen won't highlight */
+//           .reader-inline{
+//             height:0;overflow:hidden;margin:0;font-size:0;line-height:0;
+//             user-select:none;-webkit-user-select:none;pointer-events:none;-webkit-touch-callout:none;
+//             /* containment helps WebKit avoid stray paint/highlight boxes */
+//             contain: content;
+//           }
 
 //           .footnote-ui::before{
 //             content:"* Equal Contribution";
@@ -81,12 +92,13 @@
 
 //           .tooltip{position:relative;display:inline-block;cursor:pointer}
 //           .tooltip .tooltiptext{
-//             visibility:hidden;width:200px;background:#fff;color:#7C7C7C;text-align:center;border-radius:6px;
+//             /* change only this: visibility:hidden -> display:none (no visual diff) */
+//             display:none;width:200px;background:#fff;color:#7C7C7C;text-align:center;border-radius:6px;
 //             padding:5px 10px;position:absolute;z-index:1;bottom:125%;left:50%;margin-left:-100px;
 //             box-shadow:0 0 6px rgba(0,0,0,.2);font-size:10px
 //           }
 //           .tooltip:hover .tooltiptext,
-//           .tooltip:focus-within .tooltiptext{visibility:visible}
+//           .tooltip:focus-within .tooltiptext{display:block}
 
 //           .venn-container{position:relative;width:300px;height:300px;margin:auto;cursor:pointer}
 //           .circle{position:absolute;width:180px;height:180px;border-radius:50%;transition:transform 1s}
@@ -110,7 +122,7 @@
 //         `}
 //       </style>
 
-//       <div id="pubs-title" role="heading" aria-level="1" className="sr-only">
+//       <div id="pubs-title" role="heading" aria-level="1" className="sr-only" inert>
 //         Publications Section
 //       </div>
       
@@ -137,7 +149,7 @@
 //             <strong>“Together but not together”: Evaluating Typing Indicators for Interaction-Rich Communication</strong>
 //           </div>
 
-//           <p style={{ marginBottom: '5px' }}>
+//           <div style={{ marginBottom: '5px' }}>
 //             <span className="tooltip">
 //               <a href="https://zainabiftikhar.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="author-link">Zainab Iftikhar</a>
 //               <span className="tooltiptext" aria-hidden="true"> Ph.D. Candidate at Brown University</span>
@@ -146,7 +158,7 @@
 //               <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jeff Huang</a>
 //               <span className="tooltiptext" aria-hidden="true"> Associate Professor and Associate Chair of Computer Science at Brown University</span>
 //             </span>
-//           </p>
+//           </div>
 
 //           <div style={{ marginBottom: '5px' }}>
 //             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2023</span>
@@ -157,7 +169,7 @@
 //               <a
 //                 href="../documents/live_typing.pdf"
 //                 className="coral-link bubble-link"
-//                 aria-label="PDF document for the paper titled: Together but not together"
+//                 aria-label="PDF for live typing paper"
 //               >
 //                 PDF <FaFilePdf size={10} aria-hidden="true" />
 //               </a>
@@ -166,24 +178,24 @@
 //               <a
 //                 href="https://doi.org/10.1145/3544548.3581248"
 //                 className="coral-link bubble-link"
-//                 aria-label="ACM paper webpage for the paper titled: Together but not together"
+//                 aria-label="webpage for live typing paper"
 //               >
 //                 Paper <FaPaperclip size={10} aria-hidden="true" />
 //               </a>
 //             </li>
 //             <li>
-//               <span className="sr-only">Code repository for this work</span>
+//               <span className="sr-only" inert>Code repository for this work</span>
 //               <a
 //                 href="https://github.com/brownhci/live-typing"
 //                 className="coral-link bubble-link"
-//                 aria-label="Code repository for the paper titled: Together but not together"
+//                 aria-label="Code repository for live typing paper"
 //               >
 //                 Code <FaFileCode size={10} aria-hidden="true" />
 //               </a>
 //             </li>
 //           </ul>
 
-//           <p className="reader-inline" aria-hidden="true">
+//           <p className="reader-inline" aria-hidden="true" inert>
 //             Resources: <a href="../documents/live_typing.pdf">PDF</a> · <a href="https://doi.org/10.1145/3544548.3581248">Paper</a> · <a href="https://github.com/brownhci/live-typing">Code</a>
 //           </p>
 //         </div>
@@ -197,7 +209,7 @@
 //             <strong>The Mixed Reality Passthrough Window: Rethinking the Laptop Videoconferencing Experience</strong>
 //           </div>
 
-//           <p style={{ marginBottom: '5px' }}>
+//           <div style={{ marginBottom: '5px' }}>
 //             <span className="tooltip">
 //               <a href="https://www.gonsherdesign.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Ian Gonsher</a>
 //               <span className="tooltiptext" aria-hidden="true"> Assistant Professor in the School of Engineering and Department of Computer Science at Brown University</span>
@@ -206,7 +218,7 @@
 //               <a href="https://www.linkedin.com/in/horatiohan/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Yuxin Han</a>
 //               <span className="tooltiptext" aria-hidden="true"> Senior Industrial Designer at Superpedestrian</span>
 //             </span>
-//           </p>
+//           </div>
 
 //           <div style={{ marginBottom: '5px' }}>
 //             <span style={{ fontWeight: '500', color: '#676767' }}>IHIET-AI 2023</span>
@@ -217,7 +229,7 @@
 //               <a
 //                 href="../documents/mrpw.pdf"
 //                 className="coral-link bubble-link"
-//                 aria-label="PDF document for The Mixed Reality Passthrough Window"
+//                 aria-label="PDF for mixed reality window paper"
 //               >
 //                 PDF <FaFilePdf size={10} aria-hidden="true" />
 //               </a>
@@ -226,14 +238,14 @@
 //               <a
 //                 href="http://doi.org/10.54941/ahfe1002954"
 //                 className="coral-link bubble-link"
-//                 aria-label="Paper webpage for The Mixed Reality Passthrough Window"
+//                 aria-label="webpage for mixed reality window paper"
 //               >
 //                 Paper <FaPaperclip size={10} aria-hidden="true" />
 //               </a>
 //             </li>
 //           </ul>
 
-//           <p className="reader-inline" aria-hidden="true">
+//           <p className="reader-inline" aria-hidden="true" inert>
 //             Resources: <a href="../documents/mrpw.pdf">PDF</a> · <a href="http://doi.org/10.54941/ahfe1002954">Paper</a>
 //           </p>
 //         </div>
@@ -264,13 +276,13 @@
 //             <strong>ProactiveAgent: Personalized Context-Aware Reminder System</strong>
 //           </div>
 
-//           <p style={{ marginBottom: '5px' }}>
+//           <div style={{ marginBottom: '5px' }}>
 //             <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
 //             <span className="tooltip">
 //               <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
 //               <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
 //             </span><sup aria-label="equal contribution">*</sup>
-//           </p>
+//           </div>
 
 //           <div style={{ marginBottom: '5px' }}>
 //             <span style={{ fontWeight: '500', color: '#676767' }}>UIST 2023 Adjunct</span>
@@ -281,7 +293,7 @@
 //               <a
 //                 href="../documents/ProactiveAgent.pdf"
 //                 className="coral-link bubble-link"
-//                 aria-label="PDF document for ProactiveAgent research paper"
+//                 aria-label="PDF for ProactiveAgent paper"
 //               >
 //                 PDF <FaFilePdf size={10} aria-hidden="true" />
 //               </a>
@@ -290,18 +302,18 @@
 //               <a
 //                 href="https://dl.acm.org/doi/10.1145/3586182.3625115"
 //                 className="coral-link bubble-link"
-//                 aria-label="ACM webpage for ProactiveAgent research paper"
+//                 aria-label="webpage for ProactiveAgent paper"
 //               >
 //                 Paper <FaPaperclip size={10} aria-hidden="true" />
 //               </a>
 //             </li>
 //           </ul>
 
-//           <p className="reader-inline" aria-hidden="true">
-//             Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper (ACM)</a>
+//           <p className="reader-inline" aria-hidden="true" inert>
+//             Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper</a>
 //           </p>
 
-//           <p className="reader-inline" aria-hidden="true">
+//           <p className="reader-inline" aria-hidden="true" inert>
 //             * denotes Equal Contribution
 //           </p>
 //         </div>
@@ -354,9 +366,9 @@
 //         </div>
 
 //         {/* Speak Screen label for carrot */}
-//         <span className="sr-only">Carrot icon representing fresh research ideas</span>
+//         <span className="sr-only" inert>Carrot icon representing fresh research ideas</span>
 
-//         <p className="reader-inline" aria-hidden="true">
+//         <p className="reader-inline" aria-hidden="true" inert>
 //           What I’m curious about: social &amp; visual computing · accessibility · human–AI interaction
 //         </p>
 
@@ -514,6 +526,29 @@ const Publications = () => {
           .research-interests{position:absolute;top:0;right:0;padding-left:20px;width:calc(100% - 300px);height:100%;display:flex;align-items:center;font-size:11px;color:#7C7C7C}
 
           @media (orientation:landscape){.tooltip .author-link{font-size:16px}}
+
+          /* === Speak Screen suppression without changing UI or Reader Mode === */
+          .sr-only,
+          .reader-inline {
+            visibility: hidden;           /* remove highlight targets but keep DOM for Reader Mode */
+            user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
+            -webkit-touch-callout: none;
+          }
+
+          .footnote-ui,
+          .venn-label,
+          .research-interests {
+            user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;         /* keep visible, but not highlightable */
+          }
+
+          .venn-label::after {
+            user-select: none;
+            -webkit-user-select: none;
+          }
         `}
       </style>
 
@@ -544,7 +579,7 @@ const Publications = () => {
             <strong>“Together but not together”: Evaluating Typing Indicators for Interaction-Rich Communication</strong>
           </div>
 
-          <p style={{ marginBottom: '5px' }}>
+          <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
               <a href="https://zainabiftikhar.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="author-link">Zainab Iftikhar</a>
               <span className="tooltiptext" aria-hidden="true"> Ph.D. Candidate at Brown University</span>
@@ -553,7 +588,7 @@ const Publications = () => {
               <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jeff Huang</a>
               <span className="tooltiptext" aria-hidden="true"> Associate Professor and Associate Chair of Computer Science at Brown University</span>
             </span>
-          </p>
+          </div>
 
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2023</span>
@@ -564,7 +599,7 @@ const Publications = () => {
               <a
                 href="../documents/live_typing.pdf"
                 className="coral-link bubble-link"
-                aria-label="PDF document for the paper titled: Together but not together"
+                aria-label="PDF for live typing paper"
               >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
@@ -573,7 +608,7 @@ const Publications = () => {
               <a
                 href="https://doi.org/10.1145/3544548.3581248"
                 className="coral-link bubble-link"
-                aria-label="ACM paper webpage for the paper titled: Together but not together"
+                aria-label="webpage for live typing paper"
               >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
@@ -583,7 +618,7 @@ const Publications = () => {
               <a
                 href="https://github.com/brownhci/live-typing"
                 className="coral-link bubble-link"
-                aria-label="Code repository for the paper titled: Together but not together"
+                aria-label="Code repository for live typing paper"
               >
                 Code <FaFileCode size={10} aria-hidden="true" />
               </a>
@@ -604,7 +639,7 @@ const Publications = () => {
             <strong>The Mixed Reality Passthrough Window: Rethinking the Laptop Videoconferencing Experience</strong>
           </div>
 
-          <p style={{ marginBottom: '5px' }}>
+          <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
               <a href="https://www.gonsherdesign.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Ian Gonsher</a>
               <span className="tooltiptext" aria-hidden="true"> Assistant Professor in the School of Engineering and Department of Computer Science at Brown University</span>
@@ -613,7 +648,7 @@ const Publications = () => {
               <a href="https://www.linkedin.com/in/horatiohan/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Yuxin Han</a>
               <span className="tooltiptext" aria-hidden="true"> Senior Industrial Designer at Superpedestrian</span>
             </span>
-          </p>
+          </div>
 
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>IHIET-AI 2023</span>
@@ -624,7 +659,7 @@ const Publications = () => {
               <a
                 href="../documents/mrpw.pdf"
                 className="coral-link bubble-link"
-                aria-label="PDF document for The Mixed Reality Passthrough Window"
+                aria-label="PDF for mixed reality window paper"
               >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
@@ -633,7 +668,7 @@ const Publications = () => {
               <a
                 href="http://doi.org/10.54941/ahfe1002954"
                 className="coral-link bubble-link"
-                aria-label="Paper webpage for The Mixed Reality Passthrough Window"
+                aria-label="webpage for mixed reality window paper"
               >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
@@ -671,13 +706,13 @@ const Publications = () => {
             <strong>ProactiveAgent: Personalized Context-Aware Reminder System</strong>
           </div>
 
-          <p style={{ marginBottom: '5px' }}>
+          <div style={{ marginBottom: '5px' }}>
             <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
             <span className="tooltip">
               <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
               <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
             </span><sup aria-label="equal contribution">*</sup>
-          </p>
+          </div>
 
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>UIST 2023 Adjunct</span>
@@ -688,7 +723,7 @@ const Publications = () => {
               <a
                 href="../documents/ProactiveAgent.pdf"
                 className="coral-link bubble-link"
-                aria-label="PDF document for ProactiveAgent research paper"
+                aria-label="PDF for ProactiveAgent paper"
               >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
@@ -697,7 +732,7 @@ const Publications = () => {
               <a
                 href="https://dl.acm.org/doi/10.1145/3586182.3625115"
                 className="coral-link bubble-link"
-                aria-label="ACM webpage for ProactiveAgent research paper"
+                aria-label="webpage for ProactiveAgent paper"
               >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
@@ -705,7 +740,7 @@ const Publications = () => {
           </ul>
 
           <p className="reader-inline" aria-hidden="true" inert>
-            Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper (ACM)</a>
+            Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper</a>
           </p>
 
           <p className="reader-inline" aria-hidden="true" inert>
