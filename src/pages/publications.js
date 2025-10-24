@@ -44,24 +44,49 @@ const Publications = () => {
 
       <style>
         {`
+          /* Visually hidden, still readable in Reader Mode (when CSS is stripped) */
           .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+
+            /* Critical for Speak Screen: don't allow selection -> no random highlights */
+            -webkit-user-select: none !important;
+            user-select: none !important;
           }
 
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
 
-          /* Reader-only lines: invisible in UI; prevent Speak Screen reading using aria-hidden */
-          .reader-inline{height:0;overflow:hidden;margin:0;font-size:0;line-height:0}
+          /* Reader-only lines: hidden in UI; Speak Screen shouldn't highlight them */
+          .reader-inline{
+            position:absolute;
+            width:1px;
+            height:1px;
+            overflow:hidden;
+            clip: rect(0, 0, 0, 0);
+            margin:0;
+            font-size:0;
+            line-height:0;
 
+            /* block Speak Screen selection */
+            -webkit-user-select:none;
+            user-select:none;
+            pointer-events:none;
+          }
+
+          /* UI-only footnote via CSS content */
+          .footnote-ui{
+            -webkit-user-select:none;
+            user-select:none;
+            pointer-events:none; /* avoid selection/highlight glitches */
+          }
           .footnote-ui::before{
             content:"* Equal Contribution";
             color:#7C7C7C;
@@ -83,7 +108,12 @@ const Publications = () => {
           .tooltip .tooltiptext{
             visibility:hidden;width:200px;background:#fff;color:#7C7C7C;text-align:center;border-radius:6px;
             padding:5px 10px;position:absolute;z-index:1;bottom:125%;left:50%;margin-left:-100px;
-            box-shadow:0 0 6px rgba(0,0,0,.2);font-size:10px
+            box-shadow:0 0 6px rgba(0,0,0,.2);font-size:10px;
+
+            /* prevent Speak Screen from selecting tooltip text */
+            -webkit-user-select:none;
+            user-select:none;
+            pointer-events:none;
           }
           .tooltip:hover .tooltiptext,
           .tooltip:focus-within .tooltiptext{visibility:visible}
@@ -97,19 +127,28 @@ const Publications = () => {
           .venn-container:hover .circle-left{transform:translateX(0%) translateY(-25%)}
           .venn-container:hover .circle-right{transform:translateX(0%) translateY(-25%)}
 
-          .venn-label{position:absolute;color:inherit;text-align:center;line-height:1.1}
+          /* Venn labels created via pseudo-element; make them non-selectable to avoid odd highlight bars */
+          .venn-label{position:absolute;color:inherit;text-align:center;line-height:1.1;
+            -webkit-user-select:none; user-select:none; pointer-events:none;
+          }
           .venn-label::after{content:attr(data-label)}
           .text-left::after{content:"social & visual\\A computing";white-space:pre-line}
           .text-left{bottom:20px;left:50px;color:#E1C0C5}
           .text-right{bottom:35px;right:50px;color:#ECC17C}
           .text-top{top:45px;left:50%;transform:translateX(-38%);color:#757A62}
 
-          .research-interests{position:absolute;top:0;right:0;padding-left:20px;width:calc(100% - 300px);height:100%;display:flex;align-items:center;font-size:11px;color:#7C7C7C}
+          /* Keep this overlay UI from being selected/highlighted */
+          .research-interests{
+            position:absolute;top:0;right:0;padding-left:20px;width:calc(100% - 300px);height:100%;
+            display:flex;align-items:center;font-size:11px;color:#7C7C7C;
+            -webkit-user-select:none; user-select:none; pointer-events:none;
+          }
 
           @media (orientation:landscape){.tooltip .author-link{font-size:16px}}
         `}
       </style>
 
+      {/* Accessible title (kept invisible visually) */}
       <div id="pubs-title" role="heading" aria-level="1" className="sr-only">
         Publications Section
       </div>
@@ -172,7 +211,6 @@ const Publications = () => {
               </a>
             </li>
             <li>
-              <span className="sr-only">Code repository for this work</span>
               <a
                 href="https://github.com/brownhci/live-typing"
                 className="coral-link bubble-link"
@@ -307,7 +345,7 @@ const Publications = () => {
         </div>
       </div>
 
-      {/* UI-only footnote via CSS; hidden from SRs */}
+      {/* UI-only footnote via CSS; hidden from SRs; non-selectable */}
       <div
         className="footnote-ui"
         aria-hidden="true"
@@ -353,7 +391,7 @@ const Publications = () => {
           <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
         </div>
 
-        {/* Speak Screen label for carrot */}
+        {/* Speak Screen label for carrot (not visible, not selectable) */}
         <span className="sr-only">Carrot icon representing fresh research ideas</span>
 
         <p className="reader-inline" aria-hidden="true">
