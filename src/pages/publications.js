@@ -427,7 +427,7 @@ const Publications = () => {
   return (
     <div
       role="main"
-      aria-labelledby="pubs-title"
+      aria-label="Publications"
       style={{
         position: 'relative',
         display: 'flex',
@@ -446,33 +446,13 @@ const Publications = () => {
       }}
     >
       <Helmet>
-        {/* Keep this; Reader Mode still works with it */}
         <meta name="robots" content="nosnippet" />
       </Helmet>
 
       <style>
         {`
-          .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-            user-select: none;
-            -webkit-user-select: none;
-            pointer-events: none;
-            -webkit-touch-callout: none;
-          }
-
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
-
-          /* REMOVE reader-inline entirely to avoid Speak Screen phantom highlights */
-          .reader-inline{display:none}
 
           .footnote-ui::before{
             content:"* Equal Contribution";
@@ -522,10 +502,6 @@ const Publications = () => {
         `}
       </style>
 
-      <div id="pubs-title" role="heading" aria-level="1" className="sr-only">
-        Publications Section
-      </div>
-      
       <div
         role="heading"
         aria-level="2"
@@ -543,13 +519,7 @@ const Publications = () => {
 
       {/* Paper 1 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
-        {/* Restore REAL alt so Reader Mode shows descriptive text for the image */}
-        <img
-          src={liveTyping}
-          alt="Chat UI mockups showing live typing indicators"
-          style={{ height: '150px', borderRadius: '16px' }}
-          draggable="false"
-        />
+        <img src={liveTyping} alt="Chat UI mockups showing live typing indicators" style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper1-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>“Together but not together”: Evaluating Typing Indicators for Interaction-Rich Communication</strong>
@@ -590,7 +560,6 @@ const Publications = () => {
               </a>
             </li>
             <li>
-              {/* remove hidden inline text to avoid extra highlights */}
               <a
                 href="https://github.com/brownhci/live-typing"
                 className="coral-link bubble-link"
@@ -605,12 +574,7 @@ const Publications = () => {
 
       {/* Paper 2 */}
       <div className="container" role="article" aria-labelledby="paper2-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
-        <img
-          src={mrpwImage}
-          alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call."
-          style={{ height: '150px', borderRadius: '16px' }}
-          draggable="false"
-        />
+        <img src={mrpwImage} alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call." style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper2-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>The Mixed Reality Passthrough Window: Rethinking the Laptop Videoconferencing Experience</strong>
@@ -673,12 +637,7 @@ const Publications = () => {
 
       {/* Paper 3 */}
       <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
-        <img
-          src={ProactiveAgent}
-          alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output"
-          style={{ height: '150px', borderRadius: '16px' }}
-          draggable="false"
-        />
+        <img src={ProactiveAgent} alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output" style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper3-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>ProactiveAgent: Personalized Context-Aware Reminder System</strong>
@@ -719,7 +678,7 @@ const Publications = () => {
         </div>
       </div>
 
-      {/* UI-only footnote via CSS; visible exactly where you had it */}
+      {/* UI-only footnote via CSS; hidden from SRs */}
       <div
         className="footnote-ui"
         aria-hidden="true"
@@ -765,7 +724,6 @@ const Publications = () => {
           <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
         </div>
 
-        {/* Removed hidden text lines that were creating reader/speak artifacts */}
         <div className="research-interests" aria-hidden="true">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
