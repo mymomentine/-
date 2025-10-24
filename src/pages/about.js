@@ -157,7 +157,7 @@ const About = () => {
           >
             <img
               src={profileImage}
-              alt="Profile picture of Yumeng Ma, wearing a blue bucket hat and tilting her head slightly."
+              alt="Profile picture of Yumeng Ma, wearing a graduation gown that's not hers."
               style={{
                 width: '100%',
                 height: '100%',
@@ -220,7 +220,7 @@ const About = () => {
             <a href="https://depts.washington.edu/acelab/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               ACE Lab
             </a>. 
-            I research the intersection of AI and accessibility. My current work in collaboration with <strong>Microsoft</strong> explores how large language models generate code and whether that code supports accessible web experiences.
+            I research the intersection of AI and accessibility. My current work in collaboration with <strong>Microsoft</strong> explores how large language models generate code and whether that code supports accessibile web experiences.
             {/* I research and craft interactive social and visual systems that enhance user experience and accessibility. My work goes beyond design to explore the scientific and conceptual depth behind these systems. I challenge existing perspectives and rethink how we evaluate and understand interaction and perception.  My research is supported by a Paul G. Allen School Fellowship and NSF Graduate Research Fellowship. */}
             <br />
             <br />
@@ -242,7 +242,7 @@ const About = () => {
               <span className="tooltiptext">Neuroscientist and Founding Director of the Center for Vision Research at Brown University</span>
             </span>{' '}
             in the neuroscience department.
-            Before that, I recieved my B.S.from {' '}
+            My B.S. is from {' '}
             <a href="https://www.asu.edu/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
               Arizona State University
             </a>{' '} where I double majored in computer science and psychology.
@@ -263,10 +263,47 @@ const About = () => {
             >
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
               {/* What shapes our expectations and why do certain interactions feel more compelling than others? */}
-              How can AI create code that's accessibile by design and what makes those outputs feel truly inclusive?
+              How can AI create code that's accessible by design and what makes those outputs feel truly inclusive?
             </div>
 
+             <div style={{ marginBottom: '20px' }}></div>
+
+            <div style={{ marginBottom: '20px' }}>
+              <span style={{ fontWeight: 'bold' }}> Updates </span>
+            </div>
+
+             <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap' }}>
+              <span
+                style={{
+                  backgroundColor: 'rgba(117, 122, 98, 0.3)',
+                  fontWeight: 'bold',
+                  color: '#757A62',
+                  padding: '5px 10px',
+                  borderRadius: '5px',
+                  marginRight: '10px',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                }}
+              >
+                Oct 2025
+              </span>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  whiteSpace: 'normal',
+                  flex: 1,
+                  alignItems: 'center',
+                  fontSize: '16px',  // Ensure consistent font size
+                }}
+              >
+                i gave a lightning talk at the Open Source Accessibility Summit  ˙‿˙
+              </span>
+            </div>
+
+
             {/* Updates section
+            
+            
 
             {/* <div style={{ marginBottom: '20px' }}>
               <span style={{ fontWeight: 'bold' }}> Updates </span>
