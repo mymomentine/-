@@ -813,7 +813,6 @@ const Publications = () => {
 
           @media (min-width:768px){
             div.container{display:flex;align-items:flex-start;justify-content:flex-start;text-align:left}
-            /* keep your height and corner radius; highlight logic uses the extra rules on .speak-target */
             div.container img{height:150px;margin-right:10px;border-radius:16px}
           }
 
@@ -832,16 +831,6 @@ const Publications = () => {
           }
           .tooltip:hover .tooltiptext,
           .tooltip:focus-within .tooltiptext{display:block}
-
-          /* --- KEY: make alt-highlight anchor to the actual image rect --- */
-          .speak-target{
-            display:block;                 /* not inline */
-            contain:layout paint;          /* isolate layout/paint */
-            isolation:isolate;             /* new stacking context */
-            -webkit-transform:translateZ(0); /* force its own layer on iOS */
-            transform:translateZ(0);
-            backface-visibility:hidden;
-          }
 
           .venn-container{position:relative;width:300px;height:300px;margin:auto;cursor:pointer}
           .circle{position:absolute;width:180px;height:180px;border-radius:50%;transition:transform 1s}
@@ -885,7 +874,6 @@ const Publications = () => {
         <img
           src={liveTyping}
           alt="Chat UI mockups showing live typing indicators"
-          className="speak-target"
           style={{ height: '150px', borderRadius: '16px' }}
           draggable="false"
         />
@@ -909,7 +897,6 @@ const Publications = () => {
             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2023</span>
           </div>
 
-          {/* Remove aria-labels so Speak Screen highlights the chip that matches the spoken text */}
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
               <a href="../documents/live_typing.pdf" className="coral-link bubble-link">
@@ -935,7 +922,6 @@ const Publications = () => {
         <img
           src={mrpwImage}
           alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call."
-          className="speak-target"
           style={{ height: '150px', borderRadius: '16px' }}
           draggable="false"
         />
@@ -996,7 +982,6 @@ const Publications = () => {
         <img
           src={ProactiveAgent}
           alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output"
-          className="speak-target"
           style={{ height: '150px', borderRadius: '16px' }}
           draggable="false"
         />
@@ -1006,11 +991,13 @@ const Publications = () => {
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
+            <span className="name">Yumeng Ma</span>
+            <sup aria-label="equal contribution" aria-describedby="eq-note">*</sup> and{' '}
             <span className="tooltip">
               <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
               <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
-            </span><sup aria-label="equal contribution">*</sup>
+            </span>
+            <sup aria-label="equal contribution" aria-describedby="eq-note">*</sup>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
@@ -1032,10 +1019,12 @@ const Publications = () => {
         </div>
       </div>
 
-      {/* UI-only footnote via CSS; hidden from SRs */}
+      {/* Accessible footnote – visible UI stays the same; screen readers will announce this */}
       <div
+        id="eq-note"
+        role="note"
+        aria-label="* denotes equal contribution"
         className="footnote-ui"
-        aria-hidden="true"
         style={{
           position: 'relative',
           bottom: '50px',
@@ -1066,7 +1055,7 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          aria-label="Venn diagram representing the overlap between social & visual computing, accessibility, and human-AI interaction. Click to toggle overlap animation."
+          aria-label="Venn diagram representing the overlap between social and visual computing, accessibility, and human–AI interaction. Activate to toggle overlap animation."
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
           <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
@@ -1075,13 +1064,14 @@ const Publications = () => {
           <span className="venn-label text-right" data-label="accessibility" aria-hidden="true"></span>
 
           <div className={`circle circle-top ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
-          <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
+          <span className="venn-label text-top" data-label="human–AI interaction" aria-hidden="true"></span>
         </div>
 
-        <div className="research-interests" aria-hidden="true">
+        {/* Make the visible line readable; carrot stays decorative */}
+        <div className="research-interests">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
-              What I’m curious about <FaCarrot size={12} color="#7C7C7C" aria-hidden="true" />
+              What I’m curious about <FaCarrot size={12} aria-hidden="true" />
             </span>
           </div>
         </div>
