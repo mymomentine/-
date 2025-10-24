@@ -426,7 +426,8 @@ const Publications = () => {
 
   return (
     <div
-      /* REMOVED role="main" and aria-labelledby to prevent region highlight */
+      role="main"
+      aria-labelledby="pubs-title"
       style={{
         position: 'relative',
         display: 'flex',
@@ -523,8 +524,10 @@ const Publications = () => {
         `}
       </style>
 
-      {/* Removed the offscreen 'Publications Section' sr-only heading. */}
-
+      <div id="pubs-title" role="heading" aria-level="1" className="sr-only" inert>
+        Publications Section
+      </div>
+      
       <div
         role="heading"
         aria-level="2"
@@ -565,35 +568,24 @@ const Publications = () => {
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
-              <a
-                href="../documents/live_typing.pdf"
-                className="coral-link bubble-link"
-                aria-label="PDF for live typing paper"
-              >
+              <a href="../documents/live_typing.pdf" className="coral-link bubble-link">
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="https://doi.org/10.1145/3544548.3581248"
-                className="coral-link bubble-link"
-                aria-label="webpage for live typing paper"
-              >
+              <a href="https://doi.org/10.1145/3544548.3581248" className="coral-link bubble-link">
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/brownhci/live-typing"
-                className="coral-link bubble-link"
-                aria-label="Code repository for live typing paper"
-              >
+              <span className="sr-only" inert>Code repository for this work</span>
+              <a href="https://github.com/brownhci/live-typing" className="coral-link bubble-link">
                 Code <FaFileCode size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
 
-          <p className="reader-inline" aria-hidden="true">
+          <p className="reader-inline" aria-hidden="true" inert>
             Resources: <a href="../documents/live_typing.pdf">PDF</a> · <a href="https://doi.org/10.1145/3544548.3581248">Paper</a> · <a href="https://github.com/brownhci/live-typing">Code</a>
           </p>
         </div>
@@ -624,26 +616,18 @@ const Publications = () => {
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
-              <a
-                href="../documents/mrpw.pdf"
-                className="coral-link bubble-link"
-                aria-label="PDF for mixed reality window paper"
-              >
+              <a href="../documents/mrpw.pdf" className="coral-link bubble-link">
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="http://doi.org/10.54941/ahfe1002954"
-                className="coral-link bubble-link"
-                aria-label="webpage for mixed reality window paper"
-              >
+              <a href="http://doi.org/10.54941/ahfe1002954" className="coral-link bubble-link">
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
 
-          <p className="reader-inline" aria-hidden="true">
+          <p className="reader-inline" aria-hidden="true" inert>
             Resources: <a href="../documents/mrpw.pdf">PDF</a> · <a href="http://doi.org/10.54941/ahfe1002954">Paper</a>
           </p>
         </div>
@@ -688,30 +672,22 @@ const Publications = () => {
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
-              <a
-                href="../documents/ProactiveAgent.pdf"
-                className="coral-link bubble-link"
-                aria-label="PDF for ProactiveAgent paper"
-              >
+              <a href="../documents/ProactiveAgent.pdf" className="coral-link bubble-link">
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="https://dl.acm.org/doi/10.1145/3586182.3625115"
-                className="coral-link bubble-link"
-                aria-label="webpage for ProactiveAgent paper"
-              >
+              <a href="https://dl.acm.org/doi/10.1145/3586182.3625115" className="coral-link bubble-link">
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
 
-          <p className="reader-inline" aria-hidden="true">
+          <p className="reader-inline" aria-hidden="true" inert>
             Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper</a>
           </p>
 
-          <p className="reader-inline" aria-hidden="true">
+          <p className="reader-inline" aria-hidden="true" inert>
             * denotes Equal Contribution
           </p>
         </div>
@@ -751,6 +727,7 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
+          aria-label="Venn diagram representing the overlap between social & visual computing, accessibility, and human-AI interaction. Click to toggle overlap animation."
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
           <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
@@ -762,13 +739,17 @@ const Publications = () => {
           <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
         </div>
 
+        {/* Speak Screen label for carrot */}
+        <span className="sr-only" inert>Carrot icon representing fresh research ideas</span>
+
+        <p className="reader-inline" aria-hidden="true" inert>
+          What I’m curious about: social &amp; visual computing · accessibility · human–AI interaction
+        </p>
+
         <div className="research-interests" aria-hidden="true">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
-              What I’m curious about{" "}
-              <span role="img" aria-label="carrot icon representing fresh research ideas">
-                <FaCarrot size={12} />
-              </span>
+              What I’m curious about <FaCarrot size={12} color="#7C7C7C" aria-hidden="true" />
             </span>
           </div>
         </div>
