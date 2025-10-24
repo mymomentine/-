@@ -461,7 +461,6 @@ const Publications = () => {
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
             border: 0;
-            /* prevent selection/highlight overlay on iOS */
             user-select: none;
             -webkit-user-select: none;
             pointer-events: none;
@@ -471,12 +470,9 @@ const Publications = () => {
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
 
-          /* Reader-only lines: keep your exact hiding strategy
-             + add no-select/no-pointer so Speak Screen won't highlight */
           .reader-inline{
             height:0;overflow:hidden;margin:0;font-size:0;line-height:0;
             user-select:none;-webkit-user-select:none;pointer-events:none;-webkit-touch-callout:none;
-            /* containment helps WebKit avoid stray paint/highlight boxes */
             contain: content;
           }
 
@@ -499,7 +495,6 @@ const Publications = () => {
 
           .tooltip{position:relative;display:inline-block;cursor:pointer}
           .tooltip .tooltiptext{
-            /* change only this: visibility:hidden -> display:none (no visual diff) */
             display:none;width:200px;background:#fff;color:#7C7C7C;text-align:center;border-radius:6px;
             padding:5px 10px;position:absolute;z-index:1;bottom:125%;left:50%;margin-left:-100px;
             box-shadow:0 0 6px rgba(0,0,0,.2);font-size:10px
@@ -527,28 +522,13 @@ const Publications = () => {
 
           @media (orientation:landscape){.tooltip .author-link{font-size:16px}}
 
-          /* === Speak Screen suppression without changing UI or Reader Mode === */
+          /* Stop random Speak Screen highlights from ARIA-only text */
           .sr-only,
-          .reader-inline {
-            visibility: hidden;           /* remove highlight targets but keep DOM for Reader Mode */
-            user-select: none;
-            -webkit-user-select: none;
-            pointer-events: none;
-            -webkit-touch-callout: none;
-          }
-
+          .reader-inline { visibility:hidden; }
           .footnote-ui,
           .venn-label,
-          .research-interests {
-            user-select: none;
-            -webkit-user-select: none;
-            pointer-events: none;         /* keep visible, but not highlightable */
-          }
-
-          .venn-label::after {
-            user-select: none;
-            -webkit-user-select: none;
-          }
+          .research-interests { user-select:none; -webkit-user-select:none; pointer-events:none; }
+          .venn-label::after { user-select:none; -webkit-user-select:none; }
         `}
       </style>
 
@@ -582,11 +562,11 @@ const Publications = () => {
           <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
               <a href="https://zainabiftikhar.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="author-link">Zainab Iftikhar</a>
-              <span className="tooltiptext" aria-hidden="true"> Ph.D. Candidate at Brown University</span>
+              <span className="tooltiptext"> Ph.D. Candidate at Brown University</span>
             </span>, <span className="name">Yumeng Ma</span>, and{' '}
             <span className="tooltip">
               <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jeff Huang</a>
-              <span className="tooltiptext" aria-hidden="true"> Associate Professor and Associate Chair of Computer Science at Brown University</span>
+              <span className="tooltiptext"> Associate Professor and Associate Chair of Computer Science at Brown University</span>
             </span>
           </div>
 
@@ -596,30 +576,18 @@ const Publications = () => {
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
-              <a
-                href="../documents/live_typing.pdf"
-                className="coral-link bubble-link"
-                aria-label="PDF for live typing paper"
-              >
+              <a href="../documents/live_typing.pdf" className="coral-link bubble-link">
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="https://doi.org/10.1145/3544548.3581248"
-                className="coral-link bubble-link"
-                aria-label="webpage for live typing paper"
-              >
+              <a href="https://doi.org/10.1145/3544548.3581248" className="coral-link bubble-link">
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
               <span className="sr-only" inert>Code repository for this work</span>
-              <a
-                href="https://github.com/brownhci/live-typing"
-                className="coral-link bubble-link"
-                aria-label="Code repository for live typing paper"
-              >
+              <a href="https://github.com/brownhci/live-typing" className="coral-link bubble-link">
                 Code <FaFileCode size={10} aria-hidden="true" />
               </a>
             </li>
@@ -642,11 +610,11 @@ const Publications = () => {
           <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
               <a href="https://www.gonsherdesign.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Ian Gonsher</a>
-              <span className="tooltiptext" aria-hidden="true"> Assistant Professor in the School of Engineering and Department of Computer Science at Brown University</span>
+              <span className="tooltiptext"> Assistant Professor in the School of Engineering and Department of Computer Science at Brown University</span>
             </span>, <span className="name">Yumeng Ma</span>, Ivan Pineda-Dominguez, Matthew Lee, and{' '}
             <span className="tooltip">
               <a href="https://www.linkedin.com/in/horatiohan/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Yuxin Han</a>
-              <span className="tooltiptext" aria-hidden="true"> Senior Industrial Designer at Superpedestrian</span>
+              <span className="tooltiptext"> Senior Industrial Designer at Superpedestrian</span>
             </span>
           </div>
 
@@ -656,20 +624,12 @@ const Publications = () => {
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
-              <a
-                href="../documents/mrpw.pdf"
-                className="coral-link bubble-link"
-                aria-label="PDF for mixed reality window paper"
-              >
+              <a href="../documents/mrpw.pdf" className="coral-link bubble-link">
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="http://doi.org/10.54941/ahfe1002954"
-                className="coral-link bubble-link"
-                aria-label="webpage for mixed reality window paper"
-              >
+              <a href="http://doi.org/10.54941/ahfe1002954" className="coral-link bubble-link">
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
@@ -710,7 +670,7 @@ const Publications = () => {
             <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
             <span className="tooltip">
               <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
-              <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
+              <span className="tooltiptext"> Software Engineer at Magic Leap</span>
             </span><sup aria-label="equal contribution">*</sup>
           </div>
 
@@ -720,20 +680,12 @@ const Publications = () => {
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
-              <a
-                href="../documents/ProactiveAgent.pdf"
-                className="coral-link bubble-link"
-                aria-label="PDF for ProactiveAgent paper"
-              >
+              <a href="../documents/ProactiveAgent.pdf" className="coral-link bubble-link">
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a
-                href="https://dl.acm.org/doi/10.1145/3586182.3625115"
-                className="coral-link bubble-link"
-                aria-label="webpage for ProactiveAgent paper"
-              >
+              <a href="https://dl.acm.org/doi/10.1145/3586182.3625115" className="coral-link bubble-link">
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
@@ -783,7 +735,7 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          aria-label="Venn diagram representing the overlap between social & visual computing, accessibility, and human-AI interaction. Click to toggle overlap animation."
+          /* remove aria-label to stop Speak Screen from reading & highlighting it */
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
           <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
