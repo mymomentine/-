@@ -427,7 +427,7 @@ const Publications = () => {
   return (
     <div
       role="main"
-      aria-labelledby="pubs-title"
+      aria-label="Publications"
       style={{
         position: 'relative',
         display: 'flex',
@@ -451,30 +451,8 @@ const Publications = () => {
 
       <style>
         {`
-          .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-            user-select: none;
-            -webkit-user-select: none;
-            pointer-events: none;
-            -webkit-touch-callout: none;
-          }
-
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
-
-          .reader-inline{
-            height:0;overflow:hidden;margin:0;font-size:0;line-height:0;
-            user-select:none;-webkit-user-select:none;pointer-events:none;-webkit-touch-callout:none;
-            contain: content;
-          }
 
           .footnote-ui::before{
             content:"* Equal Contribution";
@@ -524,10 +502,7 @@ const Publications = () => {
         `}
       </style>
 
-      <div id="pubs-title" role="heading" aria-level="1" className="sr-only" inert>
-        Publications Section
-      </div>
-      
+      {/* Visible section title (keeps UI) */}
       <div
         role="heading"
         aria-level="2"
@@ -545,7 +520,12 @@ const Publications = () => {
 
       {/* Paper 1 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
-        <img src={liveTyping} alt="Chat UI mockups showing live typing indicators" style={{ height: '150px', borderRadius: '16px' }} />
+        <img
+          src={liveTyping}
+          alt="Chat UI mockups with typing indicators"
+          aria-describedby="paper1-title"
+          style={{ height: '150px', borderRadius: '16px' }}
+        />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper1-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>“Together but not together”: Evaluating Typing Indicators for Interaction-Rich Communication</strong>
@@ -553,11 +533,29 @@ const Publications = () => {
 
           <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
-              <a href="https://zainabiftikhar.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="author-link">Zainab Iftikhar</a>
+              <a
+                href="https://zainabiftikhar.com/"
+                target="_self"
+                rel="noopener noreferrer"
+                className="author-link"
+                style={{ textDecoration: 'none', fontSize: '16px' }}
+                aria-label="Zainab Iftikhar — PhD Candidate, Brown University"
+              >
+                Zainab Iftikhar
+              </a>
               <span className="tooltiptext" aria-hidden="true"> Ph.D. Candidate at Brown University</span>
             </span>, <span className="name">Yumeng Ma</span>, and{' '}
             <span className="tooltip">
-              <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jeff Huang</a>
+              <a
+                href="https://jeffhuang.com/"
+                target="_self"
+                rel="noopener noreferrer"
+                className="author-link"
+                style={{ textDecoration: 'none' }}
+                aria-label="Jeff Huang — Associate Professor and Associate Chair, Computer Science, Brown University"
+              >
+                Jeff Huang
+              </a>
               <span className="tooltiptext" aria-hidden="true"> Associate Professor and Associate Chair of Computer Science at Brown University</span>
             </span>
           </div>
@@ -566,34 +564,46 @@ const Publications = () => {
             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2023</span>
           </div>
 
-          <ul className="links-visual" role="list" aria-label="Resources">
+          <ul className="links-visual" role="list" aria-label="Resources — PDF, Paper, Code">
             <li>
-              <a href="../documents/live_typing.pdf" className="coral-link bubble-link">
+              <a
+                href="../documents/live_typing.pdf"
+                className="coral-link bubble-link"
+                aria-label="PDF for live typing paper"
+              >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a href="https://doi.org/10.1145/3544548.3581248" className="coral-link bubble-link">
+              <a
+                href="https://doi.org/10.1145/3544548.3581248"
+                className="coral-link bubble-link"
+                aria-label="ACM Digital Library page for live typing paper"
+              >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <span className="sr-only" inert>Code repository for this work</span>
-              <a href="https://github.com/brownhci/live-typing" className="coral-link bubble-link">
+              <a
+                href="https://github.com/brownhci/live-typing"
+                className="coral-link bubble-link"
+                aria-label="GitHub repository for live typing paper"
+              >
                 Code <FaFileCode size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
-
-          <p className="reader-inline" aria-hidden="true" inert>
-            Resources: <a href="../documents/live_typing.pdf">PDF</a> · <a href="https://doi.org/10.1145/3544548.3581248">Paper</a> · <a href="https://github.com/brownhci/live-typing">Code</a>
-          </p>
         </div>
       </div>
 
       {/* Paper 2 */}
       <div className="container" role="article" aria-labelledby="paper2-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
-        <img src={mrpwImage} alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call." style={{ height: '150px', borderRadius: '16px' }} />
+        <img
+          src={mrpwImage}
+          alt="Laptop videoconferencing passthrough window concept"
+          aria-describedby="paper2-title"
+          style={{ height: '150px', borderRadius: '16px' }}
+        />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper2-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>The Mixed Reality Passthrough Window: Rethinking the Laptop Videoconferencing Experience</strong>
@@ -601,11 +611,29 @@ const Publications = () => {
 
           <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
-              <a href="https://www.gonsherdesign.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Ian Gonsher</a>
+              <a
+                href="https://www.gonsherdesign.com/"
+                target="_self"
+                rel="noopener noreferrer"
+                className="author-link"
+                style={{ textDecoration: 'none' }}
+                aria-label="Ian Gonsher — Assistant Professor, School of Engineering and Department of Computer Science, Brown University"
+              >
+                Ian Gonsher
+              </a>
               <span className="tooltiptext" aria-hidden="true"> Assistant Professor in the School of Engineering and Department of Computer Science at Brown University</span>
             </span>, <span className="name">Yumeng Ma</span>, Ivan Pineda-Dominguez, Matthew Lee, and{' '}
             <span className="tooltip">
-              <a href="https://www.linkedin.com/in/horatiohan/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Yuxin Han</a>
+              <a
+                href="https://www.linkedin.com/in/horatiohan/"
+                target="_self"
+                rel="noopener noreferrer"
+                className="author-link"
+                style={{ textDecoration: 'none' }}
+                aria-label="Yuxin Han — Senior Industrial Designer at Superpedestrian"
+              >
+                Yuxin Han
+              </a>
               <span className="tooltiptext" aria-hidden="true"> Senior Industrial Designer at Superpedestrian</span>
             </span>
           </div>
@@ -614,22 +642,26 @@ const Publications = () => {
             <span style={{ fontWeight: '500', color: '#676767' }}>IHIET-AI 2023</span>
           </div>
 
-          <ul className="links-visual" role="list" aria-label="Resources">
+          <ul className="links-visual" role="list" aria-label="Resources — PDF, Paper">
             <li>
-              <a href="../documents/mrpw.pdf" className="coral-link bubble-link">
+              <a
+                href="../documents/mrpw.pdf"
+                className="coral-link bubble-link"
+                aria-label="PDF for mixed reality window paper"
+              >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a href="http://doi.org/10.54941/ahfe1002954" className="coral-link bubble-link">
+              <a
+                href="http://doi.org/10.54941/ahfe1002954"
+                className="coral-link bubble-link"
+                aria-label="DOI page for mixed reality window paper"
+              >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
-
-          <p className="reader-inline" aria-hidden="true" inert>
-            Resources: <a href="../documents/mrpw.pdf">PDF</a> · <a href="http://doi.org/10.54941/ahfe1002954">Paper</a>
-          </p>
         </div>
       </div>
 
@@ -652,48 +684,64 @@ const Publications = () => {
 
       {/* Paper 3 */}
       <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
-        <img src={ProactiveAgent} alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output" style={{ height: '150px', borderRadius: '16px' }} />
+        <img
+          src={ProactiveAgent}
+          alt="Diagram of a proactive reminder system"
+          aria-describedby="paper3-title"
+          style={{ height: '150px', borderRadius: '16px' }}
+        />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper3-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>ProactiveAgent: Personalized Context-Aware Reminder System</strong>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
+            <span className="name">Yumeng Ma</span>
+            <sup aria-label="equal contribution" role="note">*</sup> and{' '}
             <span className="tooltip">
-              <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
+              <a
+                href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
+                target="_self"
+                rel="noopener noreferrer"
+                className="author-link"
+                style={{ textDecoration: 'none' }}
+                aria-label="Jiahao Ren — Software Engineer at Magic Leap"
+              >
+                Jiahao Ren
+              </a>
               <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
-            </span><sup aria-label="equal contribution">*</sup>
+            </span>
+            <sup aria-label="equal contribution" role="note">*</sup>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>UIST 2023 Adjunct</span>
           </div>
 
-          <ul className="links-visual" role="list" aria-label="Resources">
+          <ul className="links-visual" role="list" aria-label="Resources — PDF, Paper">
             <li>
-              <a href="../documents/ProactiveAgent.pdf" className="coral-link bubble-link">
+              <a
+                href="../documents/ProactiveAgent.pdf"
+                className="coral-link bubble-link"
+                aria-label="PDF for ProactiveAgent paper"
+              >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
-              <a href="https://dl.acm.org/doi/10.1145/3586182.3625115" className="coral-link bubble-link">
+              <a
+                href="https://dl.acm.org/doi/10.1145/3586182.3625115"
+                className="coral-link bubble-link"
+                aria-label="ACM Digital Library page for ProactiveAgent paper"
+              >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
-
-          <p className="reader-inline" aria-hidden="true" inert>
-            Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper</a>
-          </p>
-
-          <p className="reader-inline" aria-hidden="true" inert>
-            * denotes Equal Contribution
-          </p>
         </div>
       </div>
 
-      {/* UI-only footnote via CSS; hidden from SRs */}
+      {/* UI-only footnote via CSS; hidden from SRs (authors get * with spoken labels above) */}
       <div
         className="footnote-ui"
         aria-hidden="true"
@@ -727,7 +775,7 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          aria-label="Venn diagram representing the overlap between social & visual computing, accessibility, and human-AI interaction. Click to toggle overlap animation."
+          aria-label="Venn diagram representing the overlap between social and visual computing, accessibility, and human–AI interaction. Click to toggle overlap animation."
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
           <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
@@ -739,17 +787,14 @@ const Publications = () => {
           <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
         </div>
 
-        {/* Speak Screen label for carrot */}
-        <span className="sr-only" inert>Carrot icon representing fresh research ideas</span>
-
-        <p className="reader-inline" aria-hidden="true" inert>
-          What I’m curious about: social &amp; visual computing · accessibility · human–AI interaction
-        </p>
-
-        <div className="research-interests" aria-hidden="true">
+        <div
+          className="research-interests"
+          aria-label="Curiosity areas: social and visual computing; accessibility; human–AI interaction"
+          aria-hidden={false}
+        >
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
-              What I’m curious about <FaCarrot size={12} color="#7C7C7C" aria-hidden="true" />
+              What I’m curious about <FaCarrot size={12} aria-hidden="true" />
             </span>
           </div>
         </div>
