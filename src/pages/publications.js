@@ -426,11 +426,7 @@ const Publications = () => {
 
   return (
     <div
-      role="main"
-      /* Use aria-label on the main region instead of an offscreen heading node.
-         Speak Screen may outline the region while announcing this, but it won't
-         highlight random whitespace from an .sr-only block. */
-      aria-label="Publications"
+      /* REMOVED role="main" and aria-labelledby to prevent region highlight */
       style={{
         position: 'relative',
         display: 'flex',
@@ -454,11 +450,25 @@ const Publications = () => {
 
       <style>
         {`
-          /* Keep: your visual chips, colors, spacing */
+          .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
+            -webkit-touch-callout: none;
+          }
+
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
 
-          /* Hidden text that Reader Mode should skip entirely */
           .reader-inline{
             height:0;overflow:hidden;margin:0;font-size:0;line-height:0;
             user-select:none;-webkit-user-select:none;pointer-events:none;-webkit-touch-callout:none;
@@ -469,9 +479,6 @@ const Publications = () => {
             content:"* Equal Contribution";
             color:#7C7C7C;
           }
-
-          /* Kill baseline gap that causes odd Speak Screen highlight gutters */
-          .container img{display:block;vertical-align:top}
 
           @media (min-width:768px){
             div.container{display:flex;align-items:flex-start;justify-content:flex-start;text-align:left}
@@ -516,9 +523,8 @@ const Publications = () => {
         `}
       </style>
 
-      {/* Removed the offscreen .sr-only heading node.
-          The visible H2s below are announced normally; the main has aria-label. */}
-      
+      {/* Removed the offscreen 'Publications Section' sr-only heading. */}
+
       <div
         role="heading"
         aria-level="2"
@@ -576,7 +582,6 @@ const Publications = () => {
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
-            {/* Removed sr-only helper; the anchor already has a clear aria-label */}
             <li>
               <a
                 href="https://github.com/brownhci/live-typing"
@@ -746,7 +751,6 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          /* Keep no aria-label here to avoid region-wide highlight while reading it */
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
           <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
@@ -758,7 +762,6 @@ const Publications = () => {
           <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
         </div>
 
-        {/* Make the carrot itself the labeled node (tiny highlight, not random whitespace) */}
         <div className="research-interests" aria-hidden="true">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
