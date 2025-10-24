@@ -416,6 +416,7 @@ const Publications = () => {
   const [isMerged, setIsMerged] = useState(false);
   const handleVennClick = () => setIsMerged(!isMerged);
 
+  // Keyboard toggle for Venn (no visual change)
   const handleVennKeyDown = (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -426,7 +427,7 @@ const Publications = () => {
   return (
     <div
       role="main"
-      aria-label="Publications"
+      aria-labelledby="pubs-title"
       style={{
         position: 'relative',
         display: 'flex',
@@ -445,13 +446,38 @@ const Publications = () => {
       }}
     >
       <Helmet>
+        {/* Keep this; Reader Mode still works with it */}
         <meta name="robots" content="nosnippet" />
       </Helmet>
 
       <style>
         {`
+          .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            user-select: none;
+            -webkit-user-select: none;
+            pointer-events: none;
+            -webkit-touch-callout: none;
+          }
+
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
+
+          /* REMOVE reader-inline entirely to avoid Speak Screen phantom highlights */
+          .reader-inline{display:none}
+
+          .footnote-ui::before{
+            content:"* Equal Contribution";
+            color:#7C7C7C;
+          }
 
           @media (min-width:768px){
             div.container{display:flex;align-items:flex-start;justify-content:flex-start;text-align:left}
@@ -473,12 +499,6 @@ const Publications = () => {
           }
           .tooltip:hover .tooltiptext,
           .tooltip:focus-within .tooltiptext{display:block}
-
-          /* Make non-text boxes unselectable so Speak Screen doesn't try to highlight them */
-          img, .venn-container, .circle, .venn-label, .research-interests {
-            user-select: none;
-            -webkit-user-select: none;
-          }
 
           .venn-container{position:relative;width:300px;height:300px;margin:auto;cursor:pointer}
           .circle{position:absolute;width:180px;height:180px;border-radius:50%;transition:transform 1s}
@@ -502,7 +522,10 @@ const Publications = () => {
         `}
       </style>
 
-      {/* Section heading */}
+      <div id="pubs-title" role="heading" aria-level="1" className="sr-only">
+        Publications Section
+      </div>
+      
       <div
         role="heading"
         aria-level="2"
@@ -520,13 +543,12 @@ const Publications = () => {
 
       {/* Paper 1 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
-        {/* Decorative image: stop Speak Screen from reading/overlaying on it */}
+        {/* Restore REAL alt so Reader Mode shows descriptive text for the image */}
         <img
           src={liveTyping}
-          alt=""                 /* empty alt = decorative, no speech target */
-          aria-hidden="true"     /* don't expose as a node to AT */
+          alt="Chat UI mockups showing live typing indicators"
+          style={{ height: '150px', borderRadius: '16px' }}
           draggable="false"
-          style={{ height: '150px', borderRadius: '16px', pointerEvents: 'none' }}
         />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper1-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
@@ -535,27 +557,11 @@ const Publications = () => {
 
           <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
-              <a
-                href="https://zainabiftikhar.com/"
-                target="_self"
-                rel="noopener noreferrer"
-                className="author-link"
-                style={{ textDecoration: 'none', fontSize: '16px' }}
-              >
-                Zainab Iftikhar
-              </a>
+              <a href="https://zainabiftikhar.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="author-link">Zainab Iftikhar</a>
               <span className="tooltiptext" aria-hidden="true"> Ph.D. Candidate at Brown University</span>
             </span>, <span className="name">Yumeng Ma</span>, and{' '}
             <span className="tooltip">
-              <a
-                href="https://jeffhuang.com/"
-                target="_self"
-                rel="noopener noreferrer"
-                className="author-link"
-                style={{ textDecoration: 'none' }}
-              >
-                Jeff Huang
-              </a>
+              <a href="https://jeffhuang.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jeff Huang</a>
               <span className="tooltiptext" aria-hidden="true"> Associate Professor and Associate Chair of Computer Science at Brown University</span>
             </span>
           </div>
@@ -564,11 +570,12 @@ const Publications = () => {
             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2023</span>
           </div>
 
-          <ul className="links-visual" role="list">
+          <ul className="links-visual" role="list" aria-label="Resources">
             <li>
               <a
                 href="../documents/live_typing.pdf"
                 className="coral-link bubble-link"
+                aria-label="PDF for live typing paper"
               >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
@@ -577,14 +584,17 @@ const Publications = () => {
               <a
                 href="https://doi.org/10.1145/3544548.3581248"
                 className="coral-link bubble-link"
+                aria-label="webpage for live typing paper"
               >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
+              {/* remove hidden inline text to avoid extra highlights */}
               <a
                 href="https://github.com/brownhci/live-typing"
                 className="coral-link bubble-link"
+                aria-label="Code repository for live typing paper"
               >
                 Code <FaFileCode size={10} aria-hidden="true" />
               </a>
@@ -597,10 +607,9 @@ const Publications = () => {
       <div className="container" role="article" aria-labelledby="paper2-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
         <img
           src={mrpwImage}
-          alt=""
-          aria-hidden="true"
+          alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call."
+          style={{ height: '150px', borderRadius: '16px' }}
           draggable="false"
-          style={{ height: '150px', borderRadius: '16px', pointerEvents: 'none' }}
         />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper2-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
@@ -609,27 +618,11 @@ const Publications = () => {
 
           <div style={{ marginBottom: '5px' }}>
             <span className="tooltip">
-              <a
-                href="https://www.gonsherdesign.com/"
-                target="_self"
-                rel="noopener noreferrer"
-                className="author-link"
-                style={{ textDecoration: 'none' }}
-              >
-                Ian Gonsher
-              </a>
+              <a href="https://www.gonsherdesign.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Ian Gonsher</a>
               <span className="tooltiptext" aria-hidden="true"> Assistant Professor in the School of Engineering and Department of Computer Science at Brown University</span>
             </span>, <span className="name">Yumeng Ma</span>, Ivan Pineda-Dominguez, Matthew Lee, and{' '}
             <span className="tooltip">
-              <a
-                href="https://www.linkedin.com/in/horatiohan/"
-                target="_self"
-                rel="noopener noreferrer"
-                className="author-link"
-                style={{ textDecoration: 'none' }}
-              >
-                Yuxin Han
-              </a>
+              <a href="https://www.linkedin.com/in/horatiohan/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Yuxin Han</a>
               <span className="tooltiptext" aria-hidden="true"> Senior Industrial Designer at Superpedestrian</span>
             </span>
           </div>
@@ -638,11 +631,12 @@ const Publications = () => {
             <span style={{ fontWeight: '500', color: '#676767' }}>IHIET-AI 2023</span>
           </div>
 
-          <ul className="links-visual" role="list">
+          <ul className="links-visual" role="list" aria-label="Resources">
             <li>
               <a
                 href="../documents/mrpw.pdf"
                 className="coral-link bubble-link"
+                aria-label="PDF for mixed reality window paper"
               >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
@@ -651,6 +645,7 @@ const Publications = () => {
               <a
                 href="http://doi.org/10.54941/ahfe1002954"
                 className="coral-link bubble-link"
+                aria-label="webpage for mixed reality window paper"
               >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
@@ -680,10 +675,9 @@ const Publications = () => {
       <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
         <img
           src={ProactiveAgent}
-          alt=""
-          aria-hidden="true"
+          alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output"
+          style={{ height: '150px', borderRadius: '16px' }}
           draggable="false"
-          style={{ height: '150px', borderRadius: '16px', pointerEvents: 'none' }}
         />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper3-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
@@ -691,32 +685,23 @@ const Publications = () => {
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <span className="name">Yumeng Ma</span>
-            <sup aria-label="equal contribution" role="note">*</sup> and{' '}
+            <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
             <span className="tooltip">
-              <a
-                href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
-                target="_self"
-                rel="noopener noreferrer"
-                className="author-link"
-                style={{ textDecoration: 'none' }}
-              >
-                Jiahao Ren
-              </a>
+              <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
               <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
-            </span>
-            <sup aria-label="equal contribution" role="note">*</sup>
+            </span><sup aria-label="equal contribution">*</sup>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>UIST 2023 Adjunct</span>
           </div>
 
-          <ul className="links-visual" role="list">
+          <ul className="links-visual" role="list" aria-label="Resources">
             <li>
               <a
                 href="../documents/ProactiveAgent.pdf"
                 className="coral-link bubble-link"
+                aria-label="PDF for ProactiveAgent paper"
               >
                 PDF <FaFilePdf size={10} aria-hidden="true" />
               </a>
@@ -725,6 +710,7 @@ const Publications = () => {
               <a
                 href="https://dl.acm.org/doi/10.1145/3586182.3625115"
                 className="coral-link bubble-link"
+                aria-label="webpage for ProactiveAgent paper"
               >
                 Paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
@@ -732,6 +718,22 @@ const Publications = () => {
           </ul>
         </div>
       </div>
+
+      {/* UI-only footnote via CSS; visible exactly where you had it */}
+      <div
+        className="footnote-ui"
+        aria-hidden="true"
+        style={{
+          position: 'relative',
+          bottom: '50px',
+          left: '20px',
+          fontSize: '12px',
+          color: '#7C7C7C',
+          textAlign: 'left',
+          marginTop: '30px',
+          marginBottom: '30px'
+        }}
+      />
 
       {/* Curiosity / Venn */}
       <div
@@ -751,7 +753,7 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          aria-label="Venn diagram of social and visual computing, accessibility, and human–AI interaction"
+          aria-label="Venn diagram representing the overlap between social & visual computing, accessibility, and human-AI interaction. Click to toggle overlap animation."
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
           <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
@@ -763,13 +765,11 @@ const Publications = () => {
           <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
         </div>
 
-        <div
-          className="research-interests"
-          aria-label="Curiosity areas: social and visual computing; accessibility; human–AI interaction"
-        >
+        {/* Removed hidden text lines that were creating reader/speak artifacts */}
+        <div className="research-interests" aria-hidden="true">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
-              What I’m curious about <FaCarrot size={12} aria-hidden="true" />
+              What I’m curious about <FaCarrot size={12} color="#7C7C7C" aria-hidden="true" />
             </span>
           </div>
         </div>
