@@ -175,7 +175,7 @@ const Passenger = () => {
           <br /><br />
           Hi, I’m Yumeng. I’m an HCI PhD student in CSE at UW. My research is on AI and accessibility. I hate disclosing my disability in almost every circumstance, but I think it’s essential to this story. And maybe, just maybe, it’ll help someone else feel less alone.
           <br /><br />
-          I was born with scars behind both my eyes, a condition doctors call <i>congenital macular scarring</i> (don’t bother googling it; half the internet thinks it’s caused by infections or genetic conditions I never had). It means I have no central vision and only peripheral vision. So, I’m considered “low vision” or “visually impaired” (both terms I’ve never been comfortable saying out loud). It’s an invisible disability in that you wouldn’t notice it right away unless one of three things happens:
+          I was born with scars behind both my eyes, a condition doctors call <i>congenital macular scarring</i> (don’t bother googling it; half the internet thinks it’s caused by infections or genetic conditions I never had). It means I have no central vision(which unconveniently is the part that glasses correct) and only peripheral vision. So, I’m considered “low vision” or “visually impaired” (both terms I’ve never been comfortable saying out loud). It’s an invisible disability in that you wouldn’t notice it right away unless one of three things happens:
           <ul style={{ marginTop: '10px', marginBottom: '10px' }}>
             <li>You try making eye contact and notice my eyes don’t quite focus straight.</li>
             <li>We’re reading a menu high up on a wall, tiny print, slides in a classroom, or watching subbed anime haha.</li>
