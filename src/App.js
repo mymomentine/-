@@ -9,6 +9,7 @@ import Notes from './pages/notes';
 import Overwatch from './pages/posts/overwatch'; 
 import Hello from './pages/posts/hello'; 
 import Hiatus from './pages/posts/hiatus'; 
+import Passenger from './pages/posts/passenger'; 
 import Playground from './pages/playground';
 
 
@@ -23,6 +24,7 @@ function App() {
         <Route path='/notes/overwatch' element={<Overwatch/>} />
         <Route path='/notes/hello' element={<Hello/>} />
         <Route path='/notes/hiatus' element={<Hiatus/>} />
+        <Route path='/notes/passenger' element={<Passenger/>} />
         <Route path='/playground' element={<Playground/>} />
       </Routes>
     </Router>

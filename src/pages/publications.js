@@ -54,7 +54,6 @@ const Publications = () => {
             clip: rect(0, 0, 0, 0);
             white-space: nowrap;
             border: 0;
-            /* prevent selection/highlight overlay on iOS */
             user-select: none;
             -webkit-user-select: none;
             pointer-events: none;
@@ -64,12 +63,9 @@ const Publications = () => {
           .links-visual{list-style:none;padding-left:0;margin:6px 0}
           .links-visual li{display:inline-block;margin-right:6px;margin-bottom:6px}
 
-          /* Reader-only lines: keep your exact hiding strategy
-             + add no-select/no-pointer so Speak Screen won't highlight */
           .reader-inline{
             height:0;overflow:hidden;margin:0;font-size:0;line-height:0;
             user-select:none;-webkit-user-select:none;pointer-events:none;-webkit-touch-callout:none;
-            /* containment helps WebKit avoid stray paint/highlight boxes */
             contain: content;
           }
 
@@ -92,7 +88,6 @@ const Publications = () => {
 
           .tooltip{position:relative;display:inline-block;cursor:pointer}
           .tooltip .tooltiptext{
-            /* change only this: visibility:hidden -> display:none (no visual diff) */
             display:none;width:200px;background:#fff;color:#7C7C7C;text-align:center;border-radius:6px;
             padding:5px 10px;position:absolute;z-index:1;bottom:125%;left:50%;margin-left:-100px;
             box-shadow:0 0 6px rgba(0,0,0,.2);font-size:10px
@@ -109,12 +104,9 @@ const Publications = () => {
           .venn-container:hover .circle-left{transform:translateX(0%) translateY(-25%)}
           .venn-container:hover .circle-right{transform:translateX(0%) translateY(-25%)}
 
-          .venn-label{position:absolute;color:inherit;text-align:center;line-height:1.1}
-          .venn-label::after{content:attr(data-label)}
-          .text-left::after{content:"social & visual\\A computing";white-space:pre-line}
-          .text-left{bottom:20px;left:50px;color:#E1C0C5}
-          .text-right{bottom:35px;right:50px;color:#ECC17C}
-          .text-top{top:45px;left:50%;transform:translateX(-38%);color:#757A62}
+          .text-left{position:absolute;bottom:20px;left:50px;color:#E1C0C5;text-align:center;line-height:1.1}
+          .text-right{position:absolute;bottom:35px;right:50px;color:#ECC17C;text-align:center;line-height:1.1}
+          .text-top{position:absolute;top:45px;left:50%;transform:translateX(-38%);color:#757A62;text-align:center;line-height:1.1}
 
           .research-interests{position:absolute;top:0;right:0;padding-left:20px;width:calc(100% - 300px);height:100%;display:flex;align-items:center;font-size:11px;color:#7C7C7C}
 
@@ -125,7 +117,7 @@ const Publications = () => {
       <div id="pubs-title" role="heading" aria-level="1" className="sr-only" inert>
         Publications Section
       </div>
-      
+
       <div
         role="heading"
         aria-level="2"
@@ -184,7 +176,6 @@ const Publications = () => {
               </a>
             </li>
             <li>
-              <span className="sr-only" inert>Code repository for this work</span>
               <a
                 href="https://github.com/brownhci/live-typing"
                 className="coral-link bubble-link"
@@ -270,18 +261,33 @@ const Publications = () => {
 
       {/* Paper 3 */}
       <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
-        <img src={ProactiveAgent} alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output" style={{ height: '150px', borderRadius: '16px' }} />
+        <img
+          src={ProactiveAgent}
+          alt="Diagram of a proactive reminder system using spoken input, visual context, long- and short-term memory, and generated output"
+          style={{ height: '150px', borderRadius: '16px' }}
+        />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper3-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>ProactiveAgent: Personalized Context-Aware Reminder System</strong>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <span className="name">Yumeng Ma</span><sup aria-label="equal contribution">*</sup> and{' '}
+            <span className="name">Yumeng Ma</span>
+            <sup role="note" aria-label="equal contribution">*</sup>
+            {' '}and{' '}
             <span className="tooltip">
-              <a href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jiahao Ren</a>
+              <a
+                href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
+                target="_self"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                className="author-link"
+              >
+                Jiahao Ren
+              </a>
               <span className="tooltiptext" aria-hidden="true"> Software Engineer at Magic Leap</span>
-            </span><sup aria-label="equal contribution">*</sup>
+            </span>
+            <sup role="note" aria-label="equal contribution">*</sup>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
@@ -312,17 +318,13 @@ const Publications = () => {
           <p className="reader-inline" aria-hidden="true" inert>
             Resources: <a href="../documents/ProactiveAgent.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3586182.3625115">Paper</a>
           </p>
-
-          <p className="reader-inline" aria-hidden="true" inert>
-            * denotes Equal Contribution
-          </p>
         </div>
       </div>
 
-      {/* UI-only footnote via CSS; hidden from SRs */}
+      {/* Visible footnote text (read by SRs) */}
       <div
-        className="footnote-ui"
-        aria-hidden="true"
+        id="equal-contribution-note"
+        aria-label="asterisk denotes equal contribution"
         style={{
           position: 'relative',
           bottom: '50px',
@@ -333,7 +335,20 @@ const Publications = () => {
           marginTop: '30px',
           marginBottom: '30px'
         }}
-      />
+      >
+    
+        <span
+  role="img"
+  aria-label="asterisk denotes equal contribution"
+  title="Asterisk denotes equal contribution"
+  style={{ display: 'inline-flex', alignItems: 'center' }}
+>
+  *
+</span>{' '}
+Equal Contribution
+
+      </div>
+
 
       {/* Curiosity / Venn */}
       <div
@@ -353,32 +368,37 @@ const Publications = () => {
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          aria-label="Venn diagram representing the overlap between social & visual computing, accessibility, and human-AI interaction. Click to toggle overlap animation."
+          aria-label="Venn diagram: social and visual computing, accessibility, and human–AI interaction. Press to toggle overlap animation."
         >
-          <div className={`circle circle-left ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
-          <span className="venn-label text-left" data-label="social &amp; visual computing" aria-hidden="true"></span>
+          <div className={`circle circle-left ${isMerged ? 'merge' : ''}`}></div>
+          <span className="text-left">social &amp; visual <br /> computing<br /></span>
 
-          <div className={`circle circle-right ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
-          <span className="venn-label text-right" data-label="accessibility" aria-hidden="true"></span>
+          <div className={`circle circle-right ${isMerged ? 'merge' : ''}`}></div>
+          <span className="text-right">accessibility</span>
 
-          <div className={`circle circle-top ${isMerged ? 'merge' : ''}`} aria-hidden="true"></div>
-          <span className="venn-label text-top" data-label="human-ai interaction" aria-hidden="true"></span>
+          <div className={`circle circle-top ${isMerged ? 'merge' : ''}`}></div>
+          <span className="text-top">human-ai interaction</span>
         </div>
 
-        {/* Speak Screen label for carrot */}
-        <span className="sr-only" inert>Carrot icon representing fresh research ideas</span>
+        <div className="research-interests" aria-hidden="false">
+          <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
+            <span style={{ marginLeft: '8px' }}>
+              What I’m curious about{' '}
+              <span
+                role="img"
+                aria-label="carrot icon"
+                title="Carrot icon"
+                style={{ display: 'inline-flex', alignItems: 'center' }}
+              >
+                <FaCarrot size={12} color="#7C7C7C" aria-hidden="true" />
+              </span>
+            </span>
+          </div>
+        </div>
 
         <p className="reader-inline" aria-hidden="true" inert>
           What I’m curious about: social &amp; visual computing · accessibility · human–AI interaction
         </p>
-
-        <div className="research-interests" aria-hidden="true">
-          <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
-            <span style={{ marginLeft: '8px' }}>
-              What I’m curious about <FaCarrot size={12} color="#7C7C7C" aria-hidden="true" />
-            </span>
-          </div>
-        </div>
       </div>
 
       {/* Watermark */}
