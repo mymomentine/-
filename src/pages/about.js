@@ -252,7 +252,7 @@ const About = () => {
           On the side, I enjoy lurking on Discord, reading creepypastas, skateboarding, loitering at grocery stores, sketching {' '}
           <a href="https://momentine.github.io/advent/advent.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
              comic strips
-            </a>{' '}  
+            </a>, {' '}  
             and playing bass guitar.
 
             {/* Brainstorming section */}
