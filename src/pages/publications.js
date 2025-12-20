@@ -163,7 +163,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="PDF for live typing paper"
               >
-                PDF <FaFilePdf size={10} aria-hidden="true" />
+                pdf <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
@@ -172,7 +172,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="webpage for live typing paper"
               >
-                Paper <FaPaperclip size={10} aria-hidden="true" />
+                paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
@@ -181,7 +181,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="Code repository for live typing paper"
               >
-                Code <FaFileCode size={10} aria-hidden="true" />
+                code <FaFileCode size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
@@ -222,7 +222,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="PDF for mixed reality window paper"
               >
-                PDF <FaFilePdf size={10} aria-hidden="true" />
+                pdf <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
@@ -231,7 +231,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="webpage for mixed reality window paper"
               >
-                Paper <FaPaperclip size={10} aria-hidden="true" />
+                paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
@@ -301,7 +301,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="PDF for ProactiveAgent paper"
               >
-                PDF <FaFilePdf size={10} aria-hidden="true" />
+                pdf <FaFilePdf size={10} aria-hidden="true" />
               </a>
             </li>
             <li>
@@ -310,7 +310,7 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="webpage for ProactiveAgent paper"
               >
-                Paper <FaPaperclip size={10} aria-hidden="true" />
+                paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
@@ -345,7 +345,7 @@ const Publications = () => {
 >
   *
 </span>{' '}
-Equal Contribution
+denotes equal contribution
 
       </div>
 
@@ -383,7 +383,7 @@ Equal Contribution
         <div className="research-interests" aria-hidden="false">
           <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
             <span style={{ marginLeft: '8px' }}>
-              What I’m curious about{' '}
+              what I’m curious about{' '}
               <span
                 role="img"
                 aria-label="carrot icon"

@@ -223,7 +223,7 @@ const Playground = () => {
           lineHeight: '1.4',
           marginTop: '1vh',
         }}>
-          <span style={{ fontWeight: 'bold' }}> Miscellaneous</span>
+          <span style={{ fontWeight: 'bold' }}> Unpublished Shower Thoughts</span>
           <div >
             <div style={{ marginBottom: '20px' }}></div>
             Guiding robots in performing grasp tasks under text-based instructions
@@ -259,7 +259,7 @@ const Playground = () => {
                     marginBottom: '30px'
                 }}
             >
-              Not all creations need publishing ★
+              not all creations need publishing ★
             </div>
 
       <div

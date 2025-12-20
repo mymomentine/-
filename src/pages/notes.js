@@ -158,7 +158,7 @@ const Notes = () => {
                         marginTop: '1vh',
                     }}
                 >
-                    <BlogLink to="/notes/hiatus">A little research hiatus</BlogLink>
+                    <BlogLink to="/notes/hiatus">a little research hiatus</BlogLink>
                     <div style={{ marginBottom: '5px' }}></div>
                     <div>
                         <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
@@ -222,7 +222,7 @@ const Notes = () => {
                     marginBottom: '30px'
                 }}
             >
-                Slice of life 🍰
+                slice of life 🍰
             </div>
 
             <div

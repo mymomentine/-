@@ -11,6 +11,7 @@ import Hello from './pages/posts/hello';
 import Hiatus from './pages/posts/hiatus'; 
 import Passenger from './pages/posts/passenger'; 
 import Playground from './pages/playground';
+import Comics from './pages/comics';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<About />} />
+        <Route path='/comics' element={<Comics />} />
         <Route path='/publications' element={<Publications />} />
         <Route path='/notes' element={<Notes/>} />
         <Route path='/notes/overwatch' element={<Overwatch/>} />

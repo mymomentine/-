@@ -157,7 +157,7 @@ const Hiatus = () => {
             marginBottom: '30px'
           }}
         >
-          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> A little research hiatus</span>
+          <span style={{ fontWeight: 'bold', fontSize: '20px' }}> a little research hiatus</span>
           <div style={{ marginBottom: '5px' }}></div>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>

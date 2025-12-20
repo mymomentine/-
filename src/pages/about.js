@@ -1,7 +1,9 @@
 import React from 'react';
-import { FaGraduationCap, FaGithub } from 'react-icons/fa';
+import { FaGraduationCap, FaGithub, FaGithubAlt } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { Helmet } from 'react-helmet';
+import { Link } from "react-router-dom";
+
 
 import profileImage from '../images/me.png';
 import cat from '../images/cat.gif';
@@ -192,7 +194,7 @@ const About = () => {
               <MdEmail size={18} />
             </a>
             <a href="https://github.com/momentine" target="_self" rel="noopener noreferrer" aria-label="Visit Yumeng's GitHub profile">
-              <FaGithub size={18} />
+              <FaGithubAlt size={18} />
             </a>
             <a href="https://scholar.google.com/citations?hl=en&user=qTFjaQoAAAAJ" target="_self" rel="noopener noreferrer" aria-label="Visit Yumeng's Google Scholar profile">
               <FaGraduationCap size={18} />
@@ -250,9 +252,10 @@ const About = () => {
             <br />
           
           On the side, I enjoy lurking on Discord, reading creepypastas, skateboarding, loitering at grocery stores, sketching {' '}
-          <a href="https://momentine.github.io/advent/advent.html" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
-             comic strips
-            </a>, {' '}  
+       <Link to="/comics" style={{ textDecoration: "none" }} className="coral-link">
+  comic strips
+</Link>
+, {' '}  
             and playing bass guitar.
 
             {/* Brainstorming section */}
@@ -268,6 +271,29 @@ const About = () => {
               <span style={{ fontWeight: 'bold' }}>🍓 Brainstorming ~ </span>
               {/* What shapes our expectations and why do certain interactions feel more compelling than others? */}
               How can AI create code that's accessible by design and what makes those outputs feel truly inclusive?
+            </div>
+
+             <div style={{ marginBottom: '20px' }}></div>
+
+                         {/* Brainstorming section */}
+            <div style={{ marginBottom: '20px' }}></div>
+            <div
+              style={{
+                backgroundColor: '#F3F3F3',
+                padding: '10px',
+                borderRadius: '5px',
+                margin: '10px 0',
+              }}
+            >
+              <span style={{ fontWeight: 'bold' }}>📣 Announcement ~ </span>
+              {/* What shapes our expectations and why do certain interactions feel more compelling than others? */}
+              I am currently seeking motivated undergraduate and master’s students for research opportunities at UW (sign up 
+              
+              {' '}    <a href="https://forms.gle/ZePWd7sQqvWHHvMB6" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="coral-link">
+              here
+            </a>{' '} 
+              
+            if interested)
             </div>
 
              <div style={{ marginBottom: '20px' }}></div>
