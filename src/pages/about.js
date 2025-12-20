@@ -252,10 +252,10 @@ const About = () => {
             <br />
           
           On the side, I enjoy lurking on Discord, skateboarding, loitering at grocery stores, sketching {' '}
-       <Link to="/comics" style={{ textDecoration: "none" }} className="coral-link">
+       {/* <Link to="/comics" style={{ textDecoration: "none" }} className="coral-link">
   comic strips
-</Link>
-, {' '}  
+</Link> */}
+comic strips, {' '}  
             and playing bass guitar.
 
             {/* Brainstorming section */}
