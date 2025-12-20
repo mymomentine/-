@@ -251,7 +251,7 @@ const About = () => {
             <br />
             <br />
           
-          On the side, I enjoy lurking on Discord, reading creepypastas, skateboarding, loitering at grocery stores, sketching {' '}
+          On the side, I enjoy lurking on Discord, skateboarding, loitering at grocery stores, sketching {' '}
        <Link to="/comics" style={{ textDecoration: "none" }} className="coral-link">
   comic strips
 </Link>
