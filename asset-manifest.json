@@ -1,9 +1,28 @@
 {
   "files": {
     "main.css": "/static/css/main.abd64e84.css",
-    "main.js": "/static/js/main.0f19265f.js",
+    "main.js": "/static/js/main.6e906d51.js",
     "static/media/pachi-clip.gif": "/static/media/pachi-clip.a03f8dc17a9719bf1955.gif",
+    "static/media/pumpkin.png": "/static/media/pumpkin.04acd91dba1acd157d8d.png",
     "static/media/me.png": "/static/media/me.bfeabeeb9d44d34fa2c5.png",
+    "static/media/crow.png": "/static/media/crow.a6b935a2f82fc5d1b01f.png",
+    "static/media/picnic.png": "/static/media/picnic.875fc125472c342bc705.png",
+    "static/media/traffic.png": "/static/media/traffic.874eeb38d2efa218b63b.png",
+    "static/media/hat.png": "/static/media/hat.479244e021fd0606cc57.png",
+    "static/media/grocery.png": "/static/media/grocery.61c9a65495075a8b44d3.png",
+    "static/media/docs.png": "/static/media/docs.c2f30489972506f716eb.png",
+    "static/media/nightgown.png": "/static/media/nightgown.be90eca06623a1383605.png",
+    "static/media/piano.png": "/static/media/piano.05cfd4665413fa5433ea.png",
+    "static/media/kitty.png": "/static/media/kitty.7aa0efea447fe531c7d4.png",
+    "static/media/starbag.png": "/static/media/starbag.0c4e0935bec7ee59132f.png",
+    "static/media/hairtie.png": "/static/media/hairtie.54462f3cbba481dbd97f.png",
+    "static/media/car.png": "/static/media/car.35667c9edc0a59db2b98.png",
+    "static/media/wart.png": "/static/media/wart.8d4bbfebe584a39e330c.png",
+    "static/media/urname.png": "/static/media/urname.fe6a17910ef47de3dea2.png",
+    "static/media/slap.png": "/static/media/slap.24624632008a4f0dd5ec.png",
+    "static/media/vivienne.png": "/static/media/vivienne.6b06a159e3306063035f.png",
+    "static/media/67.png": "/static/media/67.6027953cd6ddd60e4458.png",
+    "static/media/bunny.png": "/static/media/bunny.808251184ea55c37e257.png",
     "static/media/napkin.png": "/static/media/napkin.ce94034208d48bb67a0d.png",
     "static/media/livetyping.png": "/static/media/livetyping.887c9f75403001727c3c.png",
     "static/media/mrpw.png": "/static/media/mrpw.43b7afde074ca4442021.png",
@@ -12,10 +31,10 @@
     "static/media/bear.png": "/static/media/bear.330a32719ec9460fd5c9.png",
     "index.html": "/index.html",
     "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
-    "main.0f19265f.js.map": "/static/js/main.0f19265f.js.map"
+    "main.6e906d51.js.map": "/static/js/main.6e906d51.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.0f19265f.js"
+    "static/js/main.6e906d51.js"
   ]
 }
