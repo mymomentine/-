@@ -22,25 +22,25 @@ import vivienne from "../comics/vivienne.png";
 import wart from "../comics/wart.png";
 
 const comics = [
-  { src: bunny, alt: "Bunny comic", title: "my terminator bunny keychain" },
-  { src: car, alt: "Car comic", title: "unreliable blueprint" },
-  { src: docs, alt: "Docs comic", title: "cute things shouldn't hurt this much" },
-  { src: hat, alt: "Hat comic", title: "don't know what to wear when it rains" },
-  { src: kitty, alt: "Kitty comic", title: "a gift from u while i was gone" },
-  { src: dumb, alt: "Comic 67", title: "knew u were thinking something dumb" },
-  { src: crow, alt: "Crow comic", title: "are they friends or seed dealing?" },
-  { src: grocery, alt: "Grocery comic", title: "on the way back from groceries" },
-  { src: hairtie, alt: "Hairtie comic", title: "ur curls in pigtails & clippies" },
-  { src: nightgown, alt: "Nightgown comic", title: "welcome to our party. please come in!" },
-  { src: piano, alt: "Piano comic", title: "things we didn't pay for" },
-  { src: picnic, alt: "Picnic comic", title: "swear u always nap more than me" },
-  { src: pumpkin, alt: "Pumpkin comic", title: "why i love october so much" },
-  { src: slap, alt: "Slap comic", title: "complimentary upstairs percussion" },
-  { src: starbag, alt: "Starbag comic", title: "thought i would look cuter thru a star" },
-  { src: traffic, alt: "Traffic cone comic", title: "is this considered human-trafficking?" },
-  { src: urname, alt: "Urname comic", title: "wrong person same name" },
-  { src: vivienne, alt: "Vivienne comic", title: "vee-vienne westwood fantasy" },
-  { src: wart, alt: "Wart comic", title: "i knew u liked picking at it" },
+//   { src: bunny, alt: "Bunny comic", title: "my terminator bunny keychain" },
+//   { src: car, alt: "Car comic", title: "unreliable blueprint" },
+//   { src: docs, alt: "Docs comic", title: "cute things shouldn't hurt this much" },
+//   { src: hat, alt: "Hat comic", title: "don't know what to wear when it rains" },
+//   { src: kitty, alt: "Kitty comic", title: "a gift from u while i was gone" },
+//   { src: dumb, alt: "Comic 67", title: "knew u were thinking something dumb" },
+//   { src: crow, alt: "Crow comic", title: "are they friends or seed dealing?" },
+//   { src: grocery, alt: "Grocery comic", title: "on the way back from groceries" },
+//   { src: hairtie, alt: "Hairtie comic", title: "ur curls in pigtails & clippies" },
+//   { src: nightgown, alt: "Nightgown comic", title: "welcome to our party. please come in!" },
+//   { src: piano, alt: "Piano comic", title: "things we didn't pay for" },
+//   { src: picnic, alt: "Picnic comic", title: "swear u always nap more than me" },
+//   { src: pumpkin, alt: "Pumpkin comic", title: "why i love october so much" },
+//   { src: slap, alt: "Slap comic", title: "complimentary upstairs percussion" },
+//   { src: starbag, alt: "Starbag comic", title: "thought i would look cuter thru a star" },
+//   { src: traffic, alt: "Traffic cone comic", title: "is this considered human-trafficking?" },
+//   { src: urname, alt: "Urname comic", title: "wrong person same name" },
+//   { src: vivienne, alt: "Vivienne comic", title: "vee-vienne westwood fantasy" },
+//   { src: wart, alt: "Wart comic", title: "i knew u liked picking at it" },
 ];
 
 const Comics = () => {
@@ -291,7 +291,7 @@ const Comics = () => {
           color: "#7C7C7C",
         }}
       >
-        small archive of my real life moments
+        small archive of real life moments
       </div>
 
       {/* Footer */}
