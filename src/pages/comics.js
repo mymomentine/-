@@ -168,7 +168,7 @@ const Comics = () => {
     };
   }, []);
 
-  // preload ratios with Image() so you don't render any "weird comic up close" on first load
+  // preload ratios with Image() so it don't render any "weird comic up close" on first load
   useEffect(() => {
     let cancelled = false;
 
@@ -223,7 +223,7 @@ const Comics = () => {
   const layout = useMemo(() => {
     const w = wrapW || 980;
 
-    // tweak these if you want slightly bigger/smaller on each breakpoint
+    // tweak these for slightly bigger/smaller on each breakpoint
     const targetH =
       w < 520 ? 165 :
       w < 820 ? 220 :
@@ -399,9 +399,9 @@ const Comics = () => {
                       <img src={it.src} alt={it.alt} loading="lazy" />
                     </span>
                   </button>
-                  <figcaption className="comic-caption" style={{ width: `${it.width}px` }}>
+                  {/* <figcaption className="comic-caption" style={{ width: `${it.width}px` }}>
                     {it.title}
-                  </figcaption>
+                  </figcaption> */}
                 </figure>
               ))}
             </div>
