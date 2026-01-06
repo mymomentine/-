@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 
 import dumb from "../comics/67.png";
 import bunny from "../comics/bunny.png";
-import car from "../comics/car.png";
 import docs from "../comics/docs.png";
 import hat from "../comics/hat.png";
 import kitty from "../comics/kitty.png";
@@ -20,60 +19,200 @@ import traffic from "../comics/traffic.png";
 import urname from "../comics/urname.png";
 import vivienne from "../comics/vivienne.png";
 import wart from "../comics/wart.png";
+import peircing from "../comics/piercing.png";
+import plushie from "../comics/plushie.png";
+import teddybear from "../comics/teddybear.png";
+import demonhunter from "../comics/demonhunter.png";
+import starstar from "../comics/starstar.svg";
 
 const comics = [
-//   { src: bunny, alt: "Bunny comic", title: "my terminator bunny keychain" },
-//   { src: car, alt: "Car comic", title: "unreliable blueprint" },
-//   { src: docs, alt: "Docs comic", title: "cute things shouldn't hurt this much" },
-//   { src: hat, alt: "Hat comic", title: "don't know what to wear when it rains" },
-//   { src: kitty, alt: "Kitty comic", title: "a gift from u while i was gone" },
-//   { src: dumb, alt: "Comic 67", title: "knew u were thinking something dumb" },
-//   { src: crow, alt: "Crow comic", title: "are they friends or seed dealing?" },
-//   { src: grocery, alt: "Grocery comic", title: "on the way back from groceries" },
-//   { src: hairtie, alt: "Hairtie comic", title: "ur curls in pigtails & clippies" },
-//   { src: nightgown, alt: "Nightgown comic", title: "welcome to our party. please come in!" },
-//   { src: piano, alt: "Piano comic", title: "things we didn't pay for" },
-//   { src: picnic, alt: "Picnic comic", title: "swear u always nap more than me" },
-//   { src: pumpkin, alt: "Pumpkin comic", title: "why i love october so much" },
-//   { src: slap, alt: "Slap comic", title: "complimentary upstairs percussion" },
-//   { src: starbag, alt: "Starbag comic", title: "thought i would look cuter thru a star" },
-//   { src: traffic, alt: "Traffic cone comic", title: "is this considered human-trafficking?" },
-//   { src: urname, alt: "Urname comic", title: "wrong person same name" },
-//   { src: vivienne, alt: "Vivienne comic", title: "vee-vienne westwood fantasy" },
-//   { src: wart, alt: "Wart comic", title: "i knew u liked picking at it" },
+  { src: bunny, alt: "Bunny comic", title: "terminator bunny" },
+  { src: docs, alt: "Docs comic", title: "second wear" },
+  { src: kitty, alt: "Kitty comic", title: "pocket size" },
+  { src: dumb, alt: "Comic 67", title: "something dumb" },
+  { src: wart, alt: "Wart comic", title: "fingie blemish" },
+  { src: demonhunter, alt: "Demon hunters comic", title: "demon hunters" },
+  { src: crow, alt: "Crow comic", title: "negotiations" },
+  { src: grocery, alt: "Grocery comic", title: "windowsill" },
+  { src: hairtie, alt: "Hairtie comic", title: "hair tie" },
+  { src: nightgown, alt: "Nightgown comic", title: "nightgown" },
+  { src: piano, alt: "Piano comic", title: "scavenger" },
+  { src: picnic, alt: "Picnic comic", title: "picnic" },
+  { src: pumpkin, alt: "Pumpkin comic", title: "pumpkin" },
+  { src: slap, alt: "Slap comic", title: "stomp stomp" },
+  { src: starbag, alt: "Starbag comic", title: "fisheye" },
+  { src: traffic, alt: "Traffic cone comic", title: "diversion" },
+  { src: hat, alt: "Hat comic", title: "bad hat day" },
+  { src: urname, alt: "Same name comic", title: "same name" },
+  { src: vivienne, alt: "Vivienne comic", title: "saturn rings" },
+  { src: peircing, alt: "Piercing comic", title: "open wound" },
+  { src: plushie, alt: "Plushie comic", title: "plushie" },
+  { src: teddybear, alt: "Teddybear comic", title: "ambassador" },
 ];
 
-const Comics = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
+// --- layout knobs ---
+const TARGET_ROW_H = 260;
+const GAP = 8;
+const JUSTIFY_TOL = 0.15;
 
+function clamp(n, lo, hi) {
+  return Math.max(lo, Math.min(hi, n));
+}
+
+function computeJustifiedRows(items, containerW, targetH, gap) {
+  if (!containerW || containerW < 50) return [];
+
+  const rows = [];
+  let row = [];
+  let sumRatios = 0;
+
+  const flushRow = (isLastRow) => {
+    if (row.length === 0) return;
+
+    const gapsTotal = gap * (row.length - 1);
+    const availableW = containerW - gapsTotal;
+
+    let rowH = targetH;
+    if (!isLastRow) {
+      rowH = availableW / sumRatios;
+      rowH = clamp(rowH, targetH * 0.85, targetH * 1.15);
+    }
+
+    rows.push({
+      height: rowH,
+      items: row.map((it) => ({
+        ...it,
+        height: rowH,
+        width: it.ratio * rowH,
+      })),
+    });
+
+    row = [];
+    sumRatios = 0;
+  };
+
+  for (const it of items) {
+    row.push(it);
+    sumRatios += it.ratio;
+
+    const predictedW = sumRatios * targetH + gap * (row.length - 1);
+    if (predictedW >= containerW * (1 - JUSTIFY_TOL)) {
+      flushRow(false);
+    }
+  }
+
+  flushRow(true);
+  return rows;
+}
+
+const Comics = () => {
+  const wrapRef = useRef(null);
+  const [wrapW, setWrapW] = useState(0);
+
+  const [ratios, setRatios] = useState(() => Array(comics.length).fill(null));
+  const allReady = ratios.every((r) => typeof r === "number" && r > 0);
+
+  const [activeIndex, setActiveIndex] = useState(null);
   const isOpen = activeIndex !== null;
   const active = isOpen ? comics[activeIndex] : null;
 
-  const close = () => {
-    setActiveIndex(null);
-    if (document.activeElement instanceof HTMLElement) {
-      document.activeElement.blur();
-    }
+  // measure container width
+ useEffect(() => {
+  if (!wrapRef.current) return;
+  const el = wrapRef.current;
+
+  let rafId = 0;
+  let lastW = 0;
+
+  const ro = new ResizeObserver((entries) => {
+    const w = entries[0]?.contentRect?.width;
+    if (!w) return;
+
+    // ignore sub-pixel jitter
+    const rounded = Math.round(w);
+
+    if (rounded === lastW) return;
+    lastW = rounded;
+
+    cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      setWrapW(rounded);
+    });
+  });
+
+  ro.observe(el);
+
+  return () => {
+    cancelAnimationFrame(rafId);
+    ro.disconnect();
   };
+}, []);
 
-  const prev = () =>
-    setActiveIndex((i) => (i === 0 ? comics.length - 1 : i - 1));
-  const next = () =>
-    setActiveIndex((i) => (i === comics.length - 1 ? 0 : i + 1));
-
+  // preload ratios WITHOUT rendering any <img> tags
   useEffect(() => {
-    if (!isOpen) return;
+    let cancelled = false;
 
-    const onKeyDown = (e) => {
-      if (e.key === "Escape") close();
-      if (e.key === "ArrowLeft") prev();
-      if (e.key === "ArrowRight") next();
+    const loadAll = async () => {
+      const promises = comics.map(
+        (c, idx) =>
+          new Promise((resolve) => {
+            const img = new Image();
+            img.onload = () => {
+              const nw = img.naturalWidth || 1;
+              const nh = img.naturalHeight || 1;
+              resolve({ idx, ratio: nw / nh });
+            };
+            img.onerror = () => resolve({ idx, ratio: 1 });
+            img.src = c.src;
+          })
+      );
+
+      const results = await Promise.all(promises);
+      if (cancelled) return;
+
+      setRatios((prev) => {
+        const next = [...prev];
+        for (const r of results) next[r.idx] = r.ratio;
+        return next;
+      });
     };
 
+    loadAll();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const close = () => {
+    setActiveIndex(null);
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
+  };
+
+  // ESC to close
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") close();
+    };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
+
+  const itemsWithRatios = useMemo(
+    () =>
+      comics.map((c, idx) => ({
+        ...c,
+        idx,
+        ratio: ratios[idx] ?? 1,
+      })),
+    [ratios]
+  );
+
+  const rows = useMemo(() => {
+    if (!allReady) return [];
+    return computeJustifiedRows(itemsWithRatios, wrapW, TARGET_ROW_H, GAP);
+  }, [allReady, itemsWithRatios, wrapW]);
 
   return (
     <div
@@ -93,187 +232,150 @@ const Comics = () => {
         <meta name="robots" content="nosnippet" />
       </Helmet>
 
-      <style>
-        {`
-          .comic-grid {
-            column-count: 1;
-            column-gap: 14px;
-            width: 100%;
-          }
+      <style>{`
+        .comic-header {
+          font-size: 16px;
+          color: #7C7C7C;
+          line-height: 1.4;
+          margin-top: 1vh;
+          margin-bottom: 18px;
+          font-weight: bold;
+        }
 
-          @media (min-width: 520px) {
-            .comic-grid { column-count: 2; }
-          }
+        .justified-wrap { width: 100%; }
 
-          @media (min-width: 900px) {
-            .comic-grid { column-count: 3; }
-          }
+        .row {
+          display: flex;
+          flex-direction: row;
+          gap: ${GAP}px;
+          margin-bottom: ${GAP}px;
+          align-items: flex-start;
+          flex-wrap: nowrap;
+        }
 
-          .comic-card {
-            break-inside: avoid;
-            margin: 0 0 22px;
-          }
+        .tile {
+          margin: 0;
+          padding: 0;
+          display: inline-flex;
+          flex-direction: column;
+          align-items: flex-start;
+          flex: 0 0 auto;
+        }
 
-          .comic-button {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            border: 0;
-            background: transparent;
-            cursor: pointer;
-            outline: none;
-          }
+        .tile-btn {
+          border: 0;
+          padding: 0;
+          margin: 0;
+          background: transparent;
+          cursor: pointer;
+          display: block;
+        }
 
-          .comic-button:focus { outline: none; }
+        .thumb {
+          display: block;
+          overflow: hidden;
+          background: transparent;
+        }
 
-          .comic-img {
-            width: 100%;
-            height: auto;
-            display: block;
-          }
+        .thumb img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: left top;
+        }
 
-          .comic-caption {
-            margin-top: 6px;
-            font-size: 12px;
-            color: #7C7C7C;
-            line-height: 1.4;
-          }
+        .comic-caption {
+          margin-top: 6px;
+          font-size: 12px;
+          color: #7C7C7C;
+          line-height: 1.25;
+        }
 
-          .comic-header { margin-bottom: 18px; }
+        /* lightbox */
+        .lightbox {
+          position: fixed;
+          inset: 0;
+          background: rgba(255,255,255,0.92);
+          z-index: 9999;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px 16px 56px;
+        }
 
-          .comic-title {
-            font-size: 14px;
-            color: #7C7C7C;
-            letter-spacing: 0.2px;
-          }
+        .lightbox-inner {
+          width: min(980px, 92vw);
+          max-height: 88vh;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
 
-          /* lightbox */
-          .lightbox {
-            position: fixed;
-            inset: 0;
-            background: rgba(255,255,255,0.92);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px 16px 56px;
-          }
+        .lightbox-bar {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-bottom: 6px;
+          font-size: 12px;
+          color: #7C7C7C;
+        }
 
-          .lightbox-inner {
-            width: min(980px, 92vw);
-            max-height: 88vh;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-          }
+        .lightbox-img-wrap {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+        }
 
-          .lightbox-img-wrap {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-          }
+        .lightbox-img {
+          max-width: 100%;
+          max-height: 78vh;
+          width: auto;
+          height: auto;
+          display: block;
+        }
+      `}</style>
 
-          .lightbox-img {
-            max-width: 100%;
-            max-height: 78vh;
-            display: block;
-          }
-
-          .lightbox-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-            color: #7C7C7C;
-          }
-
-          .lightbox-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-          }
-
-          .lb-btn,
-          .lb-x {
-            border: 0;
-            background: transparent;
-            color: #B5B5B5;
-            padding: 0;
-            cursor: pointer;
-            outline: none;
-          }
-
-          .lb-btn { font-size: 22px; line-height: 1; }
-          .lb-x { font-size: 18px; line-height: 1; }
-
-          .lb-btn:hover,
-          .lb-x:hover {
-            color: #000;
-          }
-
-          .lb-btn:focus,
-          .lb-x:focus {
-            outline: none;
-          }
-        `}
-      </style>
-
-      {/* Header */}
-
-
-      <div
-        role="heading"
-        aria-level="2"
-        style={{
-          fontSize: '16px',
-          color: '#7C7C7C',
-          lineHeight: '1.4',
-          marginTop: '1vh',
-          marginBottom: '30px',
-          fontWeight: 'bold'
-        }}
-      >
-       Comics drawn by me
+      <div className="comic-header" role="heading" aria-level="2">
+        Comics hand-drawn by me
       </div>
 
-      {/* Grid */}
-      <div className="comic-grid">
-        {comics.map((c, idx) => (
-          <figure className="comic-card" key={`${c.title}-${idx}`}>
-            <button
-              type="button"
-              className="comic-button"
-              onClick={() => setActiveIndex(idx)}
-              aria-label={`Open ${c.title}`}
-            >
-              <img className="comic-img" src={c.src} alt={c.alt} loading="lazy" />
-            </button>
-            <figcaption className="comic-caption">{c.title}</figcaption>
-          </figure>
-        ))}
+      <div className="justified-wrap" ref={wrapRef}>
+        {/* If you want: render nothing until ratios are ready (no jump). */}
+        {allReady &&
+          rows.map((r, ridx) => (
+            <div className="row" key={`row-${ridx}`}>
+              {r.items.map((it) => (
+                <figure className="tile" key={`${it.title}-${it.idx}`}>
+                  <button
+                    type="button"
+                    className="tile-btn"
+                    onClick={() => setActiveIndex(it.idx)}
+                    aria-label={`Open ${it.title}`}
+                    style={{ width: `${it.width}px` }}
+                  >
+                    <span
+                      className="thumb"
+                      style={{ width: `${it.width}px`, height: `${it.height}px` }}
+                    >
+                      <img src={it.src} alt={it.alt} loading="lazy" />
+                    </span>
+                  </button>
+                  <figcaption className="comic-caption" style={{ width: `${it.width}px` }}>
+                    {it.title}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          ))}
       </div>
 
-      {/* Lightbox */}
       {isOpen && (
         <div className="lightbox" role="dialog" aria-modal="true" onClick={close}>
           <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
-            <div className="lightbox-bar">
-              <div>{active?.title}</div>
-              <div className="lightbox-actions">
-                <button className="lb-btn" onClick={prev} aria-label="Previous">
-                  ‹
-                </button>
-                <button className="lb-btn" onClick={next} aria-label="Next">
-                  ›
-                </button>
-                <button className="lb-x" onClick={close} aria-label="Close">
-                  ×
-                </button>
-              </div>
-            </div>
-
+            <div className="lightbox-bar">{active?.title}</div>
             <div className="lightbox-img-wrap">
               <img className="lightbox-img" src={active?.src} alt={active?.alt} />
             </div>
@@ -281,7 +383,6 @@ const Comics = () => {
         </div>
       )}
 
-      {/* Note */}
       <div
         style={{
           position: "absolute",
@@ -291,10 +392,23 @@ const Comics = () => {
           color: "#7C7C7C",
         }}
       >
-        small archive of real life moments
+        small archive of real moments
       </div>
 
-      {/* Footer */}
+      <img
+        src={starstar}
+        alt=""
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          bottom: "52px",
+          right: "20px",
+      width: "64px",
+    height: "64px",
+          display: "block",
+        }}
+      />
+
       <div
         style={{
           position: "absolute",
