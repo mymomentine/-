@@ -50,15 +50,17 @@ const comics = [
   { src: teddybear, alt: "Teddybear comic", title: "ambassador" },
 ];
 
-// --- layout knobs ---
-const TARGET_ROW_H = 260;
-const GAP = 8;
 const JUSTIFY_TOL = 0.15;
 
 function clamp(n, lo, hi) {
   return Math.max(lo, Math.min(hi, n));
 }
 
+/**
+ * Justified layout, but stabilized:
+ * - For non-last rows we solve height, then round widths to integers.
+ * - Give leftover pixels to the last tile so total row width fits container EXACTLY.
+ */
 function computeJustifiedRows(items, containerW, targetH, gap) {
   if (!containerW || containerW < 50) return [];
 
@@ -66,26 +68,52 @@ function computeJustifiedRows(items, containerW, targetH, gap) {
   let row = [];
   let sumRatios = 0;
 
-  const flushRow = (isLastRow) => {
-    if (row.length === 0) return;
+  const pushRow = (isLastRow) => {
+    if (!row.length) return;
 
     const gapsTotal = gap * (row.length - 1);
     const availableW = containerW - gapsTotal;
 
+    // last row: don't justify; keep target height
     let rowH = targetH;
     if (!isLastRow) {
       rowH = availableW / sumRatios;
       rowH = clamp(rowH, targetH * 0.85, targetH * 1.15);
     }
 
-    rows.push({
+    // raw widths
+    const raw = row.map((it) => ({
+      ...it,
       height: rowH,
-      items: row.map((it) => ({
+      width: it.ratio * rowH,
+    }));
+
+    // stabilize: integer pixel widths + exact fit (non-last rows)
+    let laidOut = raw;
+    if (!isLastRow) {
+      const rounded = raw.map((it) => ({
         ...it,
-        height: rowH,
-        width: it.ratio * rowH,
-      })),
-    });
+        width: Math.floor(it.width),
+      }));
+
+      const sumW = rounded.reduce((acc, it) => acc + it.width, 0);
+      const diff = availableW - sumW; // pixels left to distribute
+
+      // add leftover pixels to the last item so row fits perfectly
+      if (rounded.length) {
+        rounded[rounded.length - 1] = {
+          ...rounded[rounded.length - 1],
+          width: Math.max(1, rounded[rounded.length - 1].width + diff),
+        };
+      }
+
+      laidOut = rounded;
+    } else {
+      // last row: still floor widths to reduce jitter
+      laidOut = raw.map((it) => ({ ...it, width: Math.floor(it.width) }));
+    }
+
+    rows.push({ height: rowH, items: laidOut });
 
     row = [];
     sumRatios = 0;
@@ -97,11 +125,11 @@ function computeJustifiedRows(items, containerW, targetH, gap) {
 
     const predictedW = sumRatios * targetH + gap * (row.length - 1);
     if (predictedW >= containerW * (1 - JUSTIFY_TOL)) {
-      flushRow(false);
+      pushRow(false);
     }
   }
 
-  flushRow(true);
+  pushRow(true);
   return rows;
 }
 
@@ -116,39 +144,31 @@ const Comics = () => {
   const isOpen = activeIndex !== null;
   const active = isOpen ? comics[activeIndex] : null;
 
-  // measure container width
- useEffect(() => {
-  if (!wrapRef.current) return;
-  const el = wrapRef.current;
+  // Measure width WITHOUT ResizeObserver (avoids the loop warning)
+  useEffect(() => {
+    let raf = 0;
 
-  let rafId = 0;
-  let lastW = 0;
+    const measure = () => {
+      if (!wrapRef.current) return;
+      const w = Math.round(wrapRef.current.getBoundingClientRect().width);
+      setWrapW((prev) => (prev === w ? prev : w));
+    };
 
-  const ro = new ResizeObserver((entries) => {
-    const w = entries[0]?.contentRect?.width;
-    if (!w) return;
+    const onResize = () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(measure);
+    };
 
-    // ignore sub-pixel jitter
-    const rounded = Math.round(w);
+    measure();
+    window.addEventListener("resize", onResize);
 
-    if (rounded === lastW) return;
-    lastW = rounded;
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", onResize);
+    };
+  }, []);
 
-    cancelAnimationFrame(rafId);
-    rafId = requestAnimationFrame(() => {
-      setWrapW(rounded);
-    });
-  });
-
-  ro.observe(el);
-
-  return () => {
-    cancelAnimationFrame(rafId);
-    ro.disconnect();
-  };
-}, []);
-
-  // preload ratios WITHOUT rendering any <img> tags
+  // preload ratios with Image() so you don't render any "weird comic up close" on first load
   useEffect(() => {
     let cancelled = false;
 
@@ -199,6 +219,23 @@ const Comics = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
+  // Responsive knobs based on measured width (so it “tracks the nav” if they share the same wrapper)
+  const layout = useMemo(() => {
+    const w = wrapW || 980;
+
+    // tweak these if you want slightly bigger/smaller on each breakpoint
+    const targetH =
+      w < 520 ? 165 :
+      w < 820 ? 220 :
+      260;
+
+    const gap =
+      w < 520 ? 6 :
+      8;
+
+    return { targetH, gap };
+  }, [wrapW]);
+
   const itemsWithRatios = useMemo(
     () =>
       comics.map((c, idx) => ({
@@ -211,8 +248,8 @@ const Comics = () => {
 
   const rows = useMemo(() => {
     if (!allReady) return [];
-    return computeJustifiedRows(itemsWithRatios, wrapW, TARGET_ROW_H, GAP);
-  }, [allReady, itemsWithRatios, wrapW]);
+    return computeJustifiedRows(itemsWithRatios, wrapW, layout.targetH, layout.gap);
+  }, [allReady, itemsWithRatios, wrapW, layout.targetH, layout.gap]);
 
   return (
     <div
@@ -226,6 +263,7 @@ const Comics = () => {
         MozOsxFontSmoothing: "grayscale",
         backgroundColor: "white",
         minHeight: "80vh",
+        overflowX: "hidden", // prevents any 1px overflow from creating scrollbars
       }}
     >
       <Helmet>
@@ -247,13 +285,13 @@ const Comics = () => {
         .row {
           display: flex;
           flex-direction: row;
-          gap: ${GAP}px;
-          margin-bottom: ${GAP}px;
+          gap: ${layout.gap}px;
+          margin-bottom: ${layout.gap}px;
           align-items: flex-start;
           flex-wrap: nowrap;
         }
 
-        .tile {
+        figure.tile {
           margin: 0;
           padding: 0;
           display: inline-flex;
@@ -312,13 +350,11 @@ const Comics = () => {
           gap: 10px;
         }
 
-        .lightbox-bar {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          margin-bottom: 6px;
+        .lightbox-title {
           font-size: 12px;
           color: #7C7C7C;
+          line-height: 1.25;
+          margin-left: 2px; /* “slightly to the left” vibe */
         }
 
         .lightbox-img-wrap {
@@ -343,7 +379,7 @@ const Comics = () => {
       </div>
 
       <div className="justified-wrap" ref={wrapRef}>
-        {/* If you want: render nothing until ratios are ready (no jump). */}
+        {/* Render nothing until ratios are ready = no layout jump / no weird preload visuals */}
         {allReady &&
           rows.map((r, ridx) => (
             <div className="row" key={`row-${ridx}`}>
@@ -375,7 +411,7 @@ const Comics = () => {
       {isOpen && (
         <div className="lightbox" role="dialog" aria-modal="true" onClick={close}>
           <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
-            <div className="lightbox-bar">{active?.title}</div>
+            <div className="lightbox-title">{active?.title}</div>
             <div className="lightbox-img-wrap">
               <img className="lightbox-img" src={active?.src} alt={active?.alt} />
             </div>
@@ -401,10 +437,10 @@ const Comics = () => {
         aria-hidden="true"
         style={{
           position: "absolute",
-          bottom: "52px",
+          bottom: "48px",
           right: "20px",
-      width: "64px",
-    height: "64px",
+          width: "86px",  // <- make bigger here
+          height: "86px", // <- and here
           display: "block",
         }}
       />
