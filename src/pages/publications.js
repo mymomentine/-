@@ -140,7 +140,7 @@ const Publications = () => {
         <img src={novelty} alt="Counterbalanced order of how the novelty bias study is set up" style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper1-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
-            <strong>Quantifying the Novelty Bias When Evaluating Interactive Prototypes.</strong>
+            <strong>Quantifying the Novelty Bias When Evaluating Interactive Prototypes</strong>
           </div>
 
           <div style={{ marginBottom: '5px' }}>
