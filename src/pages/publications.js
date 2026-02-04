@@ -135,9 +135,9 @@ const Publications = () => {
       </div>
 
 
-      {/* Paper 3 */}
+      {/* C3 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
-        <img src={novelty} alt="Chat UI mockups showing live typing indicators" style={{ height: '150px', borderRadius: '16px' }} />
+        <img src={novelty} alt="Counterbalanced order of how the novelty bias study is set up" style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
           <div id="paper1-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
             <strong>Quantifying the Novelty Bias When Evaluating Interactive Prototypes.</strong>
@@ -173,7 +173,7 @@ const Publications = () => {
         </div>
       </div>
       
-      {/* Paper 2 */}
+      {/* C2 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
         <img src={liveTyping} alt="Chat UI mockups showing live typing indicators" style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
@@ -232,7 +232,7 @@ const Publications = () => {
         </div>
       </div>
 
-      {/* Paper 1 */}
+      {/* C1 */}
       <div className="container" role="article" aria-labelledby="paper2-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
         <img src={mrpwImage} alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call." style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
@@ -299,7 +299,7 @@ const Publications = () => {
         Extended Abstracts
       </div>
 
-      {/* Paper 3 */}
+      {/* A1 */}
       <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
         <img
           src={ProactiveAgent}
