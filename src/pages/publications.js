@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ProactiveAgent from '../images/proactiveagent.png';
 import liveTyping from '../images/livetyping.png';
 import mrpwImage from '../images/mrpw.png';
+import novelty from '../images/novelty.png';
 import { FaFilePdf, FaPaperclip, FaFileCode, FaCarrot } from "react-icons/fa";
 import { Helmet } from 'react-helmet';
 
@@ -133,7 +134,46 @@ const Publications = () => {
         Conference Proceedings
       </div>
 
-      {/* Paper 1 */}
+
+      {/* Paper 3 */}
+      <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
+        <img src={novelty} alt="Chat UI mockups showing live typing indicators" style={{ height: '150px', borderRadius: '16px' }} />
+        <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
+          <div id="paper1-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
+            <strong>Quantifying the Novelty Bias When Evaluating Interactive Prototypes.</strong>
+          </div>
+
+          <div style={{ marginBottom: '5px' }}>
+             <span className="name">Yumeng Ma</span>, {' '}
+            <span className="tooltip">
+              <a href="https://www.alexishiniker.com/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none', fontSize: '16px' }} className="author-link">Alexis Hiniker</a>
+              <span className="tooltiptext" aria-hidden="true">Associate Professor in the Informatioin School at University of Washington </span>
+            </span>, and{' '}
+            <span className="tooltip">
+              <a href="https://faculty.washington.edu/wobbrock/" target="_self" rel="noopener noreferrer" style={{ textDecoration: 'none' }} className="author-link">Jacob O. Wobbrock</a>
+              <span className="tooltiptext" aria-hidden="true">Professor of Information and, by courtesy, Computer Science & Engineering at the University of Washington</span>
+            </span>
+          </div>
+
+          <div style={{ marginBottom: '5px' }}>
+            <span style={{ fontWeight: '500', color: '#676767' }}>accepted to CHI 2026</span>
+          </div>
+
+          <ul className="links-visual" role="list" aria-label="Resources">
+            <li>
+              <a
+                href="../documents/novelty.pdf"
+                className="coral-link bubble-link"
+                aria-label="PDF for novelty paper"
+              >
+                preprint <FaFilePdf size={10} aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      {/* Paper 2 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
         <img src={liveTyping} alt="Chat UI mockups showing live typing indicators" style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
@@ -192,7 +232,7 @@ const Publications = () => {
         </div>
       </div>
 
-      {/* Paper 2 */}
+      {/* Paper 1 */}
       <div className="container" role="article" aria-labelledby="paper2-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
         <img src={mrpwImage} alt="Illustration of a laptop-based videoconferencing setup showing how users appear during a call." style={{ height: '150px', borderRadius: '16px' }} />
         <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
