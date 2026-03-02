@@ -292,10 +292,11 @@ const About = () => {
             . I research the intersection of AI and accessibility. My current work
             in collaboration with <strong>Microsoft</strong> explores how large
             language models generate code and whether that code supports accessible
-            web experiences.
+            web experiences. This summer, I will be joining <strong>Amazon</strong> as a UX research intern!
+
             <br />
             <br />
-            I recieved my M.S. in computer science from{" "}
+            I received my M.S. in computer science from{" "}
             <a
               href="https://www.brown.edu/"
               target="_self"
@@ -372,7 +373,7 @@ const About = () => {
 
             <div style={{ marginBottom: "20px" }} />
 
-            <div
+            {/* <div
               style={{
                 backgroundColor: "#F3F3F3",
                 padding: "10px",
@@ -381,8 +382,8 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: "bold" }}>📣 Announcement ~ </span>
-              I am currently seeking motivated undergraduate and master’s students
-              for research opportunities at UW (sign up{" "}
+              I am seeking motivated undergraduate and master’s students
+              for research opportunities (sign up{" "}
               <a
                 href="https://forms.gle/ZePWd7sQqvWHHvMB6"
                 target="_self"
@@ -393,13 +394,14 @@ const About = () => {
                 here
               </a>{" "}
               if interested)
-            </div>
+            </div> */}
 
             <div style={{ marginBottom: "20px" }} />
 
             <div style={{ marginBottom: "20px" }}>
               <span style={{ fontWeight: "bold" }}> Updates </span>
             </div>
+            
 
             <div
               style={{
@@ -432,7 +434,7 @@ const About = () => {
                   fontSize: "16px",
                 }}
               >
-                i gave a lightning talk at the Open Source Accessibility Summit ˙‿˙
+                gave a lightning talk at the Open Source Accessibility Summit ˙‿˙
               </span>
             </div>
 
