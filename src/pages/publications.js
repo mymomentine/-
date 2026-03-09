@@ -411,13 +411,13 @@ denotes equal contribution
           role="button"
           tabIndex={0}
           aria-pressed={isMerged}
-          aria-label="Venn diagram: social and visual computing, accessibility, and human–AI interaction. Press to toggle overlap animation."
+          aria-label="Venn diagram of my research interests."
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`}></div>
-          <span className="text-left">social &amp; visual <br /> computing<br /></span>
+          <span className="text-left">system design &amp; evaluation <br /> computing<br /></span>
 
           <div className={`circle circle-right ${isMerged ? 'merge' : ''}`}></div>
-          <span className="text-right">accessibility</span>
+          <span className="text-right">accessible computing</span>
 
           <div className={`circle circle-top ${isMerged ? 'merge' : ''}`}></div>
           <span className="text-top">human-ai interaction</span>
