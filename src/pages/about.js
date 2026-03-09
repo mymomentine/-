@@ -367,8 +367,7 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: "bold" }}>🍓 Brainstorming ~ </span>
-              How can AI create code that's accessible by design and what makes
-              those outputs feel truly inclusive?
+              How can AI generate code that is accessible by design, and how can we intervene to ensure those outputs are truly inclusive?
             </div>
 
             <div style={{ marginBottom: "20px" }} />

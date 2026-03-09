@@ -440,7 +440,7 @@ denotes equal contribution
         </div>
 
         <p className="reader-inline" aria-hidden="true" inert>
-          What I’m curious about: social &amp; visual computing · accessibility · human–AI interaction
+          What I’m curious about: systems design & evaluation · accessible computing · human–AI interaction
         </p>
       </div>
 
