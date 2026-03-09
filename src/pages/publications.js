@@ -417,7 +417,7 @@ denotes equal contribution
           aria-label="Venn diagram of my research interests."
         >
           <div className={`circle circle-left ${isMerged ? 'merge' : ''}`}></div>
-          <span className="text-left">system design &amp; evaluation <br /> computing<br /></span>
+          <span className="text-left">system design <br />&amp; evaluation<br /></span>
 
           <div className={`circle circle-right ${isMerged ? 'merge' : ''}`}></div>
           <span className="text-right">accessibility</span>
@@ -443,7 +443,7 @@ denotes equal contribution
         </div>
 
         <p className="reader-inline" aria-hidden="true" inert>
-          What I’m curious about: systems design & evaluation · accessible computing · human–AI interaction
+          What I’m curious about: systems design & evaluation · accessibility · human–AI interaction
         </p>
       </div>
 
