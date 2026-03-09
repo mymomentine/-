@@ -420,7 +420,7 @@ denotes equal contribution
           <span className="text-left">system design &amp; evaluation <br /> computing<br /></span>
 
           <div className={`circle circle-right ${isMerged ? 'merge' : ''}`}></div>
-          <span className="text-right">accessible computing</span>
+          <span className="text-right">accessibility</span>
 
           <div className={`circle circle-top ${isMerged ? 'merge' : ''}`}></div>
           <span className="text-top">human-ai interaction</span>
