@@ -3,7 +3,7 @@ import ProactiveAgent from '../images/proactiveagent.png';
 import liveTyping from '../images/livetyping.png';
 import mrpwImage from '../images/mrpw.png';
 import novelty from '../images/novelty.png';
-import { FaFilePdf, FaPaperclip, FaFileCode, FaCarrot } from "react-icons/fa";
+import { FaFilePdf, FaPaperclip, FaFileCode, FaCarrot, FaAward} from "react-icons/fa";
 import { Helmet } from 'react-helmet';
 
 const Publications = () => {
@@ -156,7 +156,10 @@ const Publications = () => {
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <span style={{ fontWeight: '500', color: '#676767' }}>accepted to CHI 2026</span>
+            <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2026 (to appear)</span>
+          </div>
+          <div style={{ marginBottom: '5px' }}>
+              <FaAward size={12} aria-hidden="true" /> Best Paper Honorable Mention Award
           </div>
 
           <ul className="links-visual" role="list" aria-label="Resources">
