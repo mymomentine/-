@@ -158,9 +158,12 @@ const Publications = () => {
           <div style={{ marginBottom: '5px' }}>
             <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2026 (to appear)</span>
           </div>
-          <div style={{ marginBottom: '5px' }}>
+          {/* <div style={{ marginBottom: '5px' }}>
               <FaAward size={12} aria-hidden="true" /> Best Paper Honorable Mention Award
-          </div>
+          </div> */}
+          <div style={{ marginBottom: '5px' }}>
+  <FaAward size={12} color="#E1C0C5" aria-hidden="true" /> Best Paper Honorable Mention Award
+</div>
 
           <ul className="links-visual" role="list" aria-label="Resources">
             <li>
