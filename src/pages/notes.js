@@ -148,6 +148,27 @@ const Notes = () => {
                 </div>
             </div> */}
 
+                                   <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
+                <div
+                    style={{
+                        fontSize: '14px',
+                        fontWeight: '300',
+                        color: '#7C7C7C',
+                        lineHeight: '1.4',
+                        marginTop: '1vh',
+                    }}
+                >
+                    <BlogLink to="/notes/chi2026">my first chi</BlogLink>
+                    <div style={{ marginBottom: '5px' }}></div>
+                    <div>
+                        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px' }}>
+                            <FaCalendarAlt size={12} color="#7C7C7C" />
+                            <span style={{ marginLeft: '8px' }}>Apr 30 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
                        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', marginBottom: '20px' }}>
                 <div
                     style={{

@@ -8,6 +8,7 @@ import Publications from './pages/publications';
 import Notes from './pages/notes';
 import Overwatch from './pages/posts/overwatch'; 
 import Hello from './pages/posts/hello'; 
+import Chi2026 from './pages/posts/chi2026'; 
 import Hiatus from './pages/posts/hiatus'; 
 import Passenger from './pages/posts/passenger'; 
 import Playground from './pages/playground';
@@ -25,6 +26,7 @@ function App() {
         <Route path='/notes' element={<Notes/>} />
         <Route path='/notes/overwatch' element={<Overwatch/>} />
         <Route path='/notes/hello' element={<Hello/>} />
+        <Route path='/notes/chi2026' element={<Chi2026/>} />
         <Route path='/notes/hiatus' element={<Hiatus/>} />
         <Route path='/notes/passenger' element={<Passenger/>} />
         <Route path='/playground' element={<Playground/>} />
