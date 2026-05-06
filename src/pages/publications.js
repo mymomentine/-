@@ -156,7 +156,7 @@ const Publications = () => {
           </div>
 
           <div style={{ marginBottom: '5px' }}>
-            <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2026 (to appear)</span>
+            <span style={{ fontWeight: '500', color: '#676767' }}>CHI 2026</span>
           </div>
           {/* <div style={{ marginBottom: '5px' }}>
               <FaAward size={12} aria-hidden="true" /> Best Paper Honorable Mention Award
@@ -172,7 +172,16 @@ const Publications = () => {
                 className="coral-link bubble-link"
                 aria-label="PDF for novelty paper"
               >
-                preprint <FaFilePdf size={10} aria-hidden="true" />
+                pdf <FaFilePdf size={10} aria-hidden="true" />
+              </a>
+            </li>
+                     <li>
+              <a
+                href="https://dl.acm.org/doi/full/10.1145/3772318.3791685"
+                className="coral-link bubble-link"
+                aria-label="webpage for live typing paper"
+              >
+                paper <FaPaperclip size={10} aria-hidden="true" />
               </a>
             </li>
           </ul>
