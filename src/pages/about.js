@@ -508,7 +508,7 @@ const About = () => {
                   >
                     my pc build
                   </a>
-                  &nbsp;(to run heavy vision-language models + make 3d art)
+                  {/* &nbsp;(to run heavy vision-language models + make 3d art) */}
                 </span>
                 <img
                   src={cat}
