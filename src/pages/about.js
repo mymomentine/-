@@ -1,5 +1,9 @@
 import React from "react";
-import { FaGraduationCap, FaGithubAlt, FaGithub } from "react-icons/fa";
+import {
+  FaGraduationCap,
+  FaGithub,
+  FaMicrophone,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
@@ -357,6 +361,8 @@ const About = () => {
               comic strips
             </Link>
             , and playing bass guitar.
+            
+            
             <div style={{ marginBottom: "20px" }} />
             <div
               style={{
@@ -367,10 +373,44 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: "bold" }}>🍓 Brainstorming ~ </span>
-              How can AI generate code that is accessible by design, and how can we intervene to ensure those outputs are truly inclusive?
+              How can AI help make the web accessible at internet scale, and what interventions are needed to ensure its outputs and inspections reflect access needs?
             </div>
 
+<div style={{ marginBottom: "20px" }} />
+<div
+  style={{
+    backgroundColor: "#F3F3F3",
+    padding: "10px",
+    borderRadius: "5px",
+    margin: "10px 0",
+  }}
+>
+  <span style={{ fontWeight: "bold" }}>
+    <FaMicrophone
+      aria-hidden="true"
+      style={{
+        marginRight: "6px",
+        verticalAlign: "text-bottom",
+      }}
+    />
+    Spotlight ~{" "}
+  </span>
+  I was recently a panelist at the{" "}
+  <a
+    href="https://abilitysummit.event.microsoft.com/"
+    target="_self"
+    rel="noopener noreferrer"
+    style={{ textDecoration: "none" }}
+    className="coral-link"
+  >
+    Microsoft Ability Summit
+  </a>
+  {" "}discussing what it means to shift accessibility left in the age of AI-generated code.
+</div>
+
             <div style={{ marginBottom: "20px" }} />
+
+
 
             {/* <div
               style={{
@@ -395,14 +435,14 @@ const About = () => {
               if interested)
             </div> */}
 
-            <div style={{ marginBottom: "20px" }} />
+            {/* <div style={{ marginBottom: "20px" }} /> */}
 
-            <div style={{ marginBottom: "20px" }}>
+            {/* <div style={{ marginBottom: "20px" }}>
               <span style={{ fontWeight: "bold" }}> Updates </span>
             </div>
-            
+             */}
 
-            <div
+            {/* <div
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -435,7 +475,7 @@ const About = () => {
               >
                 gave a lightning talk at the Open Source Accessibility Summit ˙‿˙
               </span>
-            </div>
+            </div> */}
 
             <div
               style={{
@@ -482,9 +522,6 @@ const About = () => {
               </span>
             </div>
 
-            {/* If you want bear used somewhere else later, keep the import.
-                (Right now it's not rendered in your active section.) */}
-            {/* <img src={bear} alt="Bear sketch" style={{ width: 40 }} /> */}
           </div>
         </div>
       </div>
