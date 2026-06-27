@@ -297,7 +297,7 @@ const About = () => {
             in collaboration with <strong>Microsoft</strong> explores how large
             language models generate code and whether that code supports accessible
 
-            web experiences (my paper has recently been accepted to appear at{" "}
+            web experiences (my paper on this has recently been accepted to {" "}
             <a
               href="https://assets26.sigaccess.org/"
               target="_self"
@@ -308,7 +308,7 @@ const About = () => {
             >
 
               ASSETS </a>
-            ✩). I am also a UX research intern this summer at <strong>Amazon</strong> (more info to come).
+            ✩). I am also a UX research intern this summer at <strong>Amazon</strong> (more details coming soon).
 
             <br />
             <br />
