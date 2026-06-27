@@ -296,7 +296,19 @@ const About = () => {
             . I research the intersection of AI and accessibility. My current work
             in collaboration with <strong>Microsoft</strong> explores how large
             language models generate code and whether that code supports accessible
-            web experiences. This summer, I will be joining <strong>Amazon</strong> as a UX research intern!
+
+            web experiences (my paper has recently been accepted to appear at{" "}
+            <a
+              href="https://assets26.sigaccess.org/"
+              target="_self"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+              className="coral-link"
+
+            >
+
+              ASSETS </a>
+            ✩). I am also a UX research intern this summer at <strong>Amazon</strong> (more info to come).
 
             <br />
             <br />
@@ -361,8 +373,8 @@ const About = () => {
               comic strips
             </Link>
             , and playing bass guitar.
-            
-            
+
+
             <div style={{ marginBottom: "20px" }} />
             <div
               style={{
@@ -373,40 +385,40 @@ const About = () => {
               }}
             >
               <span style={{ fontWeight: "bold" }}>🍓 Brainstorming ~ </span>
-              How can AI help make the web accessible at internet scale, and what interventions are needed to ensure its outputs and inspections reflect access needs?
+              How can AI help make the web accessible at internet scale, and what interventions are needed to ensure its outputs and inspections reflect acces?
             </div>
 
-<div style={{ marginBottom: "20px" }} />
-<div
-  style={{
-    backgroundColor: "#F3F3F3",
-    padding: "10px",
-    borderRadius: "5px",
-    margin: "10px 0",
-  }}
->
-  <span style={{ fontWeight: "bold" }}>
-    <FaMicrophone
-      aria-hidden="true"
-      style={{
-        marginRight: "6px",
-        verticalAlign: "text-bottom",
-      }}
-    />
-    Spotlight ~{" "}
-  </span>
-  I was recently a panelist at the{" "}
-  <a
-    href="https://abilitysummit.event.microsoft.com/"
-    target="_self"
-    rel="noopener noreferrer"
-    style={{ textDecoration: "none" }}
-    className="coral-link"
-  >
-    Microsoft Ability Summit
-  </a>
-  {" "}discussing what it means to shift accessibility left in the age of AI-generated code.
-</div>
+            <div style={{ marginBottom: "20px" }} />
+            <div
+              style={{
+                backgroundColor: "#F3F3F3",
+                padding: "10px",
+                borderRadius: "5px",
+                margin: "10px 0",
+              }}
+            >
+              <span style={{ fontWeight: "bold" }}>
+                <FaMicrophone
+                  aria-hidden="true"
+                  style={{
+                    marginRight: "6px",
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+                Spotlight ~{" "}
+              </span>
+              I was a panelist at the{" "}
+              <a
+                href="https://abilitysummit.event.microsoft.com/"
+                target="_self"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none" }}
+                className="coral-link"
+              >
+                Microsoft Ability Summit
+              </a>
+              {" "}discussing what it means to shift accessibility left in the age of AI-generated code.
+            </div>
 
             <div style={{ marginBottom: "20px" }} />
 
