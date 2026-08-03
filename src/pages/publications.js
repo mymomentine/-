@@ -3,7 +3,8 @@ import ProactiveAgent from '../images/proactiveagent.png';
 import liveTyping from '../images/livetyping.png';
 import mrpwImage from '../images/mrpw.png';
 import novelty from '../images/novelty.png';
-import { FaFilePdf, FaPaperclip, FaFileCode, FaCarrot, FaAward} from "react-icons/fa";
+import pace from '../images/pace.png';
+import { FaFilePdf, FaPaperclip, FaFileCode, FaCarrot, FaAward, FaDatabase, FaCode} from "react-icons/fa";
 import { Helmet } from 'react-helmet';
 
 const Publications = () => {
@@ -133,7 +134,184 @@ const Publications = () => {
       >
         Conference Proceedings
       </div>
+{/* C4 */}
+<div
+  className="container"
+  role="article"
+  aria-labelledby="paper2-title"
+  style={{
+    marginBottom: '30px',
+    display: 'flex',
+    alignItems: 'flex-start'
+  }}
+>
+  <img
+    src={pace}
+    alt="Overview of the Prompt and Circumstance accessibility benchmark study"
+    style={{ height: '150px', borderRadius: '0px' }}
+  />
 
+  <div
+    style={{
+      fontSize: '16px',
+      color: '#7C7C7C',
+      lineHeight: '1.4',
+      marginTop: '1vh',
+      marginLeft: '10px',
+      textAlign: 'left'
+    }}
+  >
+    <div
+      id="paper2-title"
+      role="heading"
+      aria-level="3"
+      style={{
+        marginBottom: '5px',
+        fontWeight: 'inherit'
+      }}
+    >
+      <strong>
+        Prompt and Circumstance: Evaluating Accessibility in LLM-Generated HTML Form Components
+      </strong>
+    </div>
+
+    <div style={{ marginBottom: '5px' }}>
+      <span className="name">Yumeng Ma</span>,{' '}
+
+      <span className="tooltip">
+        <a
+          href="https://faculty.washington.edu/wobbrock/"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px' }}
+          className="author-link"
+        >
+          Jacob O. Wobbrock
+        </a>
+        <span className="tooltiptext" aria-hidden="true">
+          Professor of Information and, by courtesy, Computer Science & Engineering at the University of Washington
+        </span>
+      </span>,{' '}
+
+      <span className="tooltip">
+        <a
+          href="https://accessibility.day/about/"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px' }}
+          className="author-link"
+        >
+          Joe Devon
+        </a>
+        <span className="tooltiptext" aria-hidden="true">
+          Founder of A11y Audits and co-founder of Global Accessibility Awareness Day
+        </span>
+      </span>,{' '}
+
+      <span className="tooltip">
+        <a
+          href="https://aaron-gustafson.com/"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px' }}
+          className="author-link"
+        >
+          Aaron Gustafson
+        </a>
+        <span className="tooltiptext" aria-hidden="true">
+          Principal Accessibility Innovation Strategist at Microsoft
+        </span>
+      </span>,{' '}
+
+      <span className="tooltip">
+        <a
+          href="https://github.com/mfairchild365"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px' }}
+          className="author-link"
+        >
+          Michael Fairchild
+        </a>
+        <span className="tooltiptext" aria-hidden="true">
+          Former Technical Program Manager for Accessibility at Microsoft
+        </span>
+      </span>,{' '}
+
+      <span className="tooltip">
+        <a
+          href="https://make4all.org/portfolio/jennifer-mankoff/"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px' }}
+          className="author-link"
+        >
+          Jennifer Mankoff
+        </a>
+        <span className="tooltiptext" aria-hidden="true">
+          Director of the Center for Research and Education on Accessible Technology and Experiences and Professor at the University of Washington
+        </span>
+      </span>, and{' '}
+
+      <span className="tooltip">
+        <a
+          href="https://venkateshpotluri.me/"
+          target="_self"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', fontSize: '16px' }}
+          className="author-link"
+        >
+          Venkatesh Potluri
+        </a>
+        <span className="tooltiptext" aria-hidden="true">
+          Assistant Professor at the School of Information, University of Michigan
+        </span>
+      </span>
+    </div>
+
+    <div style={{ marginBottom: '5px' }}>
+      <span style={{ fontWeight: '500', color: '#676767' }}>
+        ASSETS 2026
+      </span>
+    </div>
+
+    <ul
+      className="links-visual"
+      role="list"
+      aria-label="Resources"
+    >
+      <li>
+        <a
+          href="../documents/pace.pdf"
+          className="coral-link bubble-link"
+          aria-label="PDF for Prompt and Circumstance paper"
+        >
+          preprint <FaFilePdf size={10} aria-hidden="true" />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://github.com/momentine/pace"
+          className="coral-link bubble-link"
+          aria-label="GitHub repository for PACE"
+        >
+          code <FaFileCode size={10} aria-hidden="true" />
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="https://doi.org/10.5281/zenodo.21303068"
+          className="coral-link bubble-link"
+          aria-label="Dataset for Prompt and Circumstance"
+        >
+          dataset <FaDatabase size={10} aria-hidden="true" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 
       {/* C3 */}
       <div className="container" role="article" aria-labelledby="paper1-title" style={{ marginBottom: '30px', display: 'flex', alignItems: 'flex-start' }}>
