@@ -4,6 +4,7 @@ import liveTyping from '../images/livetyping.png';
 import mrpwImage from '../images/mrpw.png';
 import novelty from '../images/novelty.png';
 import pace from '../images/pace.png';
+import grace from '../images/grace.png';
 import { FaFilePdf, FaPaperclip, FaFileCode, FaCarrot, FaAward, FaDatabase, FaCode} from "react-icons/fa";
 import { Helmet } from 'react-helmet';
 
@@ -491,6 +492,67 @@ const Publications = () => {
       >
         Extended Abstracts
       </div>
+
+      {/* A2 */}
+      <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
+        <img
+          src={grace}
+          alt="tbd"
+          style={{ height: '150px', borderRadius: '16px' }}
+        />
+        <div style={{ fontSize: '16px', color: '#7C7C7C', lineHeight: '1.4', marginTop: '1vh', marginLeft: '10px', textAlign: 'left' }}>
+          <div id="paper3-title" role="heading" aria-level="3" style={{ marginBottom: '5px', fontWeight: 'inherit' }}>
+            <strong>Designing Graceful Degradation for Multimodal Autonomous Vehicle Cabins</strong>
+          </div>
+
+          <div style={{ marginBottom: '5px' }}>
+            <span className="name">Yumeng Ma</span>
+            {' '}and{' '}
+            <span className="tooltip">
+              <a
+                href="https://www.linkedin.com/in/jiahao-ren-b912b2b3/"
+                target="_self"
+                rel="noopener noreferrer"
+                style={{ textDecoration: 'none' }}
+                className="author-link"
+              >
+                Rani Malhotra
+              </a>
+              <span className="tooltiptext" aria-hidden="true">Lead consultant for the Applied Research Center for Autonomous Machines at the Infosys Center for Emerging Technology Solutions</span>
+            </span>
+          </div>
+
+          <div style={{ marginBottom: '5px' }}>
+            <span style={{ fontWeight: '500', color: '#676767' }}>AutoUI 2026 Adjunct</span>
+          </div>
+
+          <ul className="links-visual" role="list" aria-label="Resources">
+            <li>
+              <a
+                href="../documents/grace.pdf"
+                className="coral-link bubble-link"
+                aria-label="PDF for Graceful Degradation paper"
+              >
+                pdf <FaFilePdf size={10} aria-hidden="true" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://dl.acm.org/doi/10.1145/3828158.3838226"
+                className="coral-link bubble-link"
+                aria-label="webpage for Graceful Degradation paper"
+              >
+                paper <FaPaperclip size={10} aria-hidden="true" />
+              </a>
+            </li>
+          </ul>
+
+          <p className="reader-inline" aria-hidden="true" inert>
+            Resources: <a href="../documents/grace.pdf">PDF</a> · <a href="https://dl.acm.org/doi/10.1145/3828158.3838226">Paper</a>
+          </p>
+        </div>
+      </div>
+      
 
       {/* A1 */}
       <div className="container" role="article" aria-labelledby="paper3-title" style={{ marginBottom: '60px', display: 'flex', alignItems: 'flex-start' }}>
