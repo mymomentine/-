@@ -296,9 +296,7 @@ const About = () => {
             . I research the intersection of AI and accessibility. My current work
             in collaboration with <strong>Microsoft</strong> explores how large
             language models generate code and whether that code supports accessible
-
-            web experiences. I am also a UX research intern this summer at <strong>Amazon</strong> (more details coming soon).
-
+            web experiences. I was also a UX research intern at <strong>Amazon</strong> this summer, working on accessible media experiences to inform early product decisions.This fall, I’m returning to <strong>Infosys</strong> for the third time to study adaptive in-vehicle interaction and how autonomous systems can better respond to different access needs.
             <br />
             <br />
             I received my M.S. in computer science from{" "}
